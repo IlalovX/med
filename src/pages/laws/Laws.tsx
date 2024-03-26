@@ -1,5 +1,5 @@
 function Laws() {
-  return <div>Laws</div>;
+  return <div>Laasdws</div>;
 }
 
 export default Laws;
