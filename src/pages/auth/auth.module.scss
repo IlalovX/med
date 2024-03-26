@@ -1,0 +1,31 @@
+.auth {
+  :global {
+    .ant-form-item {
+      .ant-row {
+        display: block;
+        .ant-form-item-explain-error {
+          font-family: "Azeret Mono" monospace;
+          font-size: 18px;
+        }
+        .ant-col {
+          text-align: left;
+          height: 50px;
+
+          label {
+            font-size: 20px;
+            margin-bottom: 10px;
+            &::before {
+              content: "";
+            }
+          }
+          input,
+          span,
+          .ant-form-item-control-input,
+          .ant-form-item-control-input-content {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

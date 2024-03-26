@@ -1,0 +1,50 @@
+.add_user {
+  form > section {
+    box-shadow: 0 0 4px black;
+    margin: 40px 0;
+    border-radius: 10px;
+    h2 {
+      padding: 10px;
+      background-color: #4d44b5;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+    }
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 50px;
+      .start_end {
+        label {
+          font-size: 14px;
+          color: #4d44b5;
+          font-weight: 600;
+          height: 32px;
+          font-size: 14px;
+        }
+      }
+      :global {
+        .ant-row {
+          display: block;
+          .ant-col {
+            text-align: left;
+            label {
+              font-size: 14px;
+              color: #4d44b5;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  form > .btns_container {
+    text-align: end;
+    button {
+      width: 180px;
+      background-color: #4d44b5;
+    }
+  }
+}

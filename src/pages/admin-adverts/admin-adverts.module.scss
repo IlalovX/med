@@ -1,0 +1,53 @@
+.advert {
+  padding: 20px;
+  header {
+    margin-bottom: 50px;
+    .add {
+      margin-left: auto;
+      cursor: pointer;
+      background-color: #4d44b5;
+      border-radius: 30px;
+      padding: 5px 10px;
+      border: none;
+      color: white;
+      font-size: 22px;
+      text-align: end;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  main {
+    .cards_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+      .card {
+        position: relative;
+        height: 100px;
+        padding: 20px;
+        box-shadow: 0px 0px 5px grey;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px 0;
+        text-align: center;
+        a {
+          color: #303972;
+          font-size: 18px;
+        }
+        .more {
+          cursor: pointer;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          svg {
+            width: 22px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
