@@ -1,5 +1,3 @@
-import React from "react";
-
 function InternationalPartnershipDepartment() {
   return (
     <div className="container mx-auto py-5 space-y-5 ">

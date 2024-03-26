@@ -1,5 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Arrow from "../../assets/svgs/arrow-circle-right.svg?react";
 

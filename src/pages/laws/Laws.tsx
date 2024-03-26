@@ -1,9 +1,5 @@
-import React from 'react'
-
 function Laws() {
-  return (
-	 <div>Laws</div>
-  )
+  return <div>Laws</div>;
 }
 
-export default Laws
+export default Laws;
