@@ -8,7 +8,7 @@ function AboutDepartment() {
 
   return (
     <div className="bg-almost-blue">
-      <div className="container mx-auto py-5 text-white space-y-10">
+      <div className="container mx-auto p-5 text-white space-y-10">
         <h1 className="text-3xl font-bold">Кафедра акушерства и гинекологии</h1>
         <div className="grid grid-cols-2 gap-10">
           <NavLink

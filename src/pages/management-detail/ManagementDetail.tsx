@@ -1,7 +1,7 @@
 import Rector from "../../assets/images/management/РекторFull.png";
 function ManagementDetail() {
   return (
-    <div className="container mx-auto  py-5">
+    <div className="container mx-auto  p-5">
       <h1 className="text-3xl mb-10">Ректор института</h1>
       <div className="grid grid-cols-[60%_40%] gap-x-10">
         <img src={Rector} className="w-full " />

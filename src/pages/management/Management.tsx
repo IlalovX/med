@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 function Management() {
   return (
-    <div className="container mx-auto py-5 space-y-5">
+    <div className="container mx-auto p-5 space-y-5">
       <h1 className="text-4xl font-bold mb-10">Руководство</h1>
       <div className="grid grid-cols-3 grid-rows-2 gap-5">
         <NavLink to="/management/1">

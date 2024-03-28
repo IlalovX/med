@@ -2,7 +2,7 @@ import { navMenuItems } from "../../constans/data";
 
 function Sitemap() {
   return (
-    <div className="container mx-auto py-5 text-blue-500">
+    <div className="container mx-auto p-5 text-blue-500">
       {navMenuItems.map((item: any) => (
         <div className="list-disc">
           <li className="list-disc text-4xl mb-8">{item.title}</li>

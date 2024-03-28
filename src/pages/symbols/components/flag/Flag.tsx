@@ -10,7 +10,7 @@ function Flag({
   img: any;
 }) {
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto p-10">
       <div className="flex  justify-between space-x-16 mb-10">
         <div className="flex items-center justify-center h-[290px]">{img}</div>
         <div className="flex flex-col justify-evenly ">

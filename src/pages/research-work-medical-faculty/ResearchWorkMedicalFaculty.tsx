@@ -1,6 +1,6 @@
 function ResearchWorkMedicalFaculty() {
   return (
-    <div className="container mx-auto py-5 text-2xl space-y-10">
+    <div className="container mx-auto p-5 text-2xl space-y-10">
       <p>
         Учебная и учебно-методическая работа факультета Учебно методическая
         работа на факультете организована в соответствии с образовательными

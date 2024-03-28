@@ -3,11 +3,12 @@ import { Suspense, lazy } from "react";
 import { PathEnums } from "./enums/Enums";
 import { PathNames } from "./consts/Consts";
 
-const MainLayout = lazy(() => import("../layout/MainLayout"));
+const MainLayout = lazy(() => import("../layouts/MainLayout"));
 
 const Home = lazy(() => import("../pages/home/Home"));
 const Auth = lazy(() => import("../pages/auth/Auth"));
 const Symbols = lazy(() => import("../pages/symbols/Symbols"));
+const Contacts = lazy(() => import("../pages/contacts/Contacts"));
 const Information = lazy(() => import("../pages/information/Information"));
 const Sitemap = lazy(() => import("../pages/sitemap/Sitemap"));
 const StructureUniversity = lazy(
@@ -45,13 +46,15 @@ const AcademicCouncilResolutions = lazy(
   () =>
     import("../pages/academic-council-resolutions/AcademicCouncilResolutions")
 );
-const Laws = lazy(() => import("../pages/laws/Laws"));
-const GovermentDecisionsPrograms = lazy(
-  () =>
-    import("../pages/goverment-decisions-programs/GovermentDecisionsPrograms")
+
+const AboutDocuments = lazy(
+  () => import("../pages/about-documents/AboutDocuments")
 );
-const GovermentPrograms = lazy(
-  () => import("../pages/goverment-programs/GovermentPrograms")
+const MinistryOrder = lazy(
+  () => import("../pages/ministry-orders/MinistryOrder")
+);
+const StatePrograms = lazy(
+  () => import("../pages/state-programs/StatePrograms")
 );
 const Management = lazy(() => import("../pages/management/Management"));
 const ManagementDetail = lazy(
@@ -95,7 +98,7 @@ const ResearchWorkMedicalFaculty = lazy(
 const AboutDepartment = lazy(
   () => import("../pages/about-department/AboutDepartment")
 );
-const HistoryDeparment = lazy(
+const HistoryDepartment = lazy(
   () => import("../pages/history-department/HistoryDepartment")
 );
 const StructureDepartment = lazy(
@@ -123,40 +126,142 @@ const InternationalDepartment = lazy(
       "../pages/international-partnership-department/InternationalPartnershipDepartment"
     )
 );
-
-// admin
-const Admin = lazy(() => import("../pages/admin/Admin"));
-const AdminSettings = lazy(
-  () => import("../pages/admin-settings/AdminSettings")
+const EducationQualityDepartment = lazy(
+  () =>
+    import("../pages/education-quality-department/EducationQualityDepartment")
 );
-
-// admin-users
-const AdminUsers = lazy(() => import("../pages/admin-users/AdminUsers"));
-const AdminAddUser = lazy(() => import("../pages/admin-add-user/AddUser"));
-const AdminUserDetail = lazy(
-  () => import("../pages/admin-user-detail/UserDetail")
+const EducationDepartment = lazy(
+  () => import("../pages/education-department/EducationDepartment")
 );
-
-// admin-news
-const AdminNews = lazy(() => import("../pages/admin-news/AdminNews"));
-const AdminNewDetail = lazy(
-  () => import("../pages/admin-new-detail/NewDetail")
+const MasterDepartment = lazy(
+  () => import("../pages/master-department/MasterDepartment")
 );
-const AdminAddNew = lazy(() => import("../pages/admin-add-news/AddNews"));
-
-// admin-adverts
-const AdminAdverts = lazy(() => import("../pages/admin-adverts/AdminAdverts"));
-const AdminAdvertsDetail = lazy(
-  () => import("../pages/admin-advert-detail/AdvertDetail")
+const ClinicalResidencyDepartment = lazy(
+  () =>
+    import(
+      "../pages/clinical-residency-department//ClinicalResidencyDepartment"
+    )
 );
-const AdminAddAdverts = lazy(
-  () => import("../pages/admin-add-adverts/AddAdverts")
+const InternationalRelationsDepartment = lazy(
+  () =>
+    import(
+      "../pages/international-relations-department/InternationalRealtioonsDepartment"
+    )
 );
+const ScientificResearchDepartment = lazy(
+  () =>
+    import(
+      "../pages/scientific-research-department/ScientificResearchDepartment"
+    )
+);
+const GiftedStudents = lazy(
+  () => import("../pages/gifteds-students/GiftedsStudents")
+);
+const TalentedStudents = lazy(
+  () => import("../pages/talented-students/TalentedStudents")
+);
+const Accounting = lazy(() => import("../pages/accounting/Accounting"));
+const Marketing = lazy(() => import("../pages/marketing/Marketing"));
+const PlanningFinance = lazy(
+  () => import("../pages/planning-finance-department/PlanningFinanceDepartment")
+);
+const InfoResourceCenter = lazy(
+  () => import("../pages/information-resource-center/InfoResourceCenter")
+);
+const InfoTechonologiesCenter = lazy(
+  () =>
+    import("../pages/information-technologies-center/InfoTechnologiesCenter")
+);
+const YouthUnionCenter = lazy(
+  () => import("../pages/youth-union-center/YouthUnionCenter")
+);
+const WomenCommitteeCenter = lazy(
+  () => import("../pages/women-committee-department/WomenCommitteeDepartment")
+);
+const CommunicationDevelopmentCenter = lazy(
+  () =>
+    import(
+      "../pages/communication-development-center/CommunicationDevelopmentCenter"
+    )
+);
+const SpiritualityEnglightmentDepartments = lazy(
+  () =>
+    import(
+      "../pages/spirituality-enlightenment-department/SpiritualityEnglightmentDepartment"
+    )
+);
+const PressSecretary = lazy(
+  () => import("../pages/press-secretary/PressSecretary")
+);
+const HumanResourcesDepartment = lazy(
+  () => import("../pages/human-resource-department/HumanResourceDepartment")
+);
+const ChancelleryDepartment = lazy(
+  () => import("../pages/chancellery-department/ChancelleryDepartment")
+);
+const ComplianceControl = lazy(
+  () => import("../pages/compliance-control/ComplianceControl")
+);
+const ArchiveDepartment = lazy(
+  () => import("../pages/archive-department/ArchiveDepartment")
+);
+const LegalServicesDepartment = lazy(
+  () => import("../pages/legal-services-department/LegalServicesDepartment")
+);
+const Psychologist = lazy(() => import("../pages/psychologist/Psychologits"));
+const UnionCommittee = lazy(
+  () => import("../pages/union-committee/UnionCommittee")
+);
+const SimulationCenter = lazy(
+  () => import("../pages/simulation-center/SimulationCenter")
+);
+const HistorySimulationCenter = lazy(
+  () => import("../pages/history-simulation-center/HistorySimulationCenter")
+);
+const DirectorsSimulationCenter = lazy(
+  () => import("../pages/director-simulation-center/DirectorSimulationCenter")
+);
+const ContactInfoSimulationCenter = lazy(
+  () =>
+    import(
+      "../pages/contact-information-simulation-center/ContactInfoSimulationCenter"
+    )
+);
+const RegionalOffices = lazy(
+  () => import("../pages/regional-offices/RegionalOffices")
+);
+const ExampleContracts = lazy(
+  () => import("../pages/example-contracts/ExampleContracts")
+);
+const Graduates = lazy(() => import("../pages/graduates/Graduates"));
+const CareerCenterFaq = lazy(
+  () => import("../pages/career-center-faq/CareerCenterFaq")
+);
+const Treaty = lazy(() => import("../pages/treaty/Treaty"));
+const Joint = lazy(() => import("../pages/joint/Joint"));
+const InternationalPartners = lazy(
+  () => import("../pages/international-partners/InternationalPartners")
+);
+const RepublicanPartners = lazy(
+  () => import("../pages/republican-partners/RepublicanPartners")
+);
+const PhotoGallery = lazy(() => import("../pages/photo-gallery/PhotoGallery"));
+const News = lazy(() => import("../pages/news/News"));
+const NewsDetail = lazy(() => import("../pages/news-detail/NewDetail"));
+const Adverts = lazy(() => import("../pages/adverts/Adverts"));
+const AdvertDetail = lazy(() => import("../pages/advert-detail/AdvertDetail"));
 
 function PathRoutes() {
   return (
     <Routes>
-      <Route path={PathNames[PathEnums.MAIN]} element={<MainLayout />}>
+      <Route
+        path={PathNames[PathEnums.MAIN]}
+        element={
+          <Suspense>
+            <MainLayout />
+          </Suspense>
+        }
+      >
         <Route
           index
           element={
@@ -170,6 +275,14 @@ function PathRoutes() {
           element={
             <Suspense>
               <Symbols />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CONTACTS]}
+          element={
+            <Suspense>
+              <Contacts />
             </Suspense>
           }
         />
@@ -286,29 +399,30 @@ function PathRoutes() {
           }
         />
         <Route
-          path={PathNames[PathEnums.LAWS]}
+          path={PathNames[PathEnums.ABOUT_DOCUMENTS]}
           element={
             <Suspense>
-              <Laws />
+              <AboutDocuments />
             </Suspense>
           }
         />
         <Route
-          path={PathNames[PathEnums.GOVERMENT_DESCIONS_PROGRAMS]}
+          path={PathNames[PathEnums.MINISTRY_ORDER]}
           element={
             <Suspense>
-              <GovermentDecisionsPrograms />
+              <MinistryOrder />
             </Suspense>
           }
         />
         <Route
-          path={PathNames[PathEnums.GOVERMENT_PROGRAMS]}
+          path={PathNames[PathEnums.STATE_PROGRAMS]}
           element={
             <Suspense>
-              <GovermentPrograms />
+              <StatePrograms />
             </Suspense>
           }
         />
+
         <Route
           path={PathNames[PathEnums.MANAGEMENT]}
           element={
@@ -409,7 +523,7 @@ function PathRoutes() {
           path={PathNames[PathEnums.HISTORY_DEPARTMENT_MEDICAL_FACULTY]}
           element={
             <Suspense>
-              <HistoryDeparment />
+              <HistoryDepartment />
             </Suspense>
           }
         />
@@ -469,6 +583,342 @@ function PathRoutes() {
             </Suspense>
           }
         />
+        <Route
+          path={PathNames[PathEnums.EDUCATION_QUALITY_DEPARTMENT]}
+          element={
+            <Suspense>
+              <EducationQualityDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.EDUCATION_DEPARTMENT]}
+          element={
+            <Suspense>
+              <EducationDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MASTERS_DEPARTMENT]}
+          element={
+            <Suspense>
+              <MasterDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CLINICAL_RESIDENCY_DEPARTMENT]}
+          element={
+            <Suspense>
+              <ClinicalResidencyDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.INTERNATIONAL_RELATIONS_DEPARTMENT]}
+          element={
+            <Suspense>
+              <InternationalRelationsDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.SCIENTIFIC_RESEARCH_DEPARTMENT]}
+          element={
+            <Suspense>
+              <ScientificResearchDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.GIFTED_STUDENTS]}
+          element={
+            <Suspense>
+              <GiftedStudents />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.TALENTED_STUDENTS]}
+          element={
+            <Suspense>
+              <TalentedStudents />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ACCOUNTING]}
+          element={
+            <Suspense>
+              <Accounting />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MARKETING]}
+          element={
+            <Suspense>
+              <Marketing />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PLANNING_FINANCE_DEPARTMENT]}
+          element={
+            <Suspense>
+              <PlanningFinance />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.INFORMATION_TECHNOLOGIES_CENTER]}
+          element={
+            <Suspense>
+              <InfoTechonologiesCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.INFORMATION_RESOURCE_CENTER]}
+          element={
+            <Suspense>
+              <InfoResourceCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.YOUTH_UNION_CENTER]}
+          element={
+            <Suspense>
+              <YouthUnionCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.WOMEN_COMMITTEE_DEPARTMENT]}
+          element={
+            <Suspense>
+              <WomenCommitteeCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.COMMUNICATION_DEVELOPMENT_CENTER]}
+          element={
+            <Suspense>
+              <CommunicationDevelopmentCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.SPIRITUALITY_ENLIGHTENMENT_DEPARTMENT]}
+          element={
+            <Suspense>
+              <SpiritualityEnglightmentDepartments />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PRESS_SECRETARY]}
+          element={
+            <Suspense>
+              <PressSecretary />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.HUMAN_RESOURCE_DEPARTMENT]}
+          element={
+            <Suspense>
+              <HumanResourcesDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CHANCELLERY_DEPARTMENT]}
+          element={
+            <Suspense>
+              <ChancelleryDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.COMPLIANCE_CONTROL]}
+          element={
+            <Suspense>
+              <ComplianceControl />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ARCHIVE_DEPARTMENT]}
+          element={
+            <Suspense>
+              <ArchiveDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.LEGAL_SERVICES_DEPARTMENT]}
+          element={
+            <Suspense>
+              <LegalServicesDepartment />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PSYCHOLOGIST]}
+          element={
+            <Suspense>
+              <Psychologist />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.UNION_COMMITTEE]}
+          element={
+            <Suspense>
+              <UnionCommittee />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.SIMULATION_CENTER]}
+          element={
+            <Suspense>
+              <SimulationCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.HISTORY_SIMULATION_CENTER]}
+          element={
+            <Suspense>
+              <HistorySimulationCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.DIRECTOR_SIMULATION_CENTER]}
+          element={
+            <Suspense>
+              <DirectorsSimulationCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CONTACT_INFO_SIMULATION_CENTER]}
+          element={
+            <Suspense>
+              <ContactInfoSimulationCenter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.REGIONAL_OFFICES]}
+          element={
+            <Suspense>
+              <RegionalOffices />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.EXAMPLE_CONTRACTS]}
+          element={
+            <Suspense>
+              <ExampleContracts />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.GRADUATES]}
+          element={
+            <Suspense>
+              <Graduates />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CAREER_CENTER_FAQ]}
+          element={
+            <Suspense>
+              <CareerCenterFaq />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.TREATY]}
+          element={
+            <Suspense>
+              <Treaty />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.JOINT]}
+          element={
+            <Suspense>
+              <Joint />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.INTERNATIONAL_PARTNERS]}
+          element={
+            <Suspense>
+              <InternationalPartners />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.REPUBLICAN_PARTNERS]}
+          element={
+            <Suspense>
+              <RepublicanPartners />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PHOTO_GALLERY]}
+          element={
+            <Suspense>
+              <PhotoGallery />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.NEWS]}
+          element={
+            <Suspense>
+              <News />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.NEWS_DETAIL]}
+          element={
+            <Suspense>
+              <NewsDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ADVERTS]}
+          element={
+            <Suspense>
+              <Adverts />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ADVERTS_DETAIL]}
+          element={
+            <Suspense>
+              <AdvertDetail />
+            </Suspense>
+          }
+        />
       </Route>
       <Route
         path={PathNames[PathEnums.AUTH]}
@@ -478,95 +928,6 @@ function PathRoutes() {
           </Suspense>
         }
       />
-      <Route
-        path={PathNames[PathEnums.ADMIN]}
-        element={
-          <Suspense>
-            <Admin />
-          </Suspense>
-        }
-      >
-        <Route
-          path={PathNames[PathEnums.ADMIN_USERS]}
-          element={
-            <Suspense>
-              <AdminUsers />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_DETAILS_USER]}
-          element={
-            <Suspense>
-              <AdminUserDetail />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_ADD_USER]}
-          element={
-            <Suspense>
-              <AdminAddUser />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_NEWS]}
-          element={
-            <Suspense>
-              <AdminNews />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_ADD_NEWS]}
-          element={
-            <Suspense>
-              <AdminAddNew />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_DETAILS_NEWS]}
-          element={
-            <Suspense>
-              <AdminNewDetail />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_ADVERTS]}
-          element={
-            <Suspense>
-              <AdminAdverts />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_ADD_ADVERTS]}
-          element={
-            <Suspense>
-              <AdminAddAdverts />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_DETAILS_ADVERTS]}
-          element={
-            <Suspense>
-              <AdminAdvertsDetail />
-            </Suspense>
-          }
-        />
-        <Route
-          path={PathNames[PathEnums.ADMIN_SETTINGS]}
-          element={
-            <Suspense>
-              <AdminSettings />
-            </Suspense>
-          }
-        />
-      </Route>
     </Routes>
   );
 }

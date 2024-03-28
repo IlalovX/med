@@ -7,7 +7,7 @@ function AboutMedicalFaculty() {
   const { id } = useParams();
 
   return (
-    <div className="bg-almost-blue py-5">
+    <div className="bg-almost-blue p-5">
       <div className="container  mx-auto text-white ">
         <h1 className="text-4xl mb-10">Лечебный факультет № {id}</h1>
         <div className="grid grid-cols-2 gap-10">

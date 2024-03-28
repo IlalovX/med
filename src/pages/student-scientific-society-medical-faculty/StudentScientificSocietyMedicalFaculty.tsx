@@ -2,7 +2,7 @@ import image from "../../assets/images/faculty/Факультет фото.png";
 
 function StudentScientificSocietyMedicalFaculty() {
   return (
-    <div className="container mx-auto py-5 space-y-10">
+    <div className="container mx-auto p-5 space-y-10">
       <h1 className="text-4xl font-bold">Научно-исследовательские работы</h1>
       <p className="text-3xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

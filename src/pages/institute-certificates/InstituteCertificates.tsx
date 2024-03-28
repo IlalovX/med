@@ -3,7 +3,7 @@ import Certificate2 from "../../assets/images/certificates/Rectangle 240.png";
 
 function InstituteCertificates() {
   return (
-    <div className="container mx-auto py-5 space-y-5">
+    <div className="container mx-auto p-5 space-y-5">
       <h1 className="text-4xl mb-10 font-bold">
         Институтские лицензии и свидетельства об аккредитации
       </h1>

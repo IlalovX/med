@@ -3,6 +3,13 @@ import QarGerb from "../assets/svgs/gerbs/QarGerb.svg?react";
 import UzGerb from "../assets/svgs/gerbs/Gerb.svg?react";
 import QarFlag from "../assets/svgs/flags/QarFlag.svg?react";
 import UzFlag from "../assets/svgs/flags/UzFlag.svg?react";
+import {
+  HomeOutlined,
+  UserOutlined,
+  SettingOutlined,
+  ProfileOutlined,
+  ReconciliationOutlined,
+} from "@ant-design/icons";
 
 export const navMenuItems = [
   {
@@ -114,7 +121,7 @@ export const navMenuItems = [
         children: [
           {
             key: "3-1",
-            label: <NavLink to="/">Об образовании</NavLink>,
+            label: <NavLink to="/about_documents">Об образовании</NavLink>,
           },
           {
             key: "3-2",
@@ -130,12 +137,16 @@ export const navMenuItems = [
           {
             key: "3-3",
             label: (
-              <NavLink to="/">Приказы министерства и решения коллегии</NavLink>
+              <NavLink to="/ministry_documents">
+                Приказы министерства и решения коллегии
+              </NavLink>
             ),
           },
           {
             key: "3-4",
-            label: <NavLink to="/">Государственные программы</NavLink>,
+            label: (
+              <NavLink to="/state_programs">Государственные программы</NavLink>
+            ),
           },
         ],
       },
@@ -223,7 +234,7 @@ export const navMenuItems = [
           {
             key: "3-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/education_quality_department">
                 Отдел контроля качества образования
               </NavLink>
             ),
@@ -231,7 +242,7 @@ export const navMenuItems = [
           {
             key: "3-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/education_department">
                 Учебно-методическое управление
               </NavLink>
             ),
@@ -239,15 +250,13 @@ export const navMenuItems = [
           {
             key: "3-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Отдел магистратуры
-              </NavLink>
+              <NavLink to="/master_department">Отдел магистратуры</NavLink>
             ),
           },
           {
             key: "3-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/clinical_residency_department">
                 Клиническая ординатура
               </NavLink>
             ),
@@ -255,7 +264,7 @@ export const navMenuItems = [
           {
             key: "3-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/international_relations_department">
                 Отдел международных связей
               </NavLink>
             ),
@@ -263,7 +272,7 @@ export const navMenuItems = [
           {
             key: "3-6",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/scientific_research_department">
                 Отдел научных исследований
               </NavLink>
             ),
@@ -272,7 +281,7 @@ export const navMenuItems = [
           {
             key: "3-7",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/gifted_students">
                 Отдел по работе с одаренными студентами
               </NavLink>
             ),
@@ -280,7 +289,7 @@ export const navMenuItems = [
           {
             key: "3-8",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/talented_students">
                 Студенческое научное общество
               </NavLink>
             ),
@@ -293,24 +302,16 @@ export const navMenuItems = [
         children: [
           {
             key: "4-1",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Бухгалтерия
-              </NavLink>
-            ),
+            label: <NavLink to="/accounting">Бухгалтерия</NavLink>,
           },
           {
             key: "4-2",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Маркетинг
-              </NavLink>
-            ),
+            label: <NavLink to="/marketing">Маркетинг</NavLink>,
           },
           {
             key: "4-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/planning_finance_department">
                 Отдел планирования и финансов
               </NavLink>
             ),
@@ -324,7 +325,7 @@ export const navMenuItems = [
           {
             key: "5-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/information_technologies_center">
                 Центр цифровых образовательных технологий
               </NavLink>
             ),
@@ -332,23 +333,19 @@ export const navMenuItems = [
           {
             key: "5-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/information_resource_center">
                 Центр информационных ресурсов
               </NavLink>
             ),
           },
           {
             key: "5-3",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Союз молодежи
-              </NavLink>
-            ),
+            label: <NavLink to="/youth_union_center">Союз молодежи</NavLink>,
           },
           {
             key: "5-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/women_committee_department">
                 Женский комитет
               </NavLink>
             ),
@@ -356,7 +353,7 @@ export const navMenuItems = [
           {
             key: "5-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/communication_development_center">
                 Центр развития коммуникативной компетенции
               </NavLink>
             ),
@@ -370,7 +367,7 @@ export const navMenuItems = [
           {
             key: "6-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/spirituality_enlightenment_department">
                 Отдел по делам молодежи, духовности и просвещения
               </NavLink>
             ),
@@ -378,23 +375,19 @@ export const navMenuItems = [
           {
             key: "6-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Процесс-служба Института
-              </NavLink>
+              <NavLink to="/press_secretary">Процесс-служба Института</NavLink>
             ),
           },
           {
             key: "6-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Отдел кадров
-              </NavLink>
+              <NavLink to="/human_resource_department">Отдел кадров</NavLink>
             ),
           },
           {
             key: "6-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/chancellery_department">
                 Заведующая канцелярией
               </NavLink>
             ),
@@ -402,42 +395,24 @@ export const navMenuItems = [
           {
             key: "6-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Комплаенс-контроль
-              </NavLink>
+              <NavLink to="/compliance_control">Комплаенс-контроль</NavLink>
             ),
           },
           {
             key: "6-6",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Архив института
-              </NavLink>
-            ),
+            label: <NavLink to="/archive_department">Архив института</NavLink>,
           },
           {
             key: "6-7",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Юрист
-              </NavLink>
-            ),
+            label: <NavLink to="/legal_services_department">Юрист</NavLink>,
           },
           {
             key: "6-8",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Психолог
-              </NavLink>
-            ),
+            label: <NavLink to="/psychologist">Психолог</NavLink>,
           },
           {
             key: "6-9",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Профсоюзы
-              </NavLink>
-            ),
+            label: <NavLink to="/union_committee">Профсоюзы</NavLink>,
           },
         ],
       },
@@ -448,23 +423,19 @@ export const navMenuItems = [
           {
             key: "7-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Деятельность центра{" "}
-              </NavLink>
+              <NavLink to="/simulation_center">Деятельность центра </NavLink>
             ),
           },
           {
             key: "7-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                История центра
-              </NavLink>
+              <NavLink to="/history_simulation_center">История центра</NavLink>
             ),
           },
           {
             key: "7-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/director_simulation_center">
                 Сотрудники центра
               </NavLink>
             ),
@@ -472,7 +443,7 @@ export const navMenuItems = [
           {
             key: "7-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/contact_information_simulation_center">
                 Контактная информация
               </NavLink>
             ),
@@ -486,31 +457,21 @@ export const navMenuItems = [
           {
             key: "8-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Региональные управления
-              </NavLink>
+              <NavLink to="/regional_offices">Региональные управления</NavLink>
             ),
           },
           {
             key: "8-2",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Пример контрактов
-              </NavLink>
-            ),
+            label: <NavLink to="/example_contracts">Пример контрактов</NavLink>,
           },
           {
             key: "8-3",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Выпускники
-              </NavLink>
-            ),
+            label: <NavLink to="/graduates">Выпускники</NavLink>,
           },
           {
             key: "5-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/career_center_faq">
                 Часто задаваемые вопросы
               </NavLink>
             ),
@@ -528,67 +489,39 @@ export const navMenuItems = [
         children: [
           {
             key: "1-1",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Для студентов
-              </NavLink>
-            ),
+            label: <NavLink to="/instruction">Для студентов</NavLink>,
           },
           {
             key: "1-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/schedule_sec_bachelor">
                 График проведения ГЭК
               </NavLink>
             ),
           },
           {
             key: "1-3",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Расписание занятий
-              </NavLink>
-            ),
+            label: <NavLink to="/class_schedule">Расписание занятий</NavLink>,
           },
           {
             key: "1-4",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Успеваемость
-              </NavLink>
-            ),
+            label: <NavLink to="/learning">Успеваемость</NavLink>,
           },
           {
             key: "1-5",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Посещаемость
-              </NavLink>
-            ),
+            label: <NavLink to="/attendance">Посещаемость</NavLink>,
           },
           {
             key: "1-6",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Каталог наук
-              </NavLink>
-            ),
+            label: <NavLink to="/catalogue_sciences">Каталог наук</NavLink>,
           },
           {
             key: "1-7",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Стипендии
-              </NavLink>
-            ),
+            label: <NavLink to="/same_scholarships">Стипендии</NavLink>,
           },
           {
             key: "1-8",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Общежитие
-              </NavLink>
-            ),
+            label: <NavLink to="/life_students">Общежитие</NavLink>,
           },
         ],
       },
@@ -598,24 +531,16 @@ export const navMenuItems = [
         children: [
           {
             key: "2-1",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Успеваемость
-              </NavLink>
-            ),
+            label: <NavLink to="/learning_mag">Успеваемость</NavLink>,
           },
           {
             key: "2-2",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Стипендии
-              </NavLink>
-            ),
+            label: <NavLink to="/same_scholarships">Стипендии</NavLink>,
           },
           {
             key: "2-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/protection_master_dessert">
                 Защита магистерских диссертаций
               </NavLink>
             ),
@@ -623,7 +548,7 @@ export const navMenuItems = [
           {
             key: "2-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/masters_thesis_topics">
                 Темы магистерской диссертации
               </NavLink>
             ),
@@ -631,7 +556,7 @@ export const navMenuItems = [
           {
             key: "2-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/schedule_sec_masters">
                 График проведения ГЭК
               </NavLink>
             ),
@@ -644,26 +569,16 @@ export const navMenuItems = [
         children: [
           {
             key: "3-1",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Для студентов
-              </NavLink>
-            ),
+            label: <NavLink to="/instruction_clinic">Для студентов</NavLink>,
           },
           {
             key: "3-2",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Посещаемость
-              </NavLink>
-            ),
+            label: <NavLink to="/attendance_clinic">Посещаемость</NavLink>,
           },
           {
             key: "3-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Государственные экзамены
-              </NavLink>
+              <NavLink to="/state_exams">Государственные экзамены</NavLink>
             ),
           },
         ],
@@ -675,15 +590,13 @@ export const navMenuItems = [
           {
             key: "4-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Расписание занятий
-              </NavLink>
+              <NavLink to="/class_schedule_inter">Расписание занятий</NavLink>
             ),
           },
           {
             key: "4-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/foreign_students_studying">
                 Иностранные студенты, обучающиеся в институте
               </NavLink>
             ),
@@ -691,7 +604,7 @@ export const navMenuItems = [
           {
             key: "4-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/amount_payment_international_students">
                 Сумма оплаты для иностранных студентов
               </NavLink>
             ),
@@ -699,7 +612,7 @@ export const navMenuItems = [
           {
             key: "4-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/information_residence_foreign_students">
                 Информация о проживании иностранных студентов
               </NavLink>
             ),
@@ -718,39 +631,29 @@ export const navMenuItems = [
           {
             key: "1-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/admissions_committee_news">
                 Новости приемной комиссии
               </NavLink>
             ),
           },
           {
             key: "1-2",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Памятка абитуриента
-              </NavLink>
-            ),
+            label: <NavLink to="/memo">Памятка абитуриента</NavLink>,
           },
           {
             key: "1-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Процедура приема
-              </NavLink>
+              <NavLink to="/admission_procedure">Процедура приема</NavLink>
             ),
           },
           {
             key: "1-4",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Квоты приема
-              </NavLink>
-            ),
+            label: <NavLink to="/target_reception">Квоты приема</NavLink>,
           },
           {
             key: "1-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/bachelor_required_documents">
                 Перечень документов для поступления в вузы
               </NavLink>
             ),
@@ -758,15 +661,13 @@ export const navMenuItems = [
           {
             key: "1-6",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Мониторинг приема
-              </NavLink>
+              <NavLink to="/monitoring_reception">Мониторинг приема</NavLink>
             ),
           },
           {
             key: "1-7",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/place_admission_office">
                 Адрес приемной комиссии
               </NavLink>
             ),
@@ -779,32 +680,22 @@ export const navMenuItems = [
         children: [
           {
             key: "2-1",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Памятка абитуриента
-              </NavLink>
-            ),
+            label: <NavLink to="/memo_mag">Памятка абитуриента</NavLink>,
           },
           {
             key: "2-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Процедура приема
-              </NavLink>
+              <NavLink to="/admission_procedure_mag">Процедура приема</NavLink>
             ),
           },
           {
             key: "2-3",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Квоты приема
-              </NavLink>
-            ),
+            label: <NavLink to="/master_reception_quota">Квоты приема</NavLink>,
           },
           {
             key: "2-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/package_accepted_documents">
                 Перечень документов для поступления а вузы
               </NavLink>
             ),
@@ -812,7 +703,7 @@ export const navMenuItems = [
           {
             key: "2-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/place_admission_office">
                 Адрес приемной комиссии
               </NavLink>
             ),
@@ -820,9 +711,7 @@ export const navMenuItems = [
           {
             key: "2-6",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Список контрольных списков
-              </NavLink>
+              <NavLink to="/checklist_list">Список контрольных списков</NavLink>
             ),
           },
         ],
@@ -833,32 +722,22 @@ export const navMenuItems = [
         children: [
           {
             key: "3-1",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Памятка абитуриентам
-              </NavLink>
-            ),
+            label: <NavLink to="/memo_clinic">Памятка абитуриентам</NavLink>,
           },
           {
             key: "3-2",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Положения о приеме
-              </NavLink>
+              <NavLink to="/clinic_reception_quota">Положения о приеме</NavLink>
             ),
           },
           {
             key: "3-3",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Положения о приеме
-              </NavLink>
-            ),
+            label: <NavLink to="/clinic_reception_quota">Квота приема</NavLink>,
           },
           {
             key: "3-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/clinic_required_documents">
                 Документы для поступления
               </NavLink>
             ),
@@ -866,7 +745,7 @@ export const navMenuItems = [
           {
             key: "3-5",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/package_accepted_documents_clinic">
                 Адрес приёмной комиссии
               </NavLink>
             ),
@@ -880,31 +759,25 @@ export const navMenuItems = [
           {
             key: "4-1",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/admissions_jt_news">
                 Новости приемной комиссии
               </NavLink>
             ),
           },
           {
             key: "4-2",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Памятка абитурента
-              </NavLink>
-            ),
+            label: <NavLink to="/memo_jt_training">Памятка абитурента</NavLink>,
           },
           {
             key: "4-3",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Квота приема
-              </NavLink>
+              <NavLink to="/jtraining_reception_quota">Квота приема</NavLink>
             ),
           },
           {
             key: "4-4",
             label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
+              <NavLink to="/package_accepted_documents_jt">
                 Документы для поступления
               </NavLink>
             ),
@@ -915,18 +788,18 @@ export const navMenuItems = [
   },
   {
     title: "Новости института",
-    item: [
+    items: [
       {
         key: "1",
-        label: "Новости",
+        label: <NavLink to="/news">Новости</NavLink>,
       },
       {
         key: "2",
-        label: "Объявления",
+        label: <NavLink to="/adverts">Объявления</NavLink>,
       },
       {
         key: "3",
-        label: "Фотогалерея",
+        label: <NavLink to="/photo_gallery">Фотогалерея</NavLink>,
       },
     ],
   },
@@ -935,21 +808,565 @@ export const navMenuItems = [
     items: [
       {
         key: "1",
-        label: "Муждународные",
+        label: <NavLink to="/international_partners">Муждународные</NavLink>,
       },
       {
         key: "2",
-        label: "Республиканские",
+        label: <NavLink to="/republican_partners">Республиканские</NavLink>,
       },
       {
         key: "3",
-        label: "Договора",
+        label: <NavLink to="/treaty">Договора</NavLink>,
       },
       {
         key: "4",
-        label: "Совместные",
+        label: <NavLink to="/joint">Совместные</NavLink>,
       },
     ],
+  },
+];
+
+export const adminNavLinks = [
+  {
+    key: "1",
+    label: (
+      <NavLink
+        to="/admin"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <HomeOutlined />
+        <span>Dashboard</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "2",
+    label: (
+      <NavLink
+        to="/admin/users"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <UserOutlined />
+        <span>Пользователи</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "3",
+    label: (
+      <NavLink
+        to="/admin/news"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <ReconciliationOutlined />
+        <span>Новости</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "4",
+    icon: <ProfileOutlined />,
+    label: (
+      <NavLink
+        to="/admin/adverts"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <ProfileOutlined />
+        <span>Объявления</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "5",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Фотогалерея</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "6",
+    label: (
+      <NavLink
+        to="/admin/faculties"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Об институте</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "7",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Совет института</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "8",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Документы</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "9",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Факультеты</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "10",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Кафедры</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "11",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Научные и учебные отделы</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "12",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Финансовые отделы</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "13",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Центры и организации</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "14",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Другие отделы</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "15",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Учебно-симуляционный центр</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "16",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Центр карьеры</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "17",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Студентам-Бакалавриата</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "18",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Студентам-Магистратуры</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "19",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Студентам-Ординатуры</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "20",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Студентам-Иностранным студентам</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "21",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Абитуриентам-Бакалавриата</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "22",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Абитуриентам-Магистратуры</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "23",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Абитуриентам-Ординатуры</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "24",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Абитуриентам-Бакалавриата</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "25",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Абитуриентам-Приём на совместные прогаммы</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "26",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Муждународные</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "27",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Республиканские</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "28",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Договора</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "29",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Абитуриентам-Бакалавриата</span>
+      </NavLink>
+    ),
+  },
+  {
+    key: "30",
+    label: (
+      <NavLink
+        to="/admin/pages"
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
+            : isActive
+            ? "text-almost-blue flex space-x-5 items-center"
+            : "flex space-x-5 items-center"
+        }
+      >
+        <SettingOutlined />
+        <span>Совместные</span>
+      </NavLink>
+    ),
   },
 ];
 

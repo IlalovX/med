@@ -12,6 +12,9 @@
   font-family: "Azeret Mono", monospace;
 }
 
+#root {
+  height: 100vh;
+}
 li {
   list-style-type: none;
   list-style: none;

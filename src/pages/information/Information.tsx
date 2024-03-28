@@ -7,7 +7,7 @@ import Faculty from "../../assets/images/faculty/Факультет фото.png
 function Information() {
   return (
     <>
-      <section className=" bg-almost-red py-5">
+      <section className=" bg-almost-red p-5">
         <div className="container mx-auto">
           <div className="flex justify-between mb-12">
             <h1 className="text-black text-3xl">Об институте</h1>

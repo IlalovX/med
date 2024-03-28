@@ -5,7 +5,7 @@ import Arrow from "../../assets/svgs/arrow-circle-right.svg?react";
 
 function DepartmentsMedicalFaculty() {
   return (
-    <div className="bg-almost-blue text-white py-5 ">
+    <div className="bg-almost-blue text-white p-5 ">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold mb-10">Кафедры</h1>
         <div className="grid grid-cols-2 gap-10">

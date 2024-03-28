@@ -54,38 +54,38 @@ function Home() {
         </Swiper>
       </section>
 
-      <section className=" bg-almost-red py-5">
+      <section className=" bg-almost-red p-5">
         <div className="container mx-auto">
-          <div className="flex justify-between mb-12">
+          <div className="flex flex-col gap-y-5 sm:flex-row justify-between mb-12">
             <h1 className="text-black text-3xl">Об институте</h1>
             <p className="text-white text-4xl w-[40%]">
               {`  Образование - не подготовка\n к жизни;\n Образование - это самая жизнь`}
             </p>
           </div>
-          <div className="flex justify-end space-x-10 my-6">
+          <div className="flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:gap-0  lg:items-end lg:justify-end sm:space-x-10 my-6">
             <img
               src={CabinetClassroom}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px]"
             />
             <img
               src={CabinetLibrary}
-              className="max-w-[400px] max-h-[500px] "
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px] "
             />
           </div>
-          <div className="flex  space-x-10 my-6">
+          <div className="flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row    sm:space-x-10 my-6">
             <img
               src={CabinetPractice}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px]"
             />
             <img
               src={CabinetGraduation}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80 lg:w-[400px] lg:h-[500px]"
             />
           </div>
         </div>
       </section>
 
-      <section className="bg-almost-blue py-5 ">
+      <section className="bg-almost-blue p-5 ">
         <div className="container mx-auto text-white">
           <h1 className="text-3xl mb-2">Новости</h1>
           <h2 className="text-2xl mb-10">Узнайте о последних новостях</h2>
@@ -121,14 +121,14 @@ function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto flex flex-col space-y-10 py-5 ">
-        <div className="flex justify-between ">
-          <h1 className="text-2xl">Факультеты</h1>
-          <p className="text-4xl font-bold w-[40%]">{`Наш квалифицированный\n преподавательский состав\n помогает студентам в изучении\n многих дисциплин`}</p>
+      <section className="container mx-auto flex flex-col space-y-10 p-5 ">
+        <div className="flex flex-col gap-y-5 sm:flex-row justify-between ">
+          <h1 className="text-xl sm:text-2xl">Факультеты</h1>
+          <p className="text-2xl sm:text-4xl font-bold max-w-[50%]">{`Наш квалифицированный\n преподавательский состав\n помогает студентам в изучении\n многих дисциплин`}</p>
         </div>
-        <div className="flex justify-between gap-4">
+        <div className="flex flex-col lg:flex-row justify-between gap-4">
           <img src={Faculty1} alt="faculty1" className="w-full" />
-          <div className="border border-black rounded-lg p-5 flex flex-col justify-evenly">
+          <div className=" border border-black rounded-lg p-5 flex flex-col justify-evenly">
             <h1>{`Название \n Факультета`}</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -137,7 +137,7 @@ function Home() {
             <NavLink to="/">more</NavLink>
           </div>
         </div>
-        <div className="flex justify-between gap-4">
+        <div className="flex flex-col-reverse lg:flex-row justify-between gap-4">
           <div className="border border-black rounded-lg p-5 flex flex-col justify-evenly">
             <h1>{`Название \n Факультета`}</h1>
             <p>
@@ -156,13 +156,13 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-almost-blue py-5 ">
+      <section className="bg-almost-blue p-5 ">
         <div className="container mx-auto text-white flex flex-col space-y-10">
           <div>
             <h1 className="text-3xl mb-2">Объявления</h1>
             <h2 className="text-2xl mb-10">Узнайте о последних новостях</h2>
           </div>
-          <div className="flex items-center space-x-4 text-3xl">
+          <div className="text-xs flex items-center space-x-4 sm:text-3xl">
             {FILTERS_TYPE.map((item, index) => (
               <p
                 onClick={() => handleChangeFilter(item)}
@@ -211,7 +211,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto flex flex-col space-y-10 py-5">
+      <section className="container mx-auto flex flex-col space-y-10 p-5">
         <h1 className="text-3xl">Фотогалерея</h1>
         <Swiper
           rewind={true}
@@ -224,19 +224,19 @@ function Home() {
           className="container mx-auto mySwiper"
         >
           <SwiperSlide>
-            <img src={Faculty1} className="w-full h-[700px]" />
+            <img src={Faculty1} className="w-full max-h-[700px]" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Faculty2} className="w-full h-[700px]" />
+            <img src={Faculty2} className="w-full max-h-[700px]" />
           </SwiperSlide>
         </Swiper>
       </section>
 
-      <section className="bg-almost-red py-10">
+      <section className="bg-almost-red p-5">
         <div className="container mx-auto">
           <h1 className="text-3xl mb-10">Наши контакты</h1>
-          <div className="grid grid-cols-[40%_50%] h-[500px] gap-10 mb-20">
-            <div className="border border-black rounded-lg flex flex-col justify-evenly text-center text-white">
+          <div className="flex flex-col lg:grid lg:grid-cols-[40%_50%] min-h-[500px] gap-10 mb-20">
+            <div className="border border-black rounded-lg flex flex-col justify-evenly text-center text-white min-h-[350px]">
               <p>phone</p>
               <p>location</p>
               <p>gmail</p>
@@ -245,7 +245,7 @@ function Home() {
               to="https://yandex.uz/maps/org/208027049709/?ll=59.618553%2C42.471601&z=16.65"
               target="_blank"
             >
-              <img src={Local} className="w-full h-full" />
+              <img src={Local} className="w-full h-full min-h-[350px]" />
             </NavLink>
           </div>
         </div>

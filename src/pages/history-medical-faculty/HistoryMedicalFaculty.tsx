@@ -1,7 +1,7 @@
 import BG from "../../assets/images/bgHome1.png";
 function HistoryMedicalFaculty() {
   return (
-    <div className="container mx-auto py-5 space-y-10">
+    <div className="container mx-auto p-5 space-y-10">
       <h1 className="text-4xl font-bold">История факультета</h1>
       <img src={BG} alt="" />
       <p className="text-2xl">
