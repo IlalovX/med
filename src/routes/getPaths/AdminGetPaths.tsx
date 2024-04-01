@@ -1,56 +1,165 @@
 export const getRouteAdmin = () => {
-  return "/admin";
+  return "/admin/*";
 };
 
 export const getRouteAdminUsers = () => {
-  return "/admin/users";
+  return "users";
 };
 
 export const getRouteAdminUserDetails = (id: string) => {
   if (id) {
-    return `/admin/users/${id}`;
+    return `users/${id}`;
   }
-  return "/admin/users/:id";
+  return "users/:id";
 };
 
 export const getRouteAdminAddUser = () => {
-  return "/admin/users/add";
+  return "users/add";
+};
+export const getRouteAdminEditUser = (id: string) => {
+  if (id) {
+    return `users/edit/${id}`;
+  }
+  return "users/edit/:id";
 };
 
 export const getRouteAdminNews = () => {
-  return "/admin/news";
+  return "news";
 };
 
 export const getRouteAdminNewDetails = (id?: string) => {
   if (id) {
-    return `/admin/news/${id}`;
+    return `news/${id}`;
   }
-  return "/admin/news/:id";
+  return "news/:id";
 };
 
 export const getRouteAdminAddNews = () => {
-  return "/admin/news/add";
+  return "news/add";
 };
 
 export const getRouteAdminAdverts = () => {
-  return "/admin/adverts";
+  return "adverts";
 };
 
 export const getRouteAdminAddAdverts = () => {
-  return "/admin/adverts/add";
+  return "adverts/add";
 };
 
-export const getRouteAdminAdvertsDetails = (
-  facultyId: string,
-  type: string
-) => {
-  if (facultyId && type) {
-    return `/admin/adverts/${facultyId}/${type}`;
-  } else if (facultyId) {
-    return `/admin/adverts/${facultyId}`;
+export const getRouteAdminAdvertsDetails = (id: string) => {
+  if (id) {
+    return `adverts/${id}`;
   }
-  return "/admin/adverts/:facultyId/:type?";
+  return "adverts/:id";
+};
+export const getRouteAdminPhotoGallery = () => {
+  return "photo_gallery";
+};
+export const getRouteAdminAboutInstitute = (type: string) => {
+  if (type) {
+    return `about_institute/${type}`;
+  }
+  return "about_institute/:type?";
+};
+export const getRouteAdminAdviceInstitute = (type: string) => {
+  if (type) {
+    return `advice_institute/${type}`;
+  }
+  return "advice_institute/:type?";
+};
+
+export const getRouteAdminDocuments = (type: string) => {
+  if (type) {
+    return `documents/${type}`;
+  }
+  return "documents/:type?";
+};
+export const getRouteAdminScientific = (type: string) => {
+  if (type) {
+    return `scientific/${type}`;
+  }
+  return "scientific/:type?";
+};
+export const getRouteFaculties = () => {
+  return "faculties";
+};
+export const getRouteAdminFaculty = (id: string, type: string) => {
+  if (id && type) {
+    return `faculties/about_medical_faculty/${id}/${type}`;
+  } else if (id) {
+    return `faculties/about_medical_faculty/${id}`;
+  }
+  return "faculties/about_medical_faculty/:id/:type?";
+};
+export const getRouteAdminScientificFaculty = (id: string) => {
+  if (id) {
+    return `faculties/student_scientific_society_medical_faculty/${id}`;
+  }
+  return "faculties/student_scientific_society_medical_faculty/:id";
+};
+export const getRouteAdminDepartments = () => {
+  return "departments";
+};
+export const getRouteAdminDepartmentFaculty = (id: string) => {
+  if (id) {
+    return `departments/departments_medical_faculty/${id}`;
+  }
+  return "departments/departments_medical_faculty/:id/:type?";
+};
+export const getRouteAdminAboutDepartment = (department: string) => {
+  if (department) {
+    return `about_department_medical_faculty/${department}`;
+  }
+  return "about_department_medical_faculty/:department";
+};
+export const getRouteAdminHistoryDepartment = (department: string) => {
+  if (department) {
+    return `history_department_medical_faculty/${department}`;
+  }
+  return "history_department_medical_faculty/:department";
+};
+
+export const getRouteAdminStructureDepartment = (department: string) => {
+  if (department) {
+    return `structure_department_medical_faculty/${department}`;
+  }
+  return "structure_department_medical_faculty/:department";
+};
+
+export const getRouteAdminSpiritualDepartment = (department: string) => {
+  if (department) {
+    return `spiritual_and_enlightening_department_medical_faculty/${department}`;
+  }
+  return "spiritual_and_enlightening_department_medical_faculty/:department";
+};
+
+export const getRouteAdminMethodologicalDepartment = (department: string) => {
+  if (department) {
+    return `methodological_department_medical_faculty/${department}`;
+  }
+  return "methodological_department_medical_faculty/:department";
+};
+
+export const getRouteAdminResearchDepartment = (department: string) => {
+  if (department) {
+    return `research_work_department_medical_faculty/${department}`;
+  }
+  return "research_work_department_medical_faculty/:department";
+};
+
+export const getRouteAdminScientificDepartment = (department: string) => {
+  if (department) {
+    return `student_scientific_society_department_medical_faculty/${department}`;
+  }
+  return "student_scientific_society_department_medical_faculty/:department";
+};
+
+export const getRouteAdminInternationalDepartment = (department: string) => {
+  if (department) {
+    return `international_partnership_department_medical_faculty/${department}`;
+  }
+  return "international_partnership_department_medical_faculty/:department";
 };
 export const getRouteAdminSettings = () => {
-  return "/admin/settings";
+  return "settings";
 };

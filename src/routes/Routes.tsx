@@ -221,12 +221,7 @@ const HistorySimulationCenter = lazy(
 const DirectorsSimulationCenter = lazy(
   () => import("../pages/director-simulation-center/DirectorSimulationCenter")
 );
-const ContactInfoSimulationCenter = lazy(
-  () =>
-    import(
-      "../pages/contact-information-simulation-center/ContactInfoSimulationCenter"
-    )
-);
+
 const RegionalOffices = lazy(
   () => import("../pages/regional-offices/RegionalOffices")
 );
@@ -250,7 +245,129 @@ const News = lazy(() => import("../pages/news/News"));
 const NewsDetail = lazy(() => import("../pages/news-detail/NewDetail"));
 const Adverts = lazy(() => import("../pages/adverts/Adverts"));
 const AdvertDetail = lazy(() => import("../pages/advert-detail/AdvertDetail"));
+const Instruction = lazy(() => import("../pages/instruction/Instruction"));
+const ScheduleSesBachelor = lazy(
+  () => import("../pages/schedule-sec-bachelor/ScheduleSesBachelor")
+);
+const ClassSchedule = lazy(
+  () => import("../pages/class-schedule/ClassSchedule")
+);
+const ClassScheduleDetail = lazy(
+  () => import("../pages/class-schedule-detail/ClassScheduleDetail")
+);
+const MagClassSchedule = lazy(
+  () => import("../pages/mag-schedule/MagSchedule")
+);
+const MagClassScheduleDetail = lazy(
+  () => import("../pages/mag-schedule-detail/MagScheduleDetail")
+);
+const Learning = lazy(() => import("../pages/learning/Learning"));
+const LearningMag = lazy(() => import("../pages/learning-mag/LearningMag"));
+const Attendance = lazy(() => import("../pages/attendance/Attendance"));
+const CatalogSciences = lazy(
+  () => import("../pages/catalog-sciences/CatalogSciences")
+);
+const SameScholarships = lazy(
+  () => import("../pages/same-scholarships/SameScholarships")
+);
+const ProtectionMasterDesert = lazy(
+  () => import("../pages/protection-master-dessert/ProtectionMasterDesert")
+);
+const MastersThesisTopics = lazy(
+  () => import("../pages/masters-thesis-topics/MastersThesisTopics")
+);
+const ScheduleSecMaster = lazy(
+  () => import("../pages/schedule-sec-masters/ScheduleSecMaster")
+);
+const InstructionClinic = lazy(
+  () => import("../pages/instruction-clinic/InstructionClinic")
+);
+const AttendanceClinic = lazy(
+  () => import("../pages/attendance-clinic/AttendanceClinic")
+);
+const StateExams = lazy(() => import("../pages/state-exams/StateExams"));
+const ClassScheduleInter = lazy(
+  () => import("../pages/class-schedule-inter/ClassScheduleInter")
+);
+const ClassScheduleInterDetail = lazy(
+  () => import("../pages/class-schedule-inter-detail/ClassScheduleInterDetail")
+);
+const ForeignStudentsStudying = lazy(
+  () => import("../pages/foreign-students-studying/ForeignStudentsStudying")
+);
+const AmountPaymentInternationalStudent = lazy(
+  () =>
+    import(
+      "../pages/amount-payment-international-students/AmountPaymentInternationalStudents"
+    )
+);
+const InfoResidenceForeignStudent = lazy(
+  () =>
+    import(
+      "../pages/information-residence-foreign-students/InformationResidenceForeignStudents"
+    )
+);
+const AdmissionProcedure = lazy(
+  () => import("../pages/admission-procedure/AdmissionProcedure")
+);
 
+const AdmissionProcudereInt = lazy(
+  () => import("../pages/admission-procedure-int/AdmissionProcedureInt")
+);
+const AdmissionProcedureMag = lazy(
+  () => import("../pages/admission-procedure-mag/AdmissionProcedureMag")
+);
+const AdmissionCommitteeNews = lazy(
+  () => import("../pages/admissions-committee-news/AdmissionsCommitteeNews")
+);
+const BachelorRequiredDocuments = lazy(
+  () => import("../pages/bachelor-required-documents/BachelorRequiredDocuments")
+);
+const ChecklistList = lazy(
+  () => import("../pages/checklist-list/ChecklistList")
+);
+const ClinicReceptionQuota = lazy(
+  () => import("../pages/clinic-reception-quota/ClinicReceptionQuota")
+);
+const ClinicRequiredDocuments = lazy(
+  () => import("../pages/clinic-required-documents/ClinicRequiredDocuments")
+);
+const JtrainingReceptionQuota = lazy(
+  () => import("../pages/jtraining-reception-quota/JtrainingReceptionQuota")
+);
+const MasterReceptionQuota = lazy(
+  () => import("../pages/master-reception-quota/MasterReceptionQuota")
+);
+const Memo = lazy(() => import("../pages/memo/Memo"));
+const MemoClinic = lazy(() => import("../pages/memo-clinic/MemoClinic"));
+const MemoJtTraining = lazy(
+  () => import("../pages/memo-jt-training/MemoJtTraining")
+);
+const MemoMag = lazy(() => import("../pages/memo-mag/MemoMag"));
+const MonitoringReception = lazy(
+  () => import("../pages/monitoring-reception/MonitoringReception")
+);
+const PackageAcceptedDocuments = lazy(
+  () => import("../pages/package-accepted-documents/PackageAcceptedDocuments")
+);
+
+const PackageAcceptedDocumentsJt = lazy(
+  () =>
+    import("../pages/package-accepted-documents-jt/PackageAcceptedDocumentsJt")
+);
+const PlaceAdmissionOffice = lazy(
+  () => import("../pages/place-admission-office/PlaceAdmissionOffice")
+);
+const RectorsAppeal = lazy(
+  () => import("../pages/rectors-appeal/RectorsAppeal")
+);
+const TargetReception = lazy(
+  () => import("../pages/target-reception/TargetReception")
+);
+const AdmissionsJtNews = lazy(
+  () => import("../pages/admissions-jt-news/AdmissionsJtNews")
+);
+const Faq = lazy(() => import("../pages/faq/Faq"));
 function PathRoutes() {
   return (
     <Routes>
@@ -807,14 +924,7 @@ function PathRoutes() {
             </Suspense>
           }
         />
-        <Route
-          path={PathNames[PathEnums.CONTACT_INFO_SIMULATION_CENTER]}
-          element={
-            <Suspense>
-              <ContactInfoSimulationCenter />
-            </Suspense>
-          }
-        />
+
         <Route
           path={PathNames[PathEnums.REGIONAL_OFFICES]}
           element={
@@ -919,7 +1029,362 @@ function PathRoutes() {
             </Suspense>
           }
         />
+        <Route
+          path={PathNames[PathEnums.INSTRUCTION]}
+          element={
+            <Suspense>
+              <Instruction />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.SCHEDULE_SEC_BACHELOR]}
+          element={
+            <Suspense>
+              <ScheduleSesBachelor />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CLASS_SCHEDULE]}
+          element={
+            <Suspense>
+              <ClassSchedule />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CLASS_SCHEDULE_DETAIL]}
+          element={
+            <Suspense>
+              <ClassScheduleDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MAG_CLASS_SCHEDULE]}
+          element={
+            <Suspense>
+              <MagClassSchedule />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MAG_CLASS_SCHEDULE_DETAIL]}
+          element={
+            <Suspense>
+              <MagClassScheduleDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.LEARNING]}
+          element={
+            <Suspense>
+              <Learning />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.LEARNING_MAG]}
+          element={
+            <Suspense>
+              <LearningMag />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ATTENDANCE]}
+          element={
+            <Suspense>
+              <Attendance />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CATALOGUE_SCIENCES]}
+          element={
+            <Suspense>
+              <CatalogSciences />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.SAME_SCHOLARSHIPS]}
+          element={
+            <Suspense>
+              <SameScholarships />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PROTECTION_MASTER_DESSERT]}
+          element={
+            <Suspense>
+              <ProtectionMasterDesert />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MASTERS_THESIS_TOPICS]}
+          element={
+            <Suspense>
+              <MastersThesisTopics />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.SCHEDULE_SEC_MASTERS]}
+          element={
+            <Suspense>
+              <ScheduleSecMaster />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.INSTRUCTION_CLINIC]}
+          element={
+            <Suspense>
+              <InstructionClinic />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ATTENDANCE_CLINIC]}
+          element={
+            <Suspense>
+              <AttendanceClinic />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.STATE_EXAMS]}
+          element={
+            <Suspense>
+              <StateExams />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CLASS_SCHEDULE_INTER]}
+          element={
+            <Suspense>
+              <ClassScheduleInter />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CLASS_SCHEDULE_INTER_DETAIL]}
+          element={
+            <Suspense>
+              <ClassScheduleInterDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.FOREIGN_STUDENTS_STUDYING]}
+          element={
+            <Suspense>
+              <ForeignStudentsStudying />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.AMOUNT_PAYMENT_INTERNATIONAL_STUDENTS]}
+          element={
+            <Suspense>
+              <AmountPaymentInternationalStudent />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.INFORMATION_RESIDENCE_FOREIGN_STUDENTS]}
+          element={
+            <Suspense>
+              <InfoResidenceForeignStudent />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ADMISSIONS_COMMITTEE_NEWS]}
+          element={
+            <Suspense>
+              <AdmissionCommitteeNews />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MEMO]}
+          element={
+            <Suspense>
+              <Memo />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ADMISSION_PROCEDURE]}
+          element={
+            <Suspense>
+              <AdmissionProcedure />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.TARGET_RECEPTION]}
+          element={
+            <Suspense>
+              <TargetReception />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.BACHELOR_REQUIRED_DOCUMENTS]}
+          element={
+            <Suspense>
+              <BachelorRequiredDocuments />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MONITORING_RECEPTION]}
+          element={
+            <Suspense>
+              <MonitoringReception />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PLACE_ADMISSION_OFFICE]}
+          element={
+            <Suspense>
+              <PlaceAdmissionOffice />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CHECKLIST_LIST]}
+          element={
+            <Suspense>
+              <ChecklistList />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MEMO_MAG]}
+          element={
+            <Suspense>
+              <MemoMag />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ADMISSION_PROCEDURE_MAG]}
+          element={
+            <Suspense>
+              <AdmissionProcedureMag />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MASTER_RECEPTION_QUOTA]}
+          element={
+            <Suspense>
+              <MasterReceptionQuota />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PACKAGE_ACCEPTED_DOCUMENTS]}
+          element={
+            <Suspense>
+              <PackageAcceptedDocuments />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.RECTORS_APPEAL]}
+          element={
+            <Suspense>
+              <RectorsAppeal />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.ADMISSION_PROCEDURE_INT]}
+          element={
+            <Suspense>
+              <AdmissionProcudereInt />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MEMO_CLINIC]}
+          element={
+            <Suspense>
+              <MemoClinic />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path={PathNames[PathEnums.CLINIC_RECEPTION_QUOTA]}
+          element={
+            <Suspense>
+              <ClinicReceptionQuota />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.CLINIC_REQUIRED_DOCUMENTS]}
+          element={
+            <Suspense>
+              <ClinicRequiredDocuments />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path={PathNames[PathEnums.ADMISSIONS_JT_NEWS]}
+          element={
+            <Suspense>
+              <AdmissionsJtNews />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.MEMO_JT_TRAINING]}
+          element={
+            <Suspense>
+              <MemoJtTraining />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.JTRAINING_RECEPTION_QUOTA]}
+          element={
+            <Suspense>
+              <JtrainingReceptionQuota />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.PACKAGE_ACCEPTED_DOCUMENTS_JT]}
+          element={
+            <Suspense>
+              <PackageAcceptedDocumentsJt />
+            </Suspense>
+          }
+        />
+        <Route
+          path={PathNames[PathEnums.FAQ]}
+          element={
+            <Suspense>
+              <Faq />
+            </Suspense>
+          }
+        />
       </Route>
+
       <Route
         path={PathNames[PathEnums.AUTH]}
         element={

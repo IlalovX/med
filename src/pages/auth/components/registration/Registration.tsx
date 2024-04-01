@@ -1,6 +1,7 @@
 import { Form, Input } from "antd";
 
 import BgAuth from "../../../../assets/images/bgAuth.png";
+import SubmitButton from "../../../../components/submit-button/SubmitButton";
 
 const onFinish = (values: any) => {
   console.log("Success:", values);
@@ -17,18 +18,24 @@ type FieldType = {
 };
 
 function Registration() {
+  const [form] = Form.useForm();
   return (
-    <div className="grid grid-cols-[60%_40%]">
-      <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center sm:grid sm:grid-cols-[60%_40%]">
+      <div className="flex items-center justify-center p-5">
         <Form
+          form={form}
           initialValues={{ remember: true }}
           onFinish={onFinish}
+          layout="vertical"
           onFinishFailed={onFinishFailed}
           autoComplete="off"
           className="flex flex-col justify-between "
+          labelCol={{ flex: "110px" }}
         >
-          <h1 className="text-4xl mb-10">Регистрация</h1>
-          <div className="flex space-x-5 mb-10">
+          <h1 className="text-2xl sm:text-4xl mb-5 sm:mb-10 text-center sm:text-start">
+            Регистрация
+          </h1>
+          <div className="flex flex-col sm:flex-row gap-5 mb-5 sm:mb-10">
             <Form.Item<FieldType>
               label="Логин"
               name="username"
@@ -39,7 +46,7 @@ function Registration() {
                 },
               ]}
             >
-              <Input className="text-2xl" />
+              <Input className="text-xl sm:text-2xl" />
             </Form.Item>
             <Form.Item<FieldType>
               label="Почта"
@@ -51,7 +58,7 @@ function Registration() {
                 },
               ]}
             >
-              <Input className="text-2xl" />
+              <Input className="text-xl sm:text-2xl" />
             </Form.Item>
           </div>
 
@@ -65,18 +72,17 @@ function Registration() {
               },
             ]}
           >
-            <Input.Password className="text-2xl " />
+            <Input.Password className="text-sm:text-2xl " />
           </Form.Item>
 
-          <button
-            type="submit"
-            className=" w-full font-bold  text-center bg-almost-blue text-white  rounded-md text-2xl  h-10 hover:opacity-60 mt-14"
-          >
-            Регистрация
-          </button>
+          <Form.Item>
+            <SubmitButton form={form} w="w-full">
+              Регистрация
+            </SubmitButton>
+          </Form.Item>
         </Form>
       </div>
-      <img src={BgAuth} className="w-full h-screen" />
+      <img src={BgAuth} className="sm:w-full sm:min-h-screen hidden sm:block" />
     </div>
   );
 }

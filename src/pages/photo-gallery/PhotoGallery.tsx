@@ -6,7 +6,7 @@ import img4 from "../../assets/images/cabinets/Practice.png";
 function PhotoGallery() {
   return (
     <div className="bg-almost-red ">
-      <div className="container mx-auto p-5 p-5 text-white space-y-5">
+      <div className="container mx-auto p-5  text-white space-y-5">
         <h1 className="text-4xl">Фотогалерея</h1>
         <div className="flex gap-5">
           <img src={img} className="object-cover" />

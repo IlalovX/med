@@ -17,8 +17,10 @@ function InternationalPartners() {
   return (
     <div className="bg-almost-blue">
       <div className="container mx-auto p-5 text-white space-y-5">
-        <h1 className="text-4xl">Международные партнеры</h1>
-        <div className="grid grid-cols-4 gap-5">
+        <h1 className="text-2xl sm:text-4xl font-bold">
+          Международные партнеры
+        </h1>
+        <div className="flex flex-col sm:grid sm:grid-cols-4 gap-5">
           <div className="border border-white p-5 flex items-center justify-center">
             <img src={RU} alt="" className="w-[233px] h-[155px]" />
           </div>

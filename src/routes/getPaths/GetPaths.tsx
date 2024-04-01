@@ -304,9 +304,7 @@ export const getRouteHistorySimulationCenter = () => {
 export const getRouteDirectorSimulationCenter = () => {
   return "/director_simulation_center";
 };
-export const getRouteContactInfoSimulationCenter = () => {
-  return "/contact_information_simulation_center";
-};
+
 export const getRouteRegionalOffices = () => {
   return "/regional_offices";
 };
@@ -325,8 +323,23 @@ export const getRouteInstruction = () => {
 export const getRouteScheduleSecBachelor = () => {
   return "/schedule_sec_bachelor";
 };
-export const getRouteClass_schedule = () => {
+export const getRouteClassSchedule = () => {
   return "/class_schedule";
+};
+export const getRouteClassScheduleDetail = (faculty: string, id: string) => {
+  if (faculty && id) {
+    return `/class_schedule/${faculty}/${id}`;
+  }
+  return "/class_schedule/:faculty/:id";
+};
+export const getRouteMagClassSchedule = () => {
+  return "/mag_class_schedule";
+};
+export const getRouteMagClassScheduleDetail = (faculty: string, id: string) => {
+  if (faculty && id) {
+    return `/mag_class_schedule/${faculty}/${id}`;
+  }
+  return "/mag_class_schedule/:faculty/:id";
 };
 export const getRouteLearning = () => {
   return "/learning";
@@ -335,7 +348,7 @@ export const getRouteAttendance = () => {
   return "/attendance";
 };
 export const getRouteCatalogueSciences = () => {
-  return "/catalogue_sciences";
+  return "/catalog_sciences";
 };
 export const getRouteSameScholarships = () => {
   return "/same_scholarships";
@@ -363,6 +376,15 @@ export const getRouteStateExams = () => {
 };
 export const getRouteClassScheduleInter = () => {
   return "/class_schedule_inter";
+};
+export const getRouteClassScheduleInterDetail = (
+  faculty: string,
+  id: string
+) => {
+  if (faculty && id) {
+    return `/class_schedule_inter/${faculty}/${id}`;
+  }
+  return "/class_schedule_inter/:faculty/:id";
 };
 export const getRouteForeignStudentsStudying = () => {
   return "/foreign_students_studying";
@@ -421,18 +443,14 @@ export const getRouteFaq = () => {
 export const getRouteMemoClinic = () => {
   return "/memo_clinic";
 };
-export const getRouteAdmissionProcedureClinic = () => {
-  return "/admission_procedure_clinic";
-};
+
 export const getRouteClinicReceptionQuota = () => {
   return "/clinic_reception_quota";
 };
 export const getRouteClinicRequiredDocuments = () => {
   return "/clinic_required_documents";
 };
-export const getRoutePackageAcceptedDocumentsClinic = () => {
-  return "/package_accepted_documents_clinic";
-};
+
 export const getRouteAdmissionsJtNews = () => {
   return "/admissions_jt_news";
 };

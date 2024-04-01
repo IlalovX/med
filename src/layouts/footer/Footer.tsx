@@ -8,6 +8,7 @@ import Instagram from "../../assets/svgs/footer/instagram.svg?react";
 import Whatsapp from "../../assets/svgs/footer/whatsapp.svg?react";
 import Facebook from "../../assets/svgs/footer/facebook.svg?react";
 import Logo from "../../assets/images/logo_Institut.png";
+
 function Footer() {
   return (
     <div className=" bg-black p-5 text-white">

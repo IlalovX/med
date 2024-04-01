@@ -11,6 +11,645 @@ import {
   ReconciliationOutlined,
 } from "@ant-design/icons";
 
+export const LANGUAGES = [
+  {
+    title: "russia",
+    abbr: "ru",
+  },
+  {
+    title: "english",
+    abbr: "en",
+  },
+  {
+    title: "karakalpak",
+    abbr: "kaa",
+  },
+  {
+    title: "uzbek",
+    abbr: "uz",
+  },
+];
+
+export const ABOUT_INSTITUTE = [
+  {
+    key: "1-1",
+    label: <NavLink to="information">Общая информация</NavLink>,
+  },
+  {
+    key: "1-2",
+    label: <NavLink to="structure_university">Структура института</NavLink>,
+  },
+  {
+    key: "1-3",
+    label: <NavLink to="institute_statute">Устав института</NavLink>,
+  },
+  {
+    key: "1-4",
+    label: (
+      <NavLink to="institute_certificates">Институтские сертификатты </NavLink>
+    ),
+  },
+  {
+    key: "1-5",
+    label: (
+      <NavLink to="internal_regulations">
+        Правила внутреннего распорядка
+      </NavLink>
+    ),
+  },
+  {
+    key: "1-6",
+    label: <NavLink to="educational_buildings">Учебные здания</NavLink>,
+  },
+  {
+    key: "1-7",
+    label: <NavLink to="laboratory_room">Лабораторная комната</NavLink>,
+  },
+  {
+    key: "1-8",
+    label: <NavLink to="life_students">Студенческие общежития</NavLink>,
+  },
+];
+export const ADVICE_INSTITUTE = [
+  {
+    key: "2-1",
+    label: (
+      <NavLink to="academic_council_statue">Положение об ученом совете</NavLink>
+    ),
+  },
+  {
+    key: "2-2",
+    label: (
+      <NavLink to="academic_council_members">Состав ученого совета</NavLink>
+    ),
+  },
+  {
+    key: "2-3",
+    label: (
+      <NavLink to="academic_council_agenda">
+        Повестка для ученого совета
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-4",
+    label: (
+      <NavLink to="academic_council_handouts">
+        Раздаточные материалы ученого совета
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-5",
+    label: (
+      <NavLink to="academic_council_resolutions">
+        Постановление ученого совета
+      </NavLink>
+    ),
+  },
+];
+export const DOCUMENTS = [
+  {
+    key: "3-1",
+    label: <NavLink to="about_documents">Об образовании</NavLink>,
+  },
+  {
+    key: "3-2",
+    label: (
+      <NavLink
+        to="https://president.uz/oz/site/documents?menu_id=144"
+        target="_blank"
+      >
+        Указы и Постановления Президента
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-3",
+    label: (
+      <NavLink to="ministry_documents">
+        Приказы министерства и решения коллегии
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-4",
+    label: <NavLink to="state_programs">Государственные программы</NavLink>,
+  },
+];
+export const FACULTIES = [
+  {
+    key: "1-1",
+    label: (
+      <NavLink to="about_medical_faculty/1">1-медицинский факультет</NavLink>
+    ),
+  },
+  {
+    key: "1-2",
+    label: (
+      <NavLink to="about_medical_faculty/2">2-медицинский факультет</NavLink>
+    ),
+  },
+  {
+    key: "1-3",
+    label: (
+      <NavLink to="about_medical_faculty/3">3-медицинский факультет</NavLink>
+    ),
+  },
+  {
+    key: "1-4",
+    label: (
+      <NavLink to="student_scientific_society_medical_faculty/1">
+        Центры и отделы
+      </NavLink>
+    ),
+  },
+];
+export const DEPARTMENTS = [
+  {
+    key: "2-1",
+    label: (
+      <NavLink to="departments_medical_faculty/1">
+        Кафедры лечебного факультета №1
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-2",
+    label: (
+      <NavLink to="departments_medical_faculty/2">
+        Кафедры лечебного факультета №2
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-3",
+    label: (
+      <NavLink to="departments_medical_faculty/3">
+        Кафедры лечебного факультета №3
+      </NavLink>
+    ),
+  },
+];
+export const SCIENTIFIC = [
+  {
+    key: "3-1",
+    label: (
+      <NavLink to="education_quality_department">
+        Отдел контроля качества образования
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-2",
+    label: (
+      <NavLink to="education_department">
+        Учебно-методическое управление
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-3",
+    label: <NavLink to="master_department">Отдел магистратуры</NavLink>,
+  },
+  {
+    key: "3-4",
+    label: (
+      <NavLink to="clinical_residency_department">
+        Клиническая ординатура
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-5",
+    label: (
+      <NavLink to="international_relations_department">
+        Отдел международных связей
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-6",
+    label: (
+      <NavLink to="scientific_research_department">
+        Отдел научных исследований
+      </NavLink>
+    ),
+  },
+
+  {
+    key: "3-7",
+    label: (
+      <NavLink to="gifted_students">
+        Отдел по работе с одаренными студентами
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-8",
+    label: (
+      <NavLink to="talented_students">Студенческое научное общество</NavLink>
+    ),
+  },
+];
+export const FINANCE = [
+  {
+    key: "4-1",
+    label: <NavLink to="accounting">Бухгалтерия</NavLink>,
+  },
+  {
+    key: "4-2",
+    label: <NavLink to="marketing">Маркетинг</NavLink>,
+  },
+  {
+    key: "4-3",
+    label: (
+      <NavLink to="planning_finance_department">
+        Отдел планирования и финансов
+      </NavLink>
+    ),
+  },
+];
+export const CENTERS_ORGANIZATIONS = [
+  {
+    key: "5-1",
+    label: (
+      <NavLink to="information_technologies_center">
+        Центр цифровых образовательных технологий
+      </NavLink>
+    ),
+  },
+  {
+    key: "5-2",
+    label: (
+      <NavLink to="information_resource_center">
+        Центр информационных ресурсов
+      </NavLink>
+    ),
+  },
+  {
+    key: "5-3",
+    label: <NavLink to="youth_union_center">Союз молодежи</NavLink>,
+  },
+  {
+    key: "5-4",
+    label: <NavLink to="women_committee_department">Женский комитет</NavLink>,
+  },
+  {
+    key: "5-5",
+    label: (
+      <NavLink to="communication_development_center">
+        Центр развития коммуникативной компетенции
+      </NavLink>
+    ),
+  },
+];
+export const OTHERS_DEPARTMENTS = [
+  {
+    key: "6-1",
+    label: (
+      <NavLink to="spirituality_enlightenment_department">
+        Отдел по делам молодежи, духовности и просвещения
+      </NavLink>
+    ),
+  },
+  {
+    key: "6-2",
+    label: <NavLink to="press_secretary">Процесс-служба Института</NavLink>,
+  },
+  {
+    key: "6-3",
+    label: <NavLink to="human_resource_department">Отдел кадров</NavLink>,
+  },
+  {
+    key: "6-4",
+    label: (
+      <NavLink to="chancellery_department">Заведующая канцелярией</NavLink>
+    ),
+  },
+  {
+    key: "6-5",
+    label: <NavLink to="compliance_control">Комплаенс-контроль</NavLink>,
+  },
+  {
+    key: "6-6",
+    label: <NavLink to="archive_department">Архив института</NavLink>,
+  },
+  {
+    key: "6-7",
+    label: <NavLink to="legal_services_department">Юрист</NavLink>,
+  },
+  {
+    key: "6-8",
+    label: <NavLink to="psychologist">Психолог</NavLink>,
+  },
+  {
+    key: "6-9",
+    label: <NavLink to="union_committee">Профсоюзы</NavLink>,
+  },
+];
+export const SIMULATIONS_CENTER = [
+  {
+    key: "7-1",
+    label: <NavLink to="simulation_center">Деятельность центра </NavLink>,
+  },
+  {
+    key: "7-2",
+    label: <NavLink to="history_simulation_center">История центра</NavLink>,
+  },
+  {
+    key: "7-3",
+    label: <NavLink to="director_simulation_center">Сотрудники центра</NavLink>,
+  },
+  {
+    key: "7-4",
+    label: <NavLink to="place_admission_office">Контактная информация</NavLink>,
+  },
+];
+export const CENTER_CAREERS = [
+  {
+    key: "8-1",
+    label: <NavLink to="regional_offices">Региональные управления</NavLink>,
+  },
+  {
+    key: "8-2",
+    label: <NavLink to="example_contracts">Пример контрактов</NavLink>,
+  },
+  {
+    key: "8-3",
+    label: <NavLink to="graduates">Выпускники</NavLink>,
+  },
+  {
+    key: "5-4",
+    label: <NavLink to="career_center_faq">Часто задаваемые вопросы</NavLink>,
+  },
+];
+export const STUDENTS_BACHELOR = [
+  {
+    key: "1-1",
+    label: <NavLink to="instruction">Для студентов</NavLink>,
+  },
+  {
+    key: "1-2",
+    label: <NavLink to="schedule_sec_bachelor">График проведения ГЭК</NavLink>,
+  },
+  {
+    key: "1-3",
+    label: <NavLink to="class_schedule">Расписание занятий</NavLink>,
+  },
+  {
+    key: "1-4",
+    label: <NavLink to="learning">Успеваемость</NavLink>,
+  },
+  {
+    key: "1-5",
+    label: <NavLink to="attendance">Посещаемость</NavLink>,
+  },
+  {
+    key: "1-6",
+    label: <NavLink to="catalog_sciences">Каталог наук</NavLink>,
+  },
+  {
+    key: "1-7",
+    label: <NavLink to="same_scholarships">Стипендии</NavLink>,
+  },
+  {
+    key: "1-8",
+    label: <NavLink to="life_students">Общежитие</NavLink>,
+  },
+];
+export const STUDENTS_MASTER = [
+  {
+    key: "2-1",
+    label: <NavLink to="learning_mag">Успеваемость</NavLink>,
+  },
+  {
+    key: "2-2",
+    label: <NavLink to="mag_class_schedule">Расписания</NavLink>,
+  },
+  {
+    key: "2-3",
+    label: <NavLink to="same_scholarships">Стипендии</NavLink>,
+  },
+  {
+    key: "2-4",
+    label: (
+      <NavLink to="protection_master_dessert">
+        Защита магистерских диссертаций
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-5",
+    label: (
+      <NavLink to="masters_thesis_topics">
+        Темы магистерской диссертации
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-6",
+    label: <NavLink to="schedule_sec_masters">График проведения ГЭК</NavLink>,
+  },
+];
+export const STUDENTS_RESIDENCY = [
+  {
+    key: "3-1",
+    label: <NavLink to="instruction_clinic">Для студентов</NavLink>,
+  },
+  {
+    key: "3-2",
+    label: <NavLink to="attendance_clinic">Посещаемость</NavLink>,
+  },
+  {
+    key: "3-3",
+    label: <NavLink to="state_exams">Государственные экзамены</NavLink>,
+  },
+];
+export const STUDENTS_INTER = [
+  {
+    key: "4-1",
+    label: <NavLink to="class_schedule_inter">Расписание занятий</NavLink>,
+  },
+  {
+    key: "4-2",
+    label: (
+      <NavLink to="foreign_students_studying">
+        Иностранные студенты, обучающиеся в институте
+      </NavLink>
+    ),
+  },
+  {
+    key: "4-3",
+    label: (
+      <NavLink to="amount_payment_international_students">
+        Сумма оплаты для иностранных студентов
+      </NavLink>
+    ),
+  },
+  {
+    key: "4-4",
+    label: (
+      <NavLink to="information_residence_foreign_students">
+        Информация о проживании иностранных студентов
+      </NavLink>
+    ),
+  },
+];
+export const APPLICANTS_BACHELOR = [
+  {
+    key: "1-1",
+    label: (
+      <NavLink to="admissions_committee_news">
+        Новости приемной комиссии
+      </NavLink>
+    ),
+  },
+  {
+    key: "1-2",
+    label: <NavLink to="memo">Памятка абитуриента</NavLink>,
+  },
+  {
+    key: "1-3",
+    label: <NavLink to="admission_procedure">Процедура приема</NavLink>,
+  },
+  {
+    key: "1-4",
+    label: <NavLink to="target_reception">Квоты приема</NavLink>,
+  },
+  {
+    key: "1-5",
+    label: (
+      <NavLink to="bachelor_required_documents">
+        Перечень документов для поступления в вузы
+      </NavLink>
+    ),
+  },
+  {
+    key: "1-6",
+    label: <NavLink to="monitoring_reception">Мониторинг приема</NavLink>,
+  },
+  {
+    key: "1-7",
+    label: (
+      <NavLink to="place_admission_office">Адрес приемной комиссии</NavLink>
+    ),
+  },
+];
+export const APPLICANTS_MASTER = [
+  {
+    key: "2-1",
+    label: <NavLink to="memo_mag">Памятка абитуриента</NavLink>,
+  },
+  {
+    key: "2-2",
+    label: <NavLink to="admission_procedure_mag">Процедура приема</NavLink>,
+  },
+  {
+    key: "2-3",
+    label: <NavLink to="master_reception_quota">Квоты приема</NavLink>,
+  },
+  {
+    key: "2-4",
+    label: (
+      <NavLink to="package_accepted_documents">
+        Перечень документов для поступления а вузы
+      </NavLink>
+    ),
+  },
+  {
+    key: "2-5",
+    label: (
+      <NavLink to="place_admission_office">Адрес приемной комиссии</NavLink>
+    ),
+  },
+  {
+    key: "2-6",
+    label: <NavLink to="checklist_list">Список контрольных списков</NavLink>,
+  },
+];
+export const APPLICANTS_RESIDENCY = [
+  {
+    key: "3-1",
+    label: <NavLink to="memo_clinic">Памятка абитуриентам</NavLink>,
+  },
+  {
+    key: "3-2",
+    label: <NavLink to="clinic_reception_quota">Положения о приеме</NavLink>,
+  },
+  {
+    key: "3-3",
+    label: <NavLink to="admission_procedure_int">Квота приема</NavLink>,
+  },
+  {
+    key: "3-4",
+    label: (
+      <NavLink to="clinic_required_documents">
+        Документы для поступления
+      </NavLink>
+    ),
+  },
+  {
+    key: "3-5",
+    label: (
+      <NavLink to="place_admission_office">Адрес приёмной комиссии</NavLink>
+    ),
+  },
+];
+export const ADMISSION_PROGRAMS = [
+  {
+    key: "4-1",
+    label: <NavLink to="admissions_jt_news">Новости приемной комиссии</NavLink>,
+  },
+  {
+    key: "4-2",
+    label: <NavLink to="memo_jt_training">Памятка абитурента</NavLink>,
+  },
+  {
+    key: "4-3",
+    label: <NavLink to="jtraining_reception_quota">Квота приема</NavLink>,
+  },
+  {
+    key: "4-4",
+    label: (
+      <NavLink to="package_accepted_documents_jt">
+        Документы для поступления
+      </NavLink>
+    ),
+  },
+];
+export const PARTNERS_INSTITUTE = [
+  {
+    key: "1",
+    label: <NavLink to="international_partners">Муждународные</NavLink>,
+  },
+  {
+    key: "2",
+    label: <NavLink to="republican_partners">Республиканские</NavLink>,
+  },
+  {
+    key: "3",
+    label: <NavLink to="treaty">Договора</NavLink>,
+  },
+  {
+    key: "4",
+    label: <NavLink to="joint">Совместные</NavLink>,
+  },
+];
+export const NEWS_INSTITUTE = [
+  {
+    key: "1",
+    label: <NavLink to="news">Новости</NavLink>,
+  },
+  {
+    key: "2",
+    label: <NavLink to="adverts">Объявления</NavLink>,
+  },
+  {
+    key: "3",
+    label: <NavLink to="photo_gallery">Фотогалерея</NavLink>,
+  },
+];
 export const navMenuItems = [
   {
     title: "Институт",
@@ -18,137 +657,17 @@ export const navMenuItems = [
       {
         key: "1",
         label: "Об институте",
-        children: [
-          {
-            key: "1-1",
-            label: <NavLink to="/information">Общая информация</NavLink>,
-          },
-          {
-            key: "1-2",
-            label: (
-              <NavLink to="/structure_university">Структура института</NavLink>
-            ),
-          },
-          {
-            key: "1-3",
-            label: <NavLink to="/institute_statute">Устав института</NavLink>,
-          },
-          {
-            key: "1-4",
-            label: (
-              <NavLink to="/institute_certificates">
-                Институтские сертификатты{" "}
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-5",
-            label: (
-              <NavLink to="/internal_regulations">
-                Правила внутреннего распорядка
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-6",
-            label: (
-              <NavLink to="/educational_buildings">Учебные здания</NavLink>
-            ),
-          },
-          {
-            key: "1-7",
-            label: (
-              <NavLink to="/laboratory_room">Лабораторная комната</NavLink>
-            ),
-          },
-          {
-            key: "1-6",
-            label: (
-              <NavLink to="/life_students">Студенческие общедития</NavLink>
-            ),
-          },
-        ],
+        children: ABOUT_INSTITUTE,
       },
       {
         key: "2",
         label: "Совет института",
-        children: [
-          {
-            key: "2-1",
-            label: (
-              <NavLink to="/academic_council_statue">
-                Положение об ученом совете
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-2",
-            label: (
-              <NavLink to="/academic_council_members">
-                Состав ученого совета
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-3",
-            label: (
-              <NavLink to="/academic_council_agenda">
-                Повестка для ученого совета
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-4",
-            label: (
-              <NavLink to="/academic_council_handouts">
-                Раздаточные материалы ученого совета
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-5",
-            label: (
-              <NavLink to="/academic_council_resolutions">
-                Постановление ученого совета
-              </NavLink>
-            ),
-          },
-        ],
+        children: ADVICE_INSTITUTE,
       },
       {
         key: "3",
         label: "Документы",
-        children: [
-          {
-            key: "3-1",
-            label: <NavLink to="/about_documents">Об образовании</NavLink>,
-          },
-          {
-            key: "3-2",
-            label: (
-              <NavLink
-                to="https://president.uz/oz/site/documents?menu_id=144"
-                target="_blank"
-              >
-                Указы и Постановления Президента
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-3",
-            label: (
-              <NavLink to="/ministry_documents">
-                Приказы министерства и решения коллегии
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-4",
-            label: (
-              <NavLink to="/state_programs">Государственные программы</NavLink>
-            ),
-          },
-        ],
+        children: DOCUMENTS,
       },
       {
         key: 4,
@@ -162,321 +681,42 @@ export const navMenuItems = [
       {
         key: "1",
         label: "Факультеты",
-        children: [
-          {
-            key: "1-1",
-            label: (
-              <NavLink to="/about_medical_faculty/1">
-                1-медицинский факультет
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-2",
-            label: (
-              <NavLink to="/about_medical_faculty/2">
-                2-медицинский факультет
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-3",
-            label: (
-              <NavLink to="/about_medical_faculty/3">
-                3-медицинский факультет
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-4",
-            label: (
-              <NavLink to="/student_scientific_society_medical_faculty/1">
-                Центры и отделы
-              </NavLink>
-            ),
-          },
-        ],
+        children: FACULTIES,
       },
       {
         key: "2",
         label: "Кафедры",
-        children: [
-          {
-            key: "2-1",
-            label: (
-              <NavLink to="/departments_medical_faculty/1">
-                Кафедры лечебного факультета №1
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-2",
-            label: (
-              <NavLink to="/departments_medical_faculty/2">
-                Кафедры лечебного факультета №2
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-3",
-            label: (
-              <NavLink to="/departments_medical_faculty/3">
-                Кафедры лечебного факультета №3
-              </NavLink>
-            ),
-          },
-        ],
+        children: DEPARTMENTS,
       },
       {
         key: "3",
         label: "Научные и учебные отделы",
-        children: [
-          {
-            key: "3-1",
-            label: (
-              <NavLink to="/education_quality_department">
-                Отдел контроля качества образования
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-2",
-            label: (
-              <NavLink to="/education_department">
-                Учебно-методическое управление
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-3",
-            label: (
-              <NavLink to="/master_department">Отдел магистратуры</NavLink>
-            ),
-          },
-          {
-            key: "3-4",
-            label: (
-              <NavLink to="/clinical_residency_department">
-                Клиническая ординатура
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-5",
-            label: (
-              <NavLink to="/international_relations_department">
-                Отдел международных связей
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-6",
-            label: (
-              <NavLink to="/scientific_research_department">
-                Отдел научных исследований
-              </NavLink>
-            ),
-          },
-
-          {
-            key: "3-7",
-            label: (
-              <NavLink to="/gifted_students">
-                Отдел по работе с одаренными студентами
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-8",
-            label: (
-              <NavLink to="/talented_students">
-                Студенческое научное общество
-              </NavLink>
-            ),
-          },
-        ],
+        children: SCIENTIFIC,
       },
       {
         key: "4",
         label: "Финансовые отделы",
-        children: [
-          {
-            key: "4-1",
-            label: <NavLink to="/accounting">Бухгалтерия</NavLink>,
-          },
-          {
-            key: "4-2",
-            label: <NavLink to="/marketing">Маркетинг</NavLink>,
-          },
-          {
-            key: "4-3",
-            label: (
-              <NavLink to="/planning_finance_department">
-                Отдел планирования и финансов
-              </NavLink>
-            ),
-          },
-        ],
+        children: FINANCE,
       },
       {
         key: "5",
         label: "Центры и организации",
-        children: [
-          {
-            key: "5-1",
-            label: (
-              <NavLink to="/information_technologies_center">
-                Центр цифровых образовательных технологий
-              </NavLink>
-            ),
-          },
-          {
-            key: "5-2",
-            label: (
-              <NavLink to="/information_resource_center">
-                Центр информационных ресурсов
-              </NavLink>
-            ),
-          },
-          {
-            key: "5-3",
-            label: <NavLink to="/youth_union_center">Союз молодежи</NavLink>,
-          },
-          {
-            key: "5-4",
-            label: (
-              <NavLink to="/women_committee_department">
-                Женский комитет
-              </NavLink>
-            ),
-          },
-          {
-            key: "5-5",
-            label: (
-              <NavLink to="/communication_development_center">
-                Центр развития коммуникативной компетенции
-              </NavLink>
-            ),
-          },
-        ],
+        children: CENTERS_ORGANIZATIONS,
       },
       {
         key: "6",
         label: "Другие отделы",
-        children: [
-          {
-            key: "6-1",
-            label: (
-              <NavLink to="/spirituality_enlightenment_department">
-                Отдел по делам молодежи, духовности и просвещения
-              </NavLink>
-            ),
-          },
-          {
-            key: "6-2",
-            label: (
-              <NavLink to="/press_secretary">Процесс-служба Института</NavLink>
-            ),
-          },
-          {
-            key: "6-3",
-            label: (
-              <NavLink to="/human_resource_department">Отдел кадров</NavLink>
-            ),
-          },
-          {
-            key: "6-4",
-            label: (
-              <NavLink to="/chancellery_department">
-                Заведующая канцелярией
-              </NavLink>
-            ),
-          },
-          {
-            key: "6-5",
-            label: (
-              <NavLink to="/compliance_control">Комплаенс-контроль</NavLink>
-            ),
-          },
-          {
-            key: "6-6",
-            label: <NavLink to="/archive_department">Архив института</NavLink>,
-          },
-          {
-            key: "6-7",
-            label: <NavLink to="/legal_services_department">Юрист</NavLink>,
-          },
-          {
-            key: "6-8",
-            label: <NavLink to="/psychologist">Психолог</NavLink>,
-          },
-          {
-            key: "6-9",
-            label: <NavLink to="/union_committee">Профсоюзы</NavLink>,
-          },
-        ],
+        children: OTHERS_DEPARTMENTS,
       },
       {
         key: "7",
         label: "Учебно-симуляционный центр",
-        children: [
-          {
-            key: "7-1",
-            label: (
-              <NavLink to="/simulation_center">Деятельность центра </NavLink>
-            ),
-          },
-          {
-            key: "7-2",
-            label: (
-              <NavLink to="/history_simulation_center">История центра</NavLink>
-            ),
-          },
-          {
-            key: "7-3",
-            label: (
-              <NavLink to="/director_simulation_center">
-                Сотрудники центра
-              </NavLink>
-            ),
-          },
-          {
-            key: "7-4",
-            label: (
-              <NavLink to="/contact_information_simulation_center">
-                Контактная информация
-              </NavLink>
-            ),
-          },
-        ],
+        children: SIMULATIONS_CENTER,
       },
       {
         key: "8",
         label: "Центр карьеры",
-        children: [
-          {
-            key: "8-1",
-            label: (
-              <NavLink to="/regional_offices">Региональные управления</NavLink>
-            ),
-          },
-          {
-            key: "8-2",
-            label: <NavLink to="/example_contracts">Пример контрактов</NavLink>,
-          },
-          {
-            key: "8-3",
-            label: <NavLink to="/graduates">Выпускники</NavLink>,
-          },
-          {
-            key: "5-4",
-            label: (
-              <NavLink to="/career_center_faq">
-                Часто задаваемые вопросы
-              </NavLink>
-            ),
-          },
-        ],
+        children: CENTER_CAREERS,
       },
     ],
   },
@@ -486,138 +726,22 @@ export const navMenuItems = [
       {
         key: "1",
         label: "Бакалавриат",
-        children: [
-          {
-            key: "1-1",
-            label: <NavLink to="/instruction">Для студентов</NavLink>,
-          },
-          {
-            key: "1-2",
-            label: (
-              <NavLink to="/schedule_sec_bachelor">
-                График проведения ГЭК
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-3",
-            label: <NavLink to="/class_schedule">Расписание занятий</NavLink>,
-          },
-          {
-            key: "1-4",
-            label: <NavLink to="/learning">Успеваемость</NavLink>,
-          },
-          {
-            key: "1-5",
-            label: <NavLink to="/attendance">Посещаемость</NavLink>,
-          },
-          {
-            key: "1-6",
-            label: <NavLink to="/catalogue_sciences">Каталог наук</NavLink>,
-          },
-          {
-            key: "1-7",
-            label: <NavLink to="/same_scholarships">Стипендии</NavLink>,
-          },
-          {
-            key: "1-8",
-            label: <NavLink to="/life_students">Общежитие</NavLink>,
-          },
-        ],
+        children: STUDENTS_BACHELOR,
       },
       {
         key: "2",
         label: "Магистратура",
-        children: [
-          {
-            key: "2-1",
-            label: <NavLink to="/learning_mag">Успеваемость</NavLink>,
-          },
-          {
-            key: "2-2",
-            label: <NavLink to="/same_scholarships">Стипендии</NavLink>,
-          },
-          {
-            key: "2-3",
-            label: (
-              <NavLink to="/protection_master_dessert">
-                Защита магистерских диссертаций
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-4",
-            label: (
-              <NavLink to="/masters_thesis_topics">
-                Темы магистерской диссертации
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-5",
-            label: (
-              <NavLink to="/schedule_sec_masters">
-                График проведения ГЭК
-              </NavLink>
-            ),
-          },
-        ],
+        children: STUDENTS_MASTER,
       },
       {
         key: "3",
         label: "Ординатура",
-        children: [
-          {
-            key: "3-1",
-            label: <NavLink to="/instruction_clinic">Для студентов</NavLink>,
-          },
-          {
-            key: "3-2",
-            label: <NavLink to="/attendance_clinic">Посещаемость</NavLink>,
-          },
-          {
-            key: "3-3",
-            label: (
-              <NavLink to="/state_exams">Государственные экзамены</NavLink>
-            ),
-          },
-        ],
+        children: STUDENTS_RESIDENCY,
       },
       {
         key: "4",
         label: "Иностранные студенты",
-        children: [
-          {
-            key: "4-1",
-            label: (
-              <NavLink to="/class_schedule_inter">Расписание занятий</NavLink>
-            ),
-          },
-          {
-            key: "4-2",
-            label: (
-              <NavLink to="/foreign_students_studying">
-                Иностранные студенты, обучающиеся в институте
-              </NavLink>
-            ),
-          },
-          {
-            key: "4-3",
-            label: (
-              <NavLink to="/amount_payment_international_students">
-                Сумма оплаты для иностранных студентов
-              </NavLink>
-            ),
-          },
-          {
-            key: "4-3",
-            label: (
-              <NavLink to="/information_residence_foreign_students">
-                Информация о проживании иностранных студентов
-              </NavLink>
-            ),
-          },
-        ],
+        children: STUDENTS_INTER,
       },
     ],
   },
@@ -627,202 +751,32 @@ export const navMenuItems = [
       {
         key: "1",
         label: "Бакалавриат",
-        children: [
-          {
-            key: "1-1",
-            label: (
-              <NavLink to="/admissions_committee_news">
-                Новости приемной комиссии
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-2",
-            label: <NavLink to="/memo">Памятка абитуриента</NavLink>,
-          },
-          {
-            key: "1-3",
-            label: (
-              <NavLink to="/admission_procedure">Процедура приема</NavLink>
-            ),
-          },
-          {
-            key: "1-4",
-            label: <NavLink to="/target_reception">Квоты приема</NavLink>,
-          },
-          {
-            key: "1-5",
-            label: (
-              <NavLink to="/bachelor_required_documents">
-                Перечень документов для поступления в вузы
-              </NavLink>
-            ),
-          },
-          {
-            key: "1-6",
-            label: (
-              <NavLink to="/monitoring_reception">Мониторинг приема</NavLink>
-            ),
-          },
-          {
-            key: "1-7",
-            label: (
-              <NavLink to="/place_admission_office">
-                Адрес приемной комиссии
-              </NavLink>
-            ),
-          },
-        ],
+        children: APPLICANTS_BACHELOR,
       },
       {
         key: "2",
         label: "Магистратура",
-        children: [
-          {
-            key: "2-1",
-            label: <NavLink to="/memo_mag">Памятка абитуриента</NavLink>,
-          },
-          {
-            key: "2-2",
-            label: (
-              <NavLink to="/admission_procedure_mag">Процедура приема</NavLink>
-            ),
-          },
-          {
-            key: "2-3",
-            label: <NavLink to="/master_reception_quota">Квоты приема</NavLink>,
-          },
-          {
-            key: "2-4",
-            label: (
-              <NavLink to="/package_accepted_documents">
-                Перечень документов для поступления а вузы
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-5",
-            label: (
-              <NavLink to="/place_admission_office">
-                Адрес приемной комиссии
-              </NavLink>
-            ),
-          },
-          {
-            key: "2-6",
-            label: (
-              <NavLink to="/checklist_list">Список контрольных списков</NavLink>
-            ),
-          },
-        ],
+        children: APPLICANTS_MASTER,
       },
       {
         key: "3",
         label: "Ординатура",
-        children: [
-          {
-            key: "3-1",
-            label: <NavLink to="/memo_clinic">Памятка абитуриентам</NavLink>,
-          },
-          {
-            key: "3-2",
-            label: (
-              <NavLink to="/clinic_reception_quota">Положения о приеме</NavLink>
-            ),
-          },
-          {
-            key: "3-3",
-            label: <NavLink to="/clinic_reception_quota">Квота приема</NavLink>,
-          },
-          {
-            key: "3-4",
-            label: (
-              <NavLink to="/clinic_required_documents">
-                Документы для поступления
-              </NavLink>
-            ),
-          },
-          {
-            key: "3-5",
-            label: (
-              <NavLink to="/package_accepted_documents_clinic">
-                Адрес приёмной комиссии
-              </NavLink>
-            ),
-          },
-        ],
+        children: APPLICANTS_RESIDENCY,
       },
       {
         key: "4",
         label: "Приём на совместные прогаммы",
-        children: [
-          {
-            key: "4-1",
-            label: (
-              <NavLink to="/admissions_jt_news">
-                Новости приемной комиссии
-              </NavLink>
-            ),
-          },
-          {
-            key: "4-2",
-            label: <NavLink to="/memo_jt_training">Памятка абитурента</NavLink>,
-          },
-          {
-            key: "4-3",
-            label: (
-              <NavLink to="/jtraining_reception_quota">Квота приема</NavLink>
-            ),
-          },
-          {
-            key: "4-4",
-            label: (
-              <NavLink to="/package_accepted_documents_jt">
-                Документы для поступления
-              </NavLink>
-            ),
-          },
-        ],
+        children: ADMISSION_PROGRAMS,
       },
     ],
   },
   {
     title: "Новости института",
-    items: [
-      {
-        key: "1",
-        label: <NavLink to="/news">Новости</NavLink>,
-      },
-      {
-        key: "2",
-        label: <NavLink to="/adverts">Объявления</NavLink>,
-      },
-      {
-        key: "3",
-        label: <NavLink to="/photo_gallery">Фотогалерея</NavLink>,
-      },
-    ],
+    items: NEWS_INSTITUTE,
   },
   {
     title: "Партнеры",
-    items: [
-      {
-        key: "1",
-        label: <NavLink to="/international_partners">Муждународные</NavLink>,
-      },
-      {
-        key: "2",
-        label: <NavLink to="/republican_partners">Республиканские</NavLink>,
-      },
-      {
-        key: "3",
-        label: <NavLink to="/treaty">Договора</NavLink>,
-      },
-      {
-        key: "4",
-        label: <NavLink to="/joint">Совместные</NavLink>,
-      },
-    ],
+    items: PARTNERS_INSTITUTE,
   },
 ];
 
@@ -834,7 +788,7 @@ export const adminNavLinks = [
         to="/admin"
         className={({ isActive, isPending }) =>
           isPending
-            ? "text-almost-admin-grey  flex space-x items-center"
+            ? "text-almost-admin-grey  flex space-x-5 items-center"
             : isActive
             ? "text-almost-blue flex space-x-5 items-center"
             : "flex space-x-5 items-center"
@@ -883,7 +837,6 @@ export const adminNavLinks = [
   },
   {
     key: "4",
-    icon: <ProfileOutlined />,
     label: (
       <NavLink
         to="/admin/adverts"
@@ -904,7 +857,7 @@ export const adminNavLinks = [
     key: "5",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/photo_gallery"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -922,7 +875,7 @@ export const adminNavLinks = [
     key: "6",
     label: (
       <NavLink
-        to="/admin/faculties"
+        to="/admin/about_institute"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -940,7 +893,7 @@ export const adminNavLinks = [
     key: "7",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/advice_institute"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -958,7 +911,7 @@ export const adminNavLinks = [
     key: "8",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/documents"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -976,7 +929,7 @@ export const adminNavLinks = [
     key: "9",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/faculties"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -994,7 +947,7 @@ export const adminNavLinks = [
     key: "10",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/departments"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1012,7 +965,7 @@ export const adminNavLinks = [
     key: "11",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/scientific"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1030,7 +983,7 @@ export const adminNavLinks = [
     key: "12",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/finance"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1048,7 +1001,7 @@ export const adminNavLinks = [
     key: "13",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/center_organizations"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1066,7 +1019,7 @@ export const adminNavLinks = [
     key: "14",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/others_departments"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1084,7 +1037,7 @@ export const adminNavLinks = [
     key: "15",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/simulations_center"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1102,7 +1055,7 @@ export const adminNavLinks = [
     key: "16",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/center_careers"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1120,7 +1073,7 @@ export const adminNavLinks = [
     key: "17",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/students_bachelor"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1138,7 +1091,7 @@ export const adminNavLinks = [
     key: "18",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/students_master"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1156,7 +1109,7 @@ export const adminNavLinks = [
     key: "19",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/students_residency"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1174,7 +1127,7 @@ export const adminNavLinks = [
     key: "20",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/students_inter"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1192,7 +1145,7 @@ export const adminNavLinks = [
     key: "21",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/applicants_bachelor"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1210,7 +1163,7 @@ export const adminNavLinks = [
     key: "22",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/bachelor_master"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1228,7 +1181,7 @@ export const adminNavLinks = [
     key: "23",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/applicants_residency"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1246,25 +1199,7 @@ export const adminNavLinks = [
     key: "24",
     label: (
       <NavLink
-        to="/admin/pages"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "text-almost-admin-grey  flex space-x-5 items-center"
-            : isActive
-            ? "text-almost-blue flex space-x-5 items-center"
-            : "flex space-x-5 items-center"
-        }
-      >
-        <SettingOutlined />
-        <span>Абитуриентам-Бакалавриата</span>
-      </NavLink>
-    ),
-  },
-  {
-    key: "25",
-    label: (
-      <NavLink
-        to="/admin/pages"
+        to="/admin/admission_programs"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1278,11 +1213,12 @@ export const adminNavLinks = [
       </NavLink>
     ),
   },
+
   {
-    key: "26",
+    key: "25",
     label: (
       <NavLink
-        to="/admin/pages"
+        to="/admin/partners_institute"
         className={({ isActive, isPending }) =>
           isPending
             ? "text-almost-admin-grey  flex space-x-5 items-center"
@@ -1292,79 +1228,7 @@ export const adminNavLinks = [
         }
       >
         <SettingOutlined />
-        <span>Муждународные</span>
-      </NavLink>
-    ),
-  },
-  {
-    key: "27",
-    label: (
-      <NavLink
-        to="/admin/pages"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "text-almost-admin-grey  flex space-x-5 items-center"
-            : isActive
-            ? "text-almost-blue flex space-x-5 items-center"
-            : "flex space-x-5 items-center"
-        }
-      >
-        <SettingOutlined />
-        <span>Республиканские</span>
-      </NavLink>
-    ),
-  },
-  {
-    key: "28",
-    label: (
-      <NavLink
-        to="/admin/pages"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "text-almost-admin-grey  flex space-x-5 items-center"
-            : isActive
-            ? "text-almost-blue flex space-x-5 items-center"
-            : "flex space-x-5 items-center"
-        }
-      >
-        <SettingOutlined />
-        <span>Договора</span>
-      </NavLink>
-    ),
-  },
-  {
-    key: "29",
-    label: (
-      <NavLink
-        to="/admin/pages"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "text-almost-admin-grey  flex space-x-5 items-center"
-            : isActive
-            ? "text-almost-blue flex space-x-5 items-center"
-            : "flex space-x-5 items-center"
-        }
-      >
-        <SettingOutlined />
-        <span>Абитуриентам-Бакалавриата</span>
-      </NavLink>
-    ),
-  },
-  {
-    key: "30",
-    label: (
-      <NavLink
-        to="/admin/pages"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "text-almost-admin-grey  flex space-x-5 items-center"
-            : isActive
-            ? "text-almost-blue flex space-x-5 items-center"
-            : "flex space-x-5 items-center"
-        }
-      >
-        <SettingOutlined />
-        <span>Совместные</span>
+        <span>Партнеры</span>
       </NavLink>
     ),
   },
@@ -1421,7 +1285,7 @@ export const NEWS = [
   },
 ];
 
-export const ADVERT = [
+export const ADVERTS = [
   {
     key: 1,
     title: "declaration",

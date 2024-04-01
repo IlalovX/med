@@ -1,0 +1,23 @@
+.admin_news_add {
+  :global {
+    .ant-tabs {
+      .ant-tabs-nav {
+        .ant-tabs-nav-wrap {
+          justify-content: end !important;
+        }
+        .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            background-color: rgba(77, 68, 181, 1);
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: bold;
+          }
+          .ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+              color: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

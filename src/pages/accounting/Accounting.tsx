@@ -1,14 +1,14 @@
 import image from "../../assets/images/management/Учебнобной работе.png";
 function Accounting() {
   return (
-    <div className="container mx-auto space-y-5 p-5">
-      <h1 className="text-4xl font-bold">Отдел бухгалтерии</h1>
+    <div className="container mx-auto space-y-5 p-10">
+      <h1 className="text-2xl sm:text-4xl font-bold">Отдел бухгалтерии</h1>
       <div key={1} className="flex gap-x-10">
         <img src={image} />
         <div className="relative">
-          <h3 className="text-4xl font-bold">Esther Howard</h3>
-          <h4 className="text-3xl">Декан лечебного факультета №1</h4>
-          <ul className="absolute bottom-[40%] left-0 text-xl">
+          <h3 className="text-2xl sm:text-4xl font-bold">Esther Howard</h3>
+          <h4 className="text-xl sm:text-3xl">Декан лечебного факультета №1</h4>
+          <ul className="absolute bottom-[40%] left-0 text-xs sm:text-xl">
             <li>
               <span className="font-semibold mr-4">Время приема:</span>
               Понедельник-Суббота: 08:30-17:00
@@ -24,7 +24,7 @@ function Accounting() {
           </ul>
         </div>
       </div>
-      <p className="text-2xl">
+      <p className="textxl sm:text-2xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum
@@ -32,7 +32,7 @@ function Accounting() {
         incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore{" "}
       </p>
-      <p className="text-2xl">
+      <p className="textxl sm:text-2xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum
@@ -40,7 +40,7 @@ function Accounting() {
         incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore{" "}
       </p>
-      <p className="text-2xl">
+      <p className="textxl sm:text-2xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum
@@ -48,7 +48,15 @@ function Accounting() {
         incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore{" "}
       </p>
-      <p className="text-2xl">
+      <p className="textxl sm:text-2xl">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore{" "}
+      </p>
+      <p className="textxl sm:text-2xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum

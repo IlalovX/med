@@ -9,40 +9,40 @@ function Information() {
     <>
       <section className=" bg-almost-red p-5">
         <div className="container mx-auto">
-          <div className="flex justify-between mb-12">
-            <h1 className="text-black text-3xl">Об институте</h1>
-            <p className="text-white text-4xl w-[40%]">
+          <div className="flex flex-col gap-y-5 sm:flex-row justify-between mb-12">
+            <h1 className="text-2xl text-black sm:text-3xl">Об институте</h1>
+            <p className="text-white text-2xl sm:text-4xl w-[40%]">
               {`  Образование - не подготовка\n к жизни;\n Образование - это самая жизнь`}
             </p>
           </div>
-          <div className="flex justify-end space-x-10 my-6">
+          <div className="flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:gap-0  lg:items-end lg:justify-end sm:space-x-10 my-6">
             <img
               src={CabinetClassroom}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px]"
             />
             <img
               src={CabinetLibrary}
-              className="max-w-[400px] max-h-[500px] "
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px] "
             />
           </div>
-          <div className="flex  space-x-10 my-6">
+          <div className="flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row    sm:space-x-10 my-6">
             <img
               src={CabinetPractice}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px]"
             />
             <img
               src={CabinetGraduation}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80 lg:w-[400px] lg:h-[500px]"
             />
           </div>
-          <div className="flex justify-end space-x-10 my-6">
+          <div className="flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:gap-0  lg:items-end lg:justify-end sm:space-x-10 my-6">
             <img
               src={CabinetClassroom}
-              className="max-w-[400px] max-h-[500px]"
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px]"
             />
             <img
               src={CabinetLibrary}
-              className="max-w-[400px] max-h-[500px] "
+              className="sm:w-50 sm:h-80  lg:w-[400px] lg:h-[500px] "
             />
           </div>
         </div>
@@ -50,22 +50,22 @@ function Information() {
 
       <section className="bg-almost-blue py-10">
         <div className="container mx-auto">
-          <div className="flex justify-between text-white">
+          <div className="grid grid-cols-2 gap-5 text-center  sm:flex sm:justify-between text-white">
             <div>
-              <h2 className="text-4xl font-bold mb-2">10 000</h2>
-              <span className="text-2xl">Студентов</span>
+              <h2 className="text-2xl sm:text-4xl font-bold mb-2">10 000</h2>
+              <span className="text-xl sm:text-2xl">Студентов</span>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-2">500</h2>
-              <span className="text-2xl">Учебных процесс</span>
+              <h2 className="text-2xl sm:text-4xl font-bold mb-2">500</h2>
+              <span className="text-xl sm:text-2xl">Учебных процесс</span>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-2">700</h2>
-              <span className="text-2xl">Профессоров</span>
+              <h2 className="text-2xl sm:text-4xl font-bold mb-2">700</h2>
+              <span className="text-xl sm:text-2xl">Профессоров</span>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-2">20</h2>
-              <span className="text-2xl">Факультетов</span>
+              <h2 className="text-2xl sm:text-4xl font-bold mb-2">20</h2>
+              <span className="text-xl sm:text-2xl">Факультетов</span>
             </div>
           </div>
         </div>
@@ -83,8 +83,11 @@ function Information() {
           labore
         </p>
         <div className="flex justify-between gap-x-10">
-          <img src={Faculty} className="w-[60%] object-cover h-[510px]" />
-          <p className="text-2xl">
+          <img
+            src={Faculty}
+            className="w-full sm:w-[60%] object-cover max-h-[510px]"
+          />
+          <p className="text-2xl hidden sm:block">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut{" "}

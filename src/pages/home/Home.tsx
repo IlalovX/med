@@ -19,17 +19,19 @@ import Faculty1 from "../../assets/images/faculty/Факультет фото.pn
 import Faculty2 from "../../assets/images/faculty/Факультет фото (1).png";
 import Local from "../../assets/images/local.png";
 
-import { ADVERT, FILTERS_TYPE, NEWS } from "../../constans/data";
+import { ADVERTS, FILTERS_TYPE, NEWS } from "../../constans/data";
+import { useTranslation } from "react-i18next";
 
 function Home() {
+  const { t } = useTranslation();
   const [advertActiveFilter, setAdvertActiveFilter] = useState("institute");
   const [advertFilterArray, setAdvertFilterArray] = useState(
-    ADVERT.filter((item) => item.type === advertActiveFilter)
+    ADVERTS.filter((item) => item.type === advertActiveFilter)
   );
 
   const handleChangeFilter = (filter: string) => {
     setAdvertActiveFilter(filter);
-    setAdvertFilterArray(ADVERT.filter((item) => item.type === filter));
+    setAdvertFilterArray(ADVERTS.filter((item) => item.type === filter));
   };
 
   return (
@@ -173,13 +175,13 @@ function Home() {
                 }
                 key={index}
               >
-                {item}
+                {t(`home:${item}`)}
               </p>
             ))}
           </div>
           <div>
             <Swiper
-              className="mySwiper h-[300px]"
+              className="mySwiper max-h-[300px]"
               spaceBetween={10}
               breakpoints={{
                 500: {
@@ -201,7 +203,7 @@ function Home() {
                   className="relative border border-white rounded-lg p-3 "
                   key={index}
                 >
-                  <h3 className="text-4xl mb-10">{item.title}</h3>
+                  <h3 className="text-4xl mb-10"> {t(`home:${item.title}`)}</h3>
                   <p className="text-2xl">{item.value}</p>
                   <Arrow className="w-[37px] h-[37px] absolute right-[12px] bottom-[12px]" />
                 </SwiperSlide>

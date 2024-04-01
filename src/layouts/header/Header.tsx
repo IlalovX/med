@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import { Drawer, Dropdown, Space } from "antd";
 import { MenuOutlined, DownOutlined, UpOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import SvgQarFlag from "../../assets/svgs/flags/QarFlag.svg?react";
 import SvgUzFlag from "../../assets/svgs/flags/UzFlag.svg?react";
@@ -20,49 +22,20 @@ import SvgLogin from "../../assets/svgs/menu/login.svg?react";
 import SvgLoginWhite from "../../assets/svgs/loginWhite.svg?react";
 import Logo from "../../assets/images/logo_Institut.png";
 
-import { navMenuItems } from "../../constans/data";
-import { useState } from "react";
+import { LANGUAGES, navMenuItems } from "../../constans/data";
 
-const languagesItems: MenuProps["items"] = [
-  {
-    key: "1",
-    label: (
-      <div className="flex space-x-2 items-center">
-        <img src={SvgRusFlag} alt="" className="h-[19px] w-[24px]" />
-        <span>Русский</span>
-      </div>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <div className="flex space-x-2 items-center">
-        <SvgQarFlag className="h-[19px] w-[24px]" />
-        <span>Каракалпаксикий</span>
-      </div>
-    ),
-  },
-  {
-    key: "3",
-    label: (
-      <div className="flex space-x-2 items-center">
-        <img src={SvgUsFlag} alt="" className="h-[19px] w-[24px]" />
-        <span>Английский</span>
-      </div>
-    ),
-  },
-  {
-    key: "4",
-    label: (
-      <div className="flex space-x-2 items-center">
-        <SvgUzFlag className="h-[19px] w-[24px]" />
-        <span>Узбекский</span>
-      </div>
-    ),
-  },
-];
+interface AbbrType {
+  title: string;
+  abbr: string;
+}
 
 function Header() {
+  const { t, i18n } = useTranslation("common");
+  const [abbrLanguage, setAbbrLanguage] = useState<AbbrType | undefined>({
+    title: "russia",
+    abbr: "ru",
+  });
+
   const [open, setOpen] = useState(false);
 
   const showDrawer = () => {
@@ -72,6 +45,63 @@ function Header() {
   const onClose = () => {
     setOpen(false);
   };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setAbbrLanguage(LANGUAGES.find((item: AbbrType) => item?.abbr === lng));
+  };
+
+  const languagesItems: MenuProps["items"] = [
+    {
+      key: "1",
+      label: (
+        <div
+          className="flex space-x-2 items-center"
+          onClick={() => changeLanguage("ru")}
+        >
+          <img src={SvgRusFlag} alt="" className="h-[19px] w-[24px]" />
+          <span>Русский</span>
+        </div>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <div
+          className="flex space-x-2 items-center"
+          onClick={() => changeLanguage("kaa")}
+        >
+          <SvgQarFlag className="h-[19px] w-[24px]" />
+          <span>Каракалпаксикий</span>
+        </div>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <div
+          className="flex space-x-2 items-center"
+          onClick={() => changeLanguage("en")}
+        >
+          <img src={SvgUsFlag} alt="" className="h-[19px] w-[24px]" />
+          <span>Английский</span>
+        </div>
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <div
+          className="flex space-x-2 items-center"
+          onClick={() => changeLanguage("uz")}
+        >
+          <SvgUzFlag className="h-[19px] w-[24px]" />
+          <span>Узбекский</span>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <div className=" bg-almost-blue text-white">
       <section className="container mx-auto flex justify-between h-14 p-5">
@@ -100,13 +130,12 @@ function Header() {
           <Drawer
             onClose={onClose}
             open={open}
-            closable={false}
             getContainer={false}
             className="!bg-almost-blue !text-white "
           >
             <NavLink
               to="/auth/login"
-              className="flex justify-between items-center text-3xl"
+              className="flex justify-between items-center text-2xl"
             >
               <span>Войти</span>
               <SvgLoginWhite />
@@ -114,14 +143,14 @@ function Header() {
 
             {navMenuItems.map((item: any, index: number) => (
               <div className=" group" key={index}>
-                <li className="text-3xl mb-2">
+                <li className="text-xl mb-2">
                   <span>{item.title}</span>
                 </li>
                 <div className="hidden group-hover:block">
                   {item.items?.map((el: any, index: number) => {
                     return (
                       <div className="mb-8 group w-full" key={index}>
-                        <li className="flex justify-between items-center w-full ml-5 text-2xl mb-3  ">
+                        <li className="flex justify-between items-center w-full ml-5 text-xl mb-3  ">
                           <span>{el.label}</span>
                           <DownOutlined className="transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0 " />
                           <UpOutlined className="transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100" />
@@ -159,11 +188,15 @@ function Header() {
               <SvgMap />
               <span>Карта сайта</span>
             </NavLink>
-            <Dropdown menu={{ items: languagesItems }}>
+            <Dropdown
+              menu={{ items: languagesItems }}
+              overlayClassName="your-overlay-class"
+              trigger={["click"]}
+            >
               <div onClick={(e) => e.preventDefault()}>
                 <Space className="flex space-x-1 cursor-pointer">
                   <SvgGlobal />
-                  <span>Язык</span>
+                  <span>{t(abbrLanguage?.title || "")}</span>
                 </Space>
               </div>
             </Dropdown>
