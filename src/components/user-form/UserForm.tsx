@@ -34,9 +34,9 @@ function UserForm({
   const uploadImage = useUploadImage();
   const onFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files?.[0]) {
-      uploadImage
-        .mutateAsync(event.target.files?.[0])
-        .then((res) => setImageUrl(res.data));
+      const formData = new FormData();
+      formData.append("file", event.target.files?.[0]);
+      uploadImage.mutateAsync(formData).then((res) => setImageUrl(res.data));
     }
   };
 

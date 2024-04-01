@@ -1,12 +1,9 @@
 /// <reference types="vite-plugin-svgr/client" />
 import { NavLink } from "react-router-dom";
 import Arrow from "../../assets/svgs/arrow-circle-right.svg?react";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { getAdvert } from "../admin-adverts/services/queries";
 
 function Adverts() {
-  const { t } = useTranslation();
   const { data: ADVERTS } = getAdvert();
 
   return (

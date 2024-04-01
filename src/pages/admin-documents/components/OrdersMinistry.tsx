@@ -1,9 +1,5 @@
-import React from 'react'
-
 function OrdersMinistry() {
-  return (
-	 <div>OrdersMinistry</div>
-  )
+  return <div>OrdersMinistry</div>;
 }
 
-export default OrdersMinistry
+export default OrdersMinistry;

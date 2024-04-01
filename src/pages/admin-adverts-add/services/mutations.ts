@@ -1,11 +1,17 @@
 import { useMutation } from "@tanstack/react-query";
 import { $host } from "../../../services/requestServices";
 
-export function useAddNew() {
+export function useAddAdvert() {
   return useMutation({
     mutationFn: async (data: any) => {
-      const res = await $host.post("/api/v1/news", data);
+      const res = await $host.post("/api/v1/adverts", data);
       return res.data;
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+    onSuccess: (data) => {
+      console.log(data);
     },
   });
 }

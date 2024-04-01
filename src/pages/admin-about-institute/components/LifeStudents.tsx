@@ -1,9 +1,5 @@
-import React from 'react'
-
 function LifeStudents() {
-  return (
-	 <div>LifeStudents</div>
-  )
+  return <div>LifeStudents</div>;
 }
 
-export default LifeStudents
+export default LifeStudents;

@@ -9,7 +9,6 @@ import SvgQarFlag from "../../assets/svgs/flags/Karakalpakstan-flagpalette.svg?r
 import UzFlag from "../../assets/images/Flag.png";
 import SvgRusFlag from "../../assets/svgs/flags/RusFlag.svg";
 import SvgUsFlag from "../../assets/svgs/flags/UsFlag.svg";
-import SvgQarSymbol from "../../assets/svgs/gerbs/QarGerb.svg?react";
 import SvgUzSymbol from "../../assets/svgs/gerbs/UzGerb.svg?react";
 import SvgSolid from "../../assets/svgs/fa-solid_music.svg?react";
 import SvgSearch from "../../assets/svgs/menu/search-normal.svg?react";

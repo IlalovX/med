@@ -29,7 +29,6 @@ function Home() {
   const { data: NEWS } = getNews();
   const { data: ADVERTS } = getAdvert();
   const [advertActiveFilter, setAdvertActiveFilter] = useState("institute");
-  const [advertFilterArray, setAdvertFilterArray] = useState();
   //  ADVERTS.filter((item) => item.type === advertActiveFilter)
 
   const handleChangeFilter = (filter: string) => {

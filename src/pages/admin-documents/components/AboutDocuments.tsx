@@ -1,9 +1,5 @@
-import React from 'react'
-
 function AboutDocuments() {
-  return (
-	 <div>AboutDocuments</div>
-  )
+  return <div>AboutDocuments</div>;
 }
 
-export default AboutDocuments
+export default AboutDocuments;

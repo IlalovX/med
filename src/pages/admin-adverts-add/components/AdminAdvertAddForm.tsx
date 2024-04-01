@@ -3,8 +3,7 @@ import { useState } from "react";
 import { Form, FormProps } from "antd";
 import NewForm from "../../../components/new-form/NewForm";
 import { LANGUAGES } from "../../../constans/data";
-import { useMutation } from "@tanstack/react-query";
-import { $host } from "../../../services/requestServices";
+import { useAddAdvert } from "../services/mutations";
 
 function AdminAdvertAddForm({ lngIndex }: { lngIndex: string }) {
   const [form] = Form.useForm();
@@ -15,14 +14,8 @@ function AdminAdvertAddForm({ lngIndex }: { lngIndex: string }) {
     setRadioValue(e.target.value);
   };
 
-  const mutation = useMutation<any>({
-    mutationFn: (data: any) => {
-      return $host.post("/api/v1/advertisements", data);
-    },
-  });
-
   const onFinish: FormProps["onFinish"] = (values) => {
-    mutation.mutateAsync({
+    useAddAdvert().mutateAsync({
       description: values.description,
       flags: [radioValue],
       header: values.header,

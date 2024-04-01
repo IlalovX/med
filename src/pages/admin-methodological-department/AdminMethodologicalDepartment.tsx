@@ -1,9 +1,5 @@
-import React from 'react'
-
 function AdminMethodologicalDepartment() {
-  return (
-	 <div>AdminMethodologicalDepartment</div>
-  )
+  return <div>AdminMethodologicalDepartment</div>;
 }
 
-export default AdminMethodologicalDepartment
+export default AdminMethodologicalDepartment;

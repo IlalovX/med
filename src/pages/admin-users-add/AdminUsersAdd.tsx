@@ -15,22 +15,22 @@ function AdminUsersAdd() {
     {
       key: "1",
       label: "Русский",
-      children: <AdminUserAddForm />,
+      children: <AdminUserAddForm lngIndex={lngIndex} />,
     },
     {
       key: "2",
       label: "Каракалпаксикий",
-      children: <AdminUserAddForm />,
+      children: <AdminUserAddForm lngIndex={lngIndex} />,
     },
     {
       key: "3",
       label: "Английский",
-      children: <AdminUserAddForm />,
+      children: <AdminUserAddForm lngIndex={lngIndex} />,
     },
     {
       key: "4",
       label: "Узбекский",
-      children: <AdminUserAddForm />,
+      children: <AdminUserAddForm lngIndex={lngIndex} />,
     },
   ];
   return (

@@ -1,5 +1,3 @@
-import React from "react";
-
 function LaboratoryRoom() {
   return <div>LaboratoryRoom</div>;
 }

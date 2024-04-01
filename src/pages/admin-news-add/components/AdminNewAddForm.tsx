@@ -1,11 +1,9 @@
 import { Form, FormProps, RadioChangeEvent } from "antd";
 
 import NewForm from "../../../components/new-form/NewForm";
-// import { useAddNews } from "../services/mutations";
 import { useState } from "react";
 import { LANGUAGES } from "../../../constans/data";
-import { useMutation } from "@tanstack/react-query";
-import { $host } from "../../../services/requestServices";
+import { useAddNew } from "../services/mutations";
 
 function AdminNewAddForm({ lngIndex }: { lngIndex: string }) {
   const [form] = Form.useForm();
@@ -16,14 +14,8 @@ function AdminNewAddForm({ lngIndex }: { lngIndex: string }) {
     setRadioValue(e.target.value);
   };
 
-  const mutation = useMutation<any>({
-    mutationFn: (data: any) => {
-      return $host.post("/api/v1/news", data);
-    },
-  });
-
   const onFinish: FormProps["onFinish"] = (values) => {
-    mutation.mutateAsync({
+    useAddNew().mutateAsync({
       description: values.description,
       flags: [radioValue],
       header: values.header,

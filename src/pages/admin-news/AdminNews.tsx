@@ -1,5 +1,4 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { NEWS } from "../../constans/data";
 import { NavLink } from "react-router-dom";
 import { getNews } from "./services/queries";
 import { Dropdown } from "antd";

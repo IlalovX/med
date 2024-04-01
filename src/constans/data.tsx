@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import QarFlag from "../assets/svgs/flags/Karakalpakstan-flagpalette.svg?react";
 import UzFlag from "../assets/svgs/flags/Uzbekistan-01-1.svg?react";
 import UzGerb from "../assets/svgs/gerbs/UzGerb.svg?react";
-import QarGerb from "../assets/svgs/gerbs/QarGerb.svg?react";
 import {
   HomeOutlined,
   UserOutlined,

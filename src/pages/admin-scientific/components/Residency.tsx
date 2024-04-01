@@ -1,9 +1,5 @@
-import React from 'react'
-
 function Residency() {
-  return (
-	 <div>Residency</div>
-  )
+  return <div>Residency</div>;
 }
 
-export default Residency
+export default Residency;
