@@ -4,7 +4,7 @@ import { $host } from "../../../services/requestServices";
 export function useAddAdvert() {
   return useMutation({
     mutationFn: async (data: any) => {
-      const res = await $host.post("/api/v1/adverts", data);
+      const res = await $host.post("/api/v1/advertisements", data);
       return res.data;
     },
     onError: (error) => {

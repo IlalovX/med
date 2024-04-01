@@ -9,13 +9,13 @@ function AdminNewAddForm({ lngIndex }: { lngIndex: string }) {
   const [form] = Form.useForm();
   const [radioValue, setRadioValue] = useState<number>(1);
   const [imageUrl, setImageUrl] = useState<string>("");
-
+  const addNew = useAddNew();
   const onChange = (e: RadioChangeEvent) => {
     setRadioValue(e.target.value);
   };
 
   const onFinish: FormProps["onFinish"] = (values) => {
-    useAddNew().mutateAsync({
+    addNew.mutateAsync({
       description: values.description,
       flags: [radioValue],
       header: values.header,

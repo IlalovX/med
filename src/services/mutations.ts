@@ -4,14 +4,12 @@ import { $host } from "./requestServices";
 export function useUploadImage() {
   return useMutation({
     mutationFn: async (data: any) => {
-      const formData = new FormData();
-      formData.append("file", data);
-      const res = await $host.post("/api/v1/upload", formData, {
+      const res = await $host.post("/api/v1/upload", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      return res.data;
+      return res;
     },
     onError: (error) => {
       console.log(error);

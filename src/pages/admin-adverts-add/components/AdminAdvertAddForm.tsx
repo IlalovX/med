@@ -9,15 +9,15 @@ function AdminAdvertAddForm({ lngIndex }: { lngIndex: string }) {
   const [form] = Form.useForm();
   const [imageUrl, setImageUrl] = useState<string>("");
   const [radioValue, setRadioValue] = useState(1);
-
+  const addAdvert = useAddAdvert();
   const onChange = (e: RadioChangeEvent) => {
     setRadioValue(e.target.value);
   };
 
   const onFinish: FormProps["onFinish"] = (values) => {
-    useAddAdvert().mutateAsync({
+    addAdvert.mutateAsync({
       description: values.description,
-      flags: [radioValue],
+      flags: [radioValue.toString()],
       header: values.header,
       language: LANGUAGES[+lngIndex].abbr,
       photo: imageUrl,

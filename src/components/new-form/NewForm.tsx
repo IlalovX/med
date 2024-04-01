@@ -24,9 +24,10 @@ function NewForm({
   setImageUrl: any;
 }) {
   const uploadImage = useUploadImage();
+  const formData = new FormData();
+
   const onFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files?.[0]) {
-      const formData = new FormData();
       formData.append("file", event.target.files?.[0]);
       uploadImage
         .mutateAsync(formData)

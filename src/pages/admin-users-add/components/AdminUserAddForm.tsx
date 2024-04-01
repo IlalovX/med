@@ -4,12 +4,13 @@ import UserForm from "../../../components/user-form/UserForm";
 import { useAddUser } from "../services/mutations";
 
 function AdminUserAddForm({ lngIndex }: { lngIndex: string }) {
+  const addUser = useAddUser();
   const [form] = Form.useForm();
   const [dob, setDob] = useState<string | string[]>("");
   const [startEdu, setStartEdu] = useState<string | string[]>("");
   const [endEdu, setEndEdu] = useState<string | string[]>("");
   const [imageUrl, setImageUrl] = useState("");
-  console.log(lngIndex);
+  console.log(lngIndex, imageUrl);
 
   const onChangeDobPicker: DatePickerProps["onChange"] = (date, dateString) => {
     console.log(date);
@@ -34,7 +35,7 @@ function AdminUserAddForm({ lngIndex }: { lngIndex: string }) {
   const onFinish: FormProps["onFinish"] = (values) => {
     console.log(values);
 
-    useAddUser().mutateAsync({
+    addUser.mutateAsync({
       address: values.address,
       birthDate: dob,
       birthPlace: values.pob,
