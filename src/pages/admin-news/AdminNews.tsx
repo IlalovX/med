@@ -23,19 +23,21 @@ function AdminNews() {
       </div>
       <div className="grid grid-cols-2 gap-5">
         {NEWS.map((item, index) => (
-          <NavLink
-            to={`/admin/news/${index}`}
-            className="relative border border-black hover:border-blue-500 rounded-lg p-3 max-w-[510px] "
-            key={index}
-          >
-            <h3 className="text-4xl mb-10">{item.title}</h3>
-            <p className="text-2xl">{item.value}</p>
+          <div className="relative border border-black rounded-lg p-3">
+            <NavLink
+              to={`/admin/news/${index}`}
+              className=" hover:border-blue-500  max-w-[510px] "
+              key={index}
+            >
+              <h3 className="text-4xl mb-10">{item.title}</h3>
+              <p className="text-2xl">{item.value}</p>
+            </NavLink>
             <Dropdown
               menu={{
                 items: [
                   {
                     label: (
-                      <NavLink to={`/admin/users/edit/${item?.id}`}>
+                      <NavLink to={`/admin/users/edit/${item.id}`}>
                         Edit
                       </NavLink>
                     ),
@@ -45,7 +47,7 @@ function AdminNews() {
                     label: "Delete",
                     key: "1",
                     onClick: () => {
-                      useDeleteNew().mutateAsync({ id: item?.id });
+                      useDeleteNew().mutateAsync({ id: item.id });
                     },
                   },
                 ],
@@ -55,7 +57,7 @@ function AdminNews() {
             >
               <MoreOutlined className="rotate-90 absolute right-5 top-1 text-2xl" />
             </Dropdown>
-          </NavLink>
+          </div>
         ))}
       </div>
     </div>
