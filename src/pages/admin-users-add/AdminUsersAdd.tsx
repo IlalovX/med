@@ -5,8 +5,8 @@ import AdminUserAddForm from "./components/AdminUserAddForm";
 import styles from "./admin-users-add.module.scss";
 
 function AdminUsersAdd() {
-	const [lngIndex, setLngIndex] = useState("1");
-	
+  const [lngIndex, setLngIndex] = useState("1");
+
   const onChange = (key: string) => {
     setLngIndex(key);
   };
@@ -15,22 +15,22 @@ function AdminUsersAdd() {
     {
       key: "1",
       label: "Русский",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
+      children: <AdminUserAddForm />,
     },
     {
       key: "2",
       label: "Каракалпаксикий",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
+      children: <AdminUserAddForm />,
     },
     {
       key: "3",
       label: "Английский",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
+      children: <AdminUserAddForm />,
     },
     {
       key: "4",
       label: "Узбекский",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
+      children: <AdminUserAddForm />,
     },
   ];
   return (

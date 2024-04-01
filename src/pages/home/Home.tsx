@@ -19,19 +19,22 @@ import Faculty1 from "../../assets/images/faculty/Факультет фото.pn
 import Faculty2 from "../../assets/images/faculty/Факультет фото (1).png";
 import Local from "../../assets/images/local.png";
 
-import { ADVERTS, FILTERS_TYPE, NEWS } from "../../constans/data";
+import { FILTERS_TYPE } from "../../constans/data";
 import { useTranslation } from "react-i18next";
+import { getNews } from "../admin-news/services/queries";
+import { getAdvert } from "../admin-adverts/services/queries";
 
 function Home() {
   const { t } = useTranslation();
+  const { data: NEWS } = getNews();
+  const { data: ADVERTS } = getAdvert();
   const [advertActiveFilter, setAdvertActiveFilter] = useState("institute");
-  const [advertFilterArray, setAdvertFilterArray] = useState(
-    ADVERTS.filter((item) => item.type === advertActiveFilter)
-  );
+  const [advertFilterArray, setAdvertFilterArray] = useState();
+  //  ADVERTS.filter((item) => item.type === advertActiveFilter)
 
   const handleChangeFilter = (filter: string) => {
     setAdvertActiveFilter(filter);
-    setAdvertFilterArray(ADVERTS.filter((item) => item.type === filter));
+    //  setAdvertFilterArray(ADVERTS.filter((item) => item.type === filter));
   };
 
   return (
@@ -92,7 +95,7 @@ function Home() {
           <h1 className="text-3xl mb-2">Новости</h1>
           <h2 className="text-2xl mb-10">Узнайте о последних новостях</h2>
           <Swiper
-            className="mySwiper h-[300px]"
+            className="mySwiper h-[250px]"
             spaceBetween={10}
             breakpoints={{
               500: {
@@ -109,16 +112,21 @@ function Home() {
               },
             }}
           >
-            {NEWS.map((item, index) => (
-              <SwiperSlide
-                className="relative border border-white rounded-lg p-3 "
-                key={index}
-              >
-                <h3 className="text-4xl mb-10">{item.title}</h3>
-                <p className="text-2xl">{item.value}</p>
-                <Arrow className="w-[37px] h-[37px] absolute right-[12px] bottom-[12px]" />
-              </SwiperSlide>
-            ))}
+            {NEWS &&
+              NEWS?.map((item, index) => (
+                <SwiperSlide
+                  className="relative border border-white rounded-lg p-3  "
+                  key={index}
+                >
+                  <NavLink to={`/news/${item?.id}`}>
+                    <h3 className="text-4xl mb-10">
+                      {t(`home:${item?.header}`)}
+                    </h3>
+                    <p className="text-2xl">{item?.description}</p>
+                    <Arrow className="w-[37px] h-[37px] absolute right-[12px] bottom-[12px]" />
+                  </NavLink>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </section>
@@ -181,7 +189,7 @@ function Home() {
           </div>
           <div>
             <Swiper
-              className="mySwiper max-h-[300px]"
+              className="mySwiper h-[250px]"
               spaceBetween={10}
               breakpoints={{
                 500: {
@@ -198,16 +206,24 @@ function Home() {
                 },
               }}
             >
-              {advertFilterArray.map((item, index) => (
-                <SwiperSlide
-                  className="relative border border-white rounded-lg p-3 "
-                  key={index}
-                >
-                  <h3 className="text-4xl mb-10"> {t(`home:${item.title}`)}</h3>
-                  <p className="text-2xl">{item.value}</p>
-                  <Arrow className="w-[37px] h-[37px] absolute right-[12px] bottom-[12px]" />
-                </SwiperSlide>
-              ))}
+              {ADVERTS &&
+                ADVERTS?.map((item, index) => (
+                  <SwiperSlide
+                    className="relative border border-white rounded-lg p-3"
+                    key={index}
+                  >
+                    <NavLink
+                      to={`/adverts/${item?.id}`}
+                      className="h-[100%] w-full block"
+                    >
+                      <h3 className="text-4xl mb-10">
+                        {t(`home:${item?.header}`)}
+                      </h3>
+                      <p className="text-2xl">{item?.description}</p>
+                      <Arrow className="w-[37px] h-[37px] absolute right-[12px] bottom-[12px]" />
+                    </NavLink>
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </div>
         </div>

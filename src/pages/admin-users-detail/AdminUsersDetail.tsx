@@ -16,7 +16,7 @@ const items: MenuProps["items"] = [
 ];
 function AdminUsersDetail() {
   const { data } = getUserDetail();
-  console.log(data);
+
   return (
     <div className="relative h-[500px] shadow-xl">
       <div className="h-[40%] bg-almost-blue rounded-t-lg"></div>
@@ -56,7 +56,10 @@ function AdminUsersDetail() {
         </Dropdown>
       </div>
       <div className="w-[164px] h-[164px] rounded-[50%] absolute left-8 top-20 bg-white flex items-center justify-center">
-        <div className="w-[144px] h-[144px] rounded-[50%]  left-8 top-20 bg-almost-admin-purple"></div>
+        <img
+          src={data?.photo}
+          className="w-[144px] h-[144px] rounded-[50%]  left-8 top-20 bg-almost-admin-purple"
+        />
       </div>
     </div>
   );

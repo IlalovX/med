@@ -3,15 +3,14 @@ import { useState } from "react";
 import { useAddUser } from "../services/mutations";
 import UserForm from "../../../components/user-form/UserForm";
 
-function AdminUserAddForm({ lngIndex }: { lngIndex: string }) {
-  console.log(lngIndex);
-
+function AdminUserAddForm() {
   const [form] = Form.useForm();
   const addUser = useAddUser();
   const [dob, setDob] = useState<string | string[]>("");
   const [startEdu, setStartEdu] = useState<string | string[]>("");
   const [endEdu, setEndEdu] = useState<string | string[]>("");
-  //   const [img, setImg] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  console.log(imageUrl);
 
   const onChangeDobPicker: DatePickerProps["onChange"] = (date, dateString) => {
     console.log(date);
@@ -30,16 +29,26 @@ function AdminUserAddForm({ lngIndex }: { lngIndex: string }) {
     dateString
   ) => {
     console.log(date);
-
     setEndEdu(dateString);
   };
 
   const onFinish: FormProps["onFinish"] = (values) => {
+    console.log(values);
+
     addUser.mutateAsync({
-      values,
-      dob: dob,
-      startDate: startEdu,
+      address: values.address,
+      birthDate: dob,
+      birthPlace: values.pob,
+      city: values.city,
+      degree: values.degree,
+      email: values.email,
       endDate: endEdu,
+      firstName: values.firstname,
+      lastName: values.lastname,
+      phone: values.phone,
+      photo: imageUrl,
+      startDate: startEdu,
+      university: values.university,
     });
   };
 
@@ -50,6 +59,8 @@ function AdminUserAddForm({ lngIndex }: { lngIndex: string }) {
       onChangeEndEduPicker={onChangeEndEduPicker}
       onChangeStartEduPicker={onChangeStartEduPicker}
       onChangeDobPicker={onChangeDobPicker}
+      imageUrl={imageUrl}
+      setImageUrl={setImageUrl}
     />
   );
 }

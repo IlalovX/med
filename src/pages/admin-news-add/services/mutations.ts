@@ -1,9 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
 import { $host } from "../../../services/requestServices";
 
-export function useAddNews() {
-  return useMutation<any, any, any>(async (data) => {
+export function useAddNew() {
+  return useMutation(async (data: any) => {
     const res = await $host.post("/api/v1/news", data);
-    return res;
+    return res.data;
   });
 }

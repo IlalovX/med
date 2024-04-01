@@ -5,7 +5,7 @@ import { $host } from "../../../services/requestServices";
 export function getUserDetail() {
   const { id } = useParams();
   return useQuery({
-    queryKey: ["getProducts", id],
+    queryKey: ["getUser", id],
     queryFn: async () => {
       const res = await $host.get(`api/v1/teachers/${id}`);
       return res.data;

@@ -1,8 +1,6 @@
-import { DatePicker, Form, Input, Upload, message } from "antd";
+import { DatePicker, Form, Input } from "antd";
 import SubmitButton from "../submit-button/SubmitButton";
-import { useState } from "react";
-import { PlusOutlined, LoadingOutlined } from "@ant-design/icons";
-import type { GetProp, UploadProps } from "antd";
+import { useUploadImage } from "../../services/mutations";
 
 export interface FieldType {
   firstname: string;
@@ -22,61 +20,26 @@ function UserForm({
   onChangeEndEduPicker,
   onChangeStartEduPicker,
   onChangeDobPicker,
+  setImageUrl,
+  imageUrl,
 }: {
   form: any;
   onFinish: any;
   onChangeEndEduPicker: any;
   onChangeStartEduPicker: any;
   onChangeDobPicker: any;
+  setImageUrl: any;
+  imageUrl: string;
 }) {
-  type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
-  const [imageUrl, setImageUrl] = useState<string>();
-  const [loading, setLoading] = useState(false);
-  const getBase64 = (img: FileType, callback: (url: string) => void) => {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => callback(reader.result as string));
-    reader.readAsDataURL(img);
-  };
-
-  const beforeUpload = (file: FileType) => {
-    const isJpgOrPng = file.type === "image/jpeg" || file.type === "image/png";
-    if (!isJpgOrPng) {
-      message.error("You can only upload JPG/PNG file!");
-    }
-    const isLt2M = file.size / 1024 / 1024 < 2;
-    if (!isLt2M) {
-      message.error("Image must smaller than 2MB!");
-    }
-    return isJpgOrPng && isLt2M;
-  };
-
-  const normFile = (e: any) => {
-    if (Array.isArray(e)) {
-      console.log(e);
-
-      return e;
-    }
-    return e?.fileList;
-  };
-
-  const handleChange: UploadProps["onChange"] = (info) => {
-    if (info.file.status === "uploading") {
-      setLoading(true);
-      return;
-    }
-    if (info.file.status === "done") {
-      getBase64(info.file.originFileObj as FileType, (url) => {
-        setLoading(false);
-        setImageUrl(url);
-      });
+  const uploadImage = useUploadImage();
+  const onFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files?.[0]) {
+      uploadImage
+        .mutateAsync(event.target.files?.[0])
+        .then((res) => setImageUrl(res.data));
     }
   };
-  const uploadButton = (
-    <button style={{ border: 0, background: "none" }} type="button">
-      {loading ? <LoadingOutlined /> : <PlusOutlined />}
-      <div style={{ marginTop: 8 }}>Upload</div>
-    </button>
-  );
+
   return (
     <div className="shadow-lg  w-full ">
       <h1 className="text-white text-3xl font-bold bg-almost-blue py-2 px-5 rounded-t-lg">
@@ -126,24 +89,13 @@ function UserForm({
         <Form.Item
           label="Upload"
           valuePropName="fileList"
-          getValueFromEvent={normFile}
           rules={[{ required: true }]}
+          className=" h-[250px]"
         >
-          <Upload
-            name="avatar"
-            listType="picture-circle"
-            className="avatar-uploader"
-            showUploadList={false}
-            action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
-            beforeUpload={beforeUpload}
-            onChange={handleChange}
-          >
-            {imageUrl ? (
-              <img src={imageUrl} alt="avatar" style={{ width: "100%" }} />
-            ) : (
-              uploadButton
-            )}
-          </Upload>
+          <input type="file" onChange={onFileChange} />
+          {imageUrl && (
+            <img src={imageUrl} className="w-[150px] h-[150px] mt-5" />
+          )}
         </Form.Item>
         <Form.Item label="Date of Birth" rules={[{ required: true }]}>
           <DatePicker onChange={onChangeDobPicker} className="!w-full " />

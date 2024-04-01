@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         "almost-blue": "rgba(26, 65, 199, 1)",
-        "almost-red": "rgba(166, 12, 44, 1)",
+        "almost-red": "rgba(219, 0, 45, 1)",
         "almost-admin-blue": "rgba(77, 68, 181, 1)",
         "almost-admin-purple": "rgba(193, 187, 235, 1)",
         "almost-admin-milk": "rgba(245, 247, 250, 1)",

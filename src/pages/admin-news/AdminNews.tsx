@@ -22,7 +22,44 @@ function AdminNews() {
         </NavLink>
       </div>
       <div className="grid grid-cols-2 gap-5">
-        {NEWS.map((item, index) => (
+        {data?.map((item, index) => (
+          <div className="relative border border-black rounded-lg p-3">
+            <NavLink
+              to={`/admin/news/${index}`}
+              className=" hover:border-blue-500  max-w-[510px] "
+              key={index}
+            >
+              <h3 className="text-4xl mb-10">{item?.header}</h3>
+              <p className="text-2xl">{item?.description}</p>
+            </NavLink>
+            <Dropdown
+              menu={{
+                items: [
+                  {
+                    label: (
+                      <NavLink to={`/admin/users/edit/${item?.id}`}>
+                        Edit
+                      </NavLink>
+                    ),
+                    key: "0",
+                  },
+                  {
+                    label: "Delete",
+                    key: "1",
+                    onClick: () => {
+                      useDeleteNew().mutateAsync({ id: item?.id });
+                    },
+                  },
+                ],
+              }}
+              trigger={["click"]}
+              placement="bottomRight"
+            >
+              <MoreOutlined className="rotate-90 absolute right-5 top-1 text-2xl" />
+            </Dropdown>
+          </div>
+        ))}
+        {/* {NEWS.map((item, index) => (
           <div className="relative border border-black rounded-lg p-3">
             <NavLink
               to={`/admin/news/${index}`}
@@ -58,7 +95,7 @@ function AdminNews() {
               <MoreOutlined className="rotate-90 absolute right-5 top-1 text-2xl" />
             </Dropdown>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

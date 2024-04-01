@@ -1,5 +1,3 @@
-/// <reference types="vite-plugin-svgr/client" />
-
 import { NavLink } from "react-router-dom";
 import { Drawer, Dropdown, Space } from "antd";
 import { MenuOutlined, DownOutlined, UpOutlined } from "@ant-design/icons";
@@ -7,12 +5,12 @@ import type { MenuProps } from "antd";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import SvgQarFlag from "../../assets/svgs/flags/QarFlag.svg?react";
-import SvgUzFlag from "../../assets/svgs/flags/UzFlag.svg?react";
+import SvgQarFlag from "../../assets/svgs/flags/Karakalpakstan-flagpalette.svg?react";
+import UzFlag from "../../assets/images/Flag.png";
 import SvgRusFlag from "../../assets/svgs/flags/RusFlag.svg";
 import SvgUsFlag from "../../assets/svgs/flags/UsFlag.svg";
 import SvgQarSymbol from "../../assets/svgs/gerbs/QarGerb.svg?react";
-import SvgUzSymbol from "../../assets/svgs/gerbs/Gerb.svg?react";
+import SvgUzSymbol from "../../assets/svgs/gerbs/UzGerb.svg?react";
 import SvgSolid from "../../assets/svgs/fa-solid_music.svg?react";
 import SvgSearch from "../../assets/svgs/menu/search-normal.svg?react";
 import SvgHemis from "../../assets/svgs/menu/teacher.svg?react";
@@ -95,7 +93,7 @@ function Header() {
           className="flex space-x-2 items-center"
           onClick={() => changeLanguage("uz")}
         >
-          <SvgUzFlag className="h-[19px] w-[24px]" />
+          <img src={UzFlag} alt="" className="h-[19px] w-[24px]" />
           <span>Узбекский</span>
         </div>
       ),
@@ -105,25 +103,32 @@ function Header() {
   return (
     <div className=" bg-almost-blue text-white">
       <section className="container mx-auto flex justify-between h-14 p-5">
-        <div className="flex space-x-2 items-center">
-          <NavLink to="/symbols/kaa/emblem">
-            <SvgQarSymbol className="max-h-[24px] max-w-[24px]" />
-          </NavLink>
-          <NavLink to="/symbols/kaa/flag">
-            <SvgQarFlag className="max-h-[24px] max-w-[45px]" />
-          </NavLink>
-          <NavLink to="/symbols/kaa/anthem">
-            <SvgSolid className="max-h-[24px] max-w-[24px]" />
-          </NavLink>
-          <NavLink to="/symbols/uz/emblem">
-            <SvgUzSymbol className="max-h-[24px] max-w-[24px]" />
-          </NavLink>
-          <NavLink to="/symbols/uz/flag">
-            <SvgUzFlag className="max-h-[24px] max-w-[45px]" />
-          </NavLink>
-          <NavLink to="/symbols/uz/anthem">
-            <SvgSolid className="max-h-[24px] max-w-[24px]" />
-          </NavLink>
+        <div className="flex space-x-5 items-center">
+          <div className="flex items-center space-x-2">
+            <NavLink to="/symbols/uz/emblem">
+              <SvgUzSymbol className="max-h-[24px] max-w-[24px]" />
+            </NavLink>
+            <NavLink to="/symbols/uz/flag">
+              <img src={UzFlag} alt="" className="max-h-[24px] max-w-[45px]" />
+            </NavLink>
+            <NavLink to="/symbols/uz/anthem">
+              <SvgSolid className="max-h-[24px] max-w-[24px]" />
+            </NavLink>
+          </div>
+          <div className="flex items-center space-x-2">
+            <NavLink to="/symbols/kaa/emblem">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/87/Emblem_of_Karakalpakstan.svg"
+                className="max-h-[24px] max-w-[24px]"
+              />
+            </NavLink>
+            <NavLink to="/symbols/kaa/flag">
+              <SvgQarFlag className="max-h-[24px] max-w-[45px]" />
+            </NavLink>
+            <NavLink to="/symbols/kaa/anthem">
+              <SvgSolid className="max-h-[24px] max-w-[24px]" />
+            </NavLink>
+          </div>
         </div>
         <div className="flex text-xl lg:hidden sm:text-3xl ">
           <MenuOutlined className="cursor-pointer" onClick={showDrawer} />
