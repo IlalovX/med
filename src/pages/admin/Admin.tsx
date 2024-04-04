@@ -17,11 +17,8 @@ import { useState } from "react";
 
 const items: MenuProps["items"] = [
   {
-    label: "Edit",
+    label: <NavLink to="/admin/edit">Edit</NavLink>,
     key: "0",
-    onClick: () => {
-      console.log(false);
-    },
   },
 ];
 

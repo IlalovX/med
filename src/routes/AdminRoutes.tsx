@@ -4,6 +4,7 @@ import { AdminPathNames } from "./consts/AdminConsts";
 import { AdminPathEnums } from "./enums/AdminEnums";
 
 const Admin = lazy(() => import("../pages/admin/Admin"));
+const AdminEdit = lazy(() => import("../pages/admin-edit/AdminEdit"));
 const AdminUser = lazy(() => import("../pages/admin-users/AdminUsers"));
 const AdminUsersDetail = lazy(
   () => import("../pages/admin-users-detail/AdminUsersDetail")
@@ -19,12 +20,18 @@ const AdminNewsDetail = lazy(
   () => import("../pages/admin-news-detail/AdminNewsDetail")
 );
 const AdminNewsAdd = lazy(() => import("../pages/admin-news-add/AdminNewsAdd"));
+const AdminNewsEdit = lazy(
+  () => import("../pages/admin-news-edit/AdminNewsEdit")
+);
 const AdminAdverts = lazy(() => import("../pages/admin-adverts/AdminAdverts"));
 const AdminAdvertsDetail = lazy(
   () => import("../pages/admin-adverts-detail/AdminAdvertsDetail")
 );
 const AdminAdvertsAdd = lazy(
   () => import("../pages/admin-adverts-add/AdminAdvertsAdd")
+);
+const AdminAdvertsEdit = lazy(
+  () => import("../pages/admin-adverts-edit/AdminAdvertsEdit")
 );
 const AdminPhotoGallery = lazy(
   () => import("../pages/admin-photo-gallery/AdminPhotoGallery")
@@ -96,6 +103,14 @@ function AdminPathRoutes() {
         }
       >
         <Route
+          path={AdminPathNames[AdminPathEnums.ADMIN_EDIT]}
+          element={
+            <Suspense>
+              <AdminEdit />
+            </Suspense>
+          }
+        />
+        <Route
           path={AdminPathNames[AdminPathEnums.ADMIN_USERS]}
           element={
             <Suspense>
@@ -146,6 +161,14 @@ function AdminPathRoutes() {
           }
         />
         <Route
+          path={AdminPathNames[AdminPathEnums.ADMIN_NEWS_EDIT]}
+          element={
+            <Suspense>
+              <AdminNewsEdit />
+            </Suspense>
+          }
+        />
+        <Route
           path={AdminPathNames[AdminPathEnums.ADMIN_NEWS_ADD]}
           element={
             <Suspense>
@@ -174,6 +197,14 @@ function AdminPathRoutes() {
           element={
             <Suspense>
               <AdminAdvertsAdd />
+            </Suspense>
+          }
+        />
+        <Route
+          path={AdminPathNames[AdminPathEnums.ADMIN_ADVERTS_EDIT]}
+          element={
+            <Suspense>
+              <AdminAdvertsEdit />
             </Suspense>
           }
         />

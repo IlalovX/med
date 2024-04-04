@@ -30,10 +30,14 @@ import {
   getRouteAdminInternationalDepartment,
   getRouteAdminScientific,
   getRouteAdminEditUser,
+  getRouteAdminAdvertsEdit,
+  getRouteAdminEditNew,
+  getRouteAdminEdit,
 } from "../getPaths/AdminGetPaths";
 
 export const AdminPathNames: Record<AdminPathEnums, string> = {
   [AdminPathEnums.ADMIN]: getRouteAdmin(),
+  [AdminPathEnums.ADMIN_EDIT]: getRouteAdminEdit(),
   [AdminPathEnums.ADMIN_USERS]: getRouteAdminUsers(),
   [AdminPathEnums.ADMIN_USERS_DETAIL]: getRouteAdminUserDetails(""),
   [AdminPathEnums.ADMIN_USERS_ADD]: getRouteAdminAddUser(),
@@ -41,9 +45,11 @@ export const AdminPathNames: Record<AdminPathEnums, string> = {
   [AdminPathEnums.ADMIN_NEWS]: getRouteAdminNews(),
   [AdminPathEnums.ADMIN_NEWS_ADD]: getRouteAdminAddNews(),
   [AdminPathEnums.ADMIN_NEWS_DETAIL]: getRouteAdminNewDetails(""),
+  [AdminPathEnums.ADMIN_NEWS_EDIT]: getRouteAdminEditNew(""),
   [AdminPathEnums.ADMIN_ADVERTS]: getRouteAdminAdverts(),
   [AdminPathEnums.ADMIN_ADVERTS_ADD]: getRouteAdminAddAdverts(),
   [AdminPathEnums.ADMIN_ADVERTS_DETAIL]: getRouteAdminAdvertsDetails(""),
+  [AdminPathEnums.ADMIN_ADVERTS_EDIT]: getRouteAdminAdvertsEdit(""),
   [AdminPathEnums.ADMIN_PHOTO_GALLERY]: getRouteAdminPhotoGallery(),
   [AdminPathEnums.ADMIN_ABOUT_INSTITUTE]: getRouteAdminAboutInstitute(""),
   [AdminPathEnums.ADMIN_ADVICE_INSTITUTE]: getRouteAdminAdviceInstitute(""),

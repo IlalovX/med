@@ -22,6 +22,7 @@ function AdminAdvertAddForm({ lngIndex }: { lngIndex: string }) {
       language: LANGUAGES[+lngIndex].abbr,
       photo: imageUrl,
     });
+    form.resetFields();
   };
   return (
     <div className="shadow-lg  w-full rounded-lg">

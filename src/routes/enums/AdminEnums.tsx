@@ -1,5 +1,6 @@
 export enum AdminPathEnums {
   ADMIN = "/admin/*",
+  ADMIN_EDIT = "edit",
   ADMIN_USERS = "users",
   ADMIN_USERS_DETAIL = "users/:id",
   ADMIN_USERS_ADD = "users/add",
@@ -7,9 +8,11 @@ export enum AdminPathEnums {
   ADMIN_NEWS = "news",
   ADMIN_NEWS_ADD = "news/add",
   ADMIN_NEWS_DETAIL = "news/:id",
+  ADMIN_NEWS_EDIT = "news/edit/:id",
   ADMIN_ADVERTS = "adverts",
   ADMIN_ADVERTS_ADD = "adverts/add",
   ADMIN_ADVERTS_DETAIL = "adverts/:id",
+  ADMIN_ADVERTS_EDIT = "adverts/edit/:id",
   ADMIN_PHOTO_GALLERY = "photo_gallery",
   ADMIN_ABOUT_INSTITUTE = "about_institute/:type?",
   ADMIN_ADVICE_INSTITUTE = "advice_institute/:type?",

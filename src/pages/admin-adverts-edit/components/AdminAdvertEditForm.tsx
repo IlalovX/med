@@ -3,21 +3,23 @@ import { Form, FormProps, RadioChangeEvent } from "antd";
 import NewForm from "../../../components/new-form/NewForm";
 import { useState } from "react";
 import { LANGUAGES } from "../../../constans/data";
-import { useAddNew } from "../services/mutations";
+import { useParams } from "react-router-dom";
+import { useEditAdvert } from "../services/mutation";
 
-function AdminNewAddForm({ lngIndex }: { lngIndex: string }) {
+function AdminAdvertEditForm({ lngIndex }: { lngIndex: string }) {
+  const { id } = useParams();
   const [form] = Form.useForm();
   const [radioValue, setRadioValue] = useState<number>(1);
   const [imageUrl, setImageUrl] = useState<string>("");
-  const addNew = useAddNew();
+  const editAdvert = useEditAdvert({ id: id as string });
   const onChange = (e: RadioChangeEvent) => {
     setRadioValue(e.target.value);
   };
 
   const onFinish: FormProps["onFinish"] = (values) => {
-    addNew.mutateAsync({
+    editAdvert.mutateAsync({
       description: values.description,
-      flags: [radioValue],
+      flags: [radioValue.toString()],
       header: values.header,
       language: LANGUAGES[+lngIndex].abbr,
       photo: imageUrl,
@@ -37,4 +39,4 @@ function AdminNewAddForm({ lngIndex }: { lngIndex: string }) {
   );
 }
 
-export default AdminNewAddForm;
+export default AdminAdvertEditForm;

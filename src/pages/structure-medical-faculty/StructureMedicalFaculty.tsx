@@ -1,6 +1,8 @@
 import { STRUCTURE } from "../../constans/data";
 import image from "../../assets/images/management/Работе с молодежью.png";
+import { getStructureFaculty } from "./services/queries";
 function StructureMedicalFaculty() {
+  const { data } = getStructureFaculty();
   return (
     <div className="container mx-auto p-5">
       <h1 className="text-4xl font-bold mb-10">Структура </h1>

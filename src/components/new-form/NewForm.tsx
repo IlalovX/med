@@ -47,14 +47,40 @@ function NewForm({
           layout="vertical"
           onFinish={onFinish}
         >
-          <Form.Item<FieldType> label="Заголовок" name="header">
+          <Form.Item<FieldType>
+            label="Заголовок"
+            name="header"
+            rules={[
+              {
+                required: true,
+                message: `Пожалуйста заполните поля "Заголовок"`,
+              },
+            ]}
+          >
             <Input placeholder="Lorem ipsum dolor sit amet" />
           </Form.Item>
 
-          <Form.Item<FieldType> label="Описание" name="description">
+          <Form.Item<FieldType>
+            label="Описание"
+            name="description"
+            rules={[
+              {
+                required: true,
+                message: `Пожалуйста заполните поля "Описание"`,
+              },
+            ]}
+          >
             <Input.TextArea className="!resize-none" rows={5} />
           </Form.Item>
-          <Form.Item label="Upload">
+          <Form.Item
+            label="Upload"
+            rules={[
+              {
+                required: true,
+                message: `Пожалуйста заполните поля "Upload"`,
+              },
+            ]}
+          >
             <input type="file" onChange={onFileChange} />
           </Form.Item>
 

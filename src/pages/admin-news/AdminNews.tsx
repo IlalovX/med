@@ -7,6 +7,7 @@ import { useDeleteNew } from "./services/mutation";
 
 function AdminNews() {
   const { data } = getNews();
+  const deleteNew = useDeleteNew();
   console.log(data);
 
   return (
@@ -46,7 +47,7 @@ function AdminNews() {
                     label: "Delete",
                     key: "1",
                     onClick: () => {
-                      useDeleteNew().mutateAsync({ id: item?.id });
+                      deleteNew.mutateAsync({ id: item?.id });
                     },
                   },
                 ],

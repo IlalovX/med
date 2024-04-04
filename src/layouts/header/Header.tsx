@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Drawer, Dropdown, Space } from "antd";
-import { MenuOutlined, DownOutlined, UpOutlined } from "@ant-design/icons";
+import { MenuOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -20,6 +20,7 @@ import SvgLoginWhite from "../../assets/svgs/loginWhite.svg?react";
 import Logo from "../../assets/images/logo_Institut.png";
 
 import { LANGUAGES, navMenuItems } from "../../constans/data";
+import NavMenu from "../../components/nav-menu/NavMenu";
 
 interface AbbrType {
   title: string;
@@ -27,6 +28,8 @@ interface AbbrType {
 }
 
 function Header() {
+  console.log(navMenuItems);
+
   const { t, i18n } = useTranslation("common");
   const [abbrLanguage, setAbbrLanguage] = useState<AbbrType | undefined>({
     title: "russia",
@@ -151,22 +154,9 @@ function Header() {
                   <span>{item.title}</span>
                 </li>
                 <div className="hidden group-hover:block">
-                  {item.items?.map((el: any, index: number) => {
+                  {item.items?.map((items: any, index: number) => {
                     return (
-                      <div className="mb-8 group w-full" key={index}>
-                        <li className="flex justify-between items-center w-full ml-5 text-xl mb-3  ">
-                          <span>{el.label}</span>
-                          <DownOutlined className="transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0 " />
-                          <UpOutlined className="transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100" />
-                        </li>
-                        <ul className="ml-10  hidden  group-hover:block ">
-                          {el.children?.map((child: any, index: number) => (
-                            <li className="text-xl mb-2 " key={index}>
-                              {child.label}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      <NavMenu items={items} key={index} onClose={onClose} />
                     );
                   })}
                 </div>

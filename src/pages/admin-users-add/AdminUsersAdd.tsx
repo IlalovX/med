@@ -1,41 +1,66 @@
-import { Tabs, TabsProps } from "antd";
 import { useState } from "react";
-import AdminUserAddForm from "./components/AdminUserAddForm";
-
+import { DatePickerProps, Form, FormProps } from "antd";
+import { useAddUser } from "./services/mutations";
 import styles from "./admin-users-add.module.scss";
+import UserForm from "../../components/user-form/UserForm";
 
 function AdminUsersAdd() {
-  const [lngIndex, setLngIndex] = useState("1");
+  const addUser = useAddUser();
+  const [form] = Form.useForm();
+  const [dob, setDob] = useState<string | string[]>("");
+  const [startEdu, setStartEdu] = useState<string | string[]>("");
+  const [endEdu, setEndEdu] = useState<string | string[]>("");
+  const [imageUrl, setImageUrl] = useState("");
 
-  const onChange = (key: string) => {
-    setLngIndex(key);
+  const onChangeDobPicker: DatePickerProps["onChange"] = (date, dateString) => {
+    console.log(date);
+    setDob(dateString);
   };
 
-  const items: TabsProps["items"] = [
-    {
-      key: "1",
-      label: "Русский",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
-    },
-    {
-      key: "2",
-      label: "Каракалпаксикий",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
-    },
-    {
-      key: "3",
-      label: "Английский",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
-    },
-    {
-      key: "4",
-      label: "Узбекский",
-      children: <AdminUserAddForm lngIndex={lngIndex} />,
-    },
-  ];
+  const onChangeStartEduPicker: DatePickerProps["onChange"] = (
+    date,
+    dateString
+  ) => {
+    console.log(date);
+    setStartEdu(dateString);
+  };
+  const onChangeEndEduPicker: DatePickerProps["onChange"] = (
+    date,
+    dateString
+  ) => {
+    console.log(date);
+    setEndEdu(dateString);
+  };
+
+  const onFinish: FormProps["onFinish"] = (values) => {
+    addUser.mutateAsync({
+      address: values.address,
+      birthDate: dob,
+      birthPlace: values.pob,
+      city: values.city,
+      degree: values.degree,
+      email: values.email,
+      endDate: endEdu,
+      firstName: values.firstname,
+      lastName: values.lastname,
+      phone: values.phone,
+      photo: imageUrl,
+      startDate: startEdu,
+      university: values.university,
+    });
+    form.resetFields();
+  };
   return (
     <div className={styles.admin_users_add}>
-      <Tabs onChange={onChange} type="card" items={items} />
+      <UserForm
+        form={form}
+        onFinish={onFinish}
+        onChangeEndEduPicker={onChangeEndEduPicker}
+        onChangeStartEduPicker={onChangeStartEduPicker}
+        onChangeDobPicker={onChangeDobPicker}
+        imageUrl={imageUrl}
+        setImageUrl={setImageUrl}
+      />
     </div>
   );
 }

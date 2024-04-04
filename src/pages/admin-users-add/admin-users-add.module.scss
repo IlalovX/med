@@ -1,5 +1,22 @@
 .admin_users_add {
   :global {
+    .ant-form-item {
+      .ant-row {
+        .ant-form-item-explain-error {
+          font-family: "Azeret Mono" monospace;
+          font-size: 18px;
+        }
+        .ant-col {
+          label {
+            font-size: 20px;
+            margin-bottom: 10px;
+            &::before {
+              content: "";
+            }
+          }
+        }
+      }
+    }
     .ant-tabs {
       .ant-tabs-nav {
         .ant-tabs-nav-wrap {

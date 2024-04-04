@@ -8,7 +8,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import Arrow from "../../assets/svgs/arrow-circle-right.svg?react";
-import Send from "../../assets/svgs/send.svg?react";
+import Send from "../../assets/svgs/sms.svg?react";
+import Global from "../../assets/svgs/global-search.svg?react";
+import Call from "../../assets/svgs/footer/call-calling.svg?react";
 import BgImg1 from "../../assets/images/bgHome1.png";
 import BgImg2 from "../../assets/images/bgHome2.png";
 import CabinetClassroom from "../../assets/images/cabinets/Classroom.png";
@@ -63,7 +65,7 @@ function Home() {
           <div className="flex flex-col gap-y-5 sm:flex-row justify-between mb-12">
             <h1 className="text-black text-3xl">Об институте</h1>
             <p className="text-white text-4xl w-[40%]">
-              {`  Образование - не подготовка\n к жизни;\n Образование - это самая жизнь`}
+              {`  Образование - не подготовка\n к жизни;\n Образование - это сама жизнь`}
             </p>
           </div>
           <div className="flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:gap-0  lg:items-end lg:justify-end sm:space-x-10 my-6">
@@ -157,12 +159,6 @@ function Home() {
           </div>
           <img src={Faculty2} alt="faculty1" className="w-full" />
         </div>
-        <div className="flex  justify-center">
-          <button className="flex justify-between items-center space-x-2 border border-black px-4 py-1 rounded-lg text-xl">
-            <span>Все факультеты</span>
-            <Send width={24} height={24} />
-          </button>
-        </div>
       </section>
 
       <section className="bg-almost-blue p-5 ">
@@ -253,10 +249,28 @@ function Home() {
         <div className="container mx-auto">
           <h1 className="text-3xl mb-10">Наши контакты</h1>
           <div className="flex flex-col lg:grid lg:grid-cols-[40%_50%] min-h-[500px] gap-10 mb-20">
-            <div className="border border-black rounded-lg flex flex-col justify-evenly text-center text-white min-h-[350px]">
-              <p>phone</p>
-              <p>location</p>
-              <p>gmail</p>
+            <div className="border border-black rounded-lg flex flex-col justify-center  text-white min-h-[350px] gap-5">
+              <div className="grid grid-cols-2 gap-5 max-w-[20%] mx-auto">
+                <Call />
+                <div>
+                  <p>Телефон</p>
+                  <p>+998901234567</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2  gap-5 max-w-[20%] mx-auto">
+                <Global className="" />
+                <div>
+                  <p>Адрес</p>
+                  <p>A.Dosnazarov 108</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-5 max-w-[20%] mx-auto">
+                <Send className="" />
+                <div>
+                  <p>Почта</p>
+                  <p>KMI@gmail.com</p>
+                </div>
+              </div>
             </div>
             <NavLink
               to="https://yandex.uz/maps/org/208027049709/?ll=59.618553%2C42.471601&z=16.65"

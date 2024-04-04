@@ -11,6 +11,7 @@ import { useDeleteUser } from "./services/mutations";
 
 function AdminUsers() {
   const { data }: { data: any } = getUsers();
+  const deleteUser = useDeleteUser();
 
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -74,7 +75,7 @@ function AdminUsers() {
                     label: "Delete",
                     key: "1",
                     onClick: () => {
-                      useDeleteUser().mutateAsync({ id: item?.id });
+                      deleteUser.mutateAsync({ id: item?.id });
                     },
                   },
                 ],

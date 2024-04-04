@@ -2,6 +2,9 @@ export const getRouteAdmin = () => {
   return "/admin/*";
 };
 
+export const getRouteAdminEdit = () => {
+	return "edit";
+}
 export const getRouteAdminUsers = () => {
   return "users";
 };
@@ -34,6 +37,12 @@ export const getRouteAdminNewDetails = (id?: string) => {
   return "news/:id";
 };
 
+export const getRouteAdminEditNew = (id: string) => {
+  if (id) {
+    return `news/edit/${id}`;
+  }
+  return "news/edit/:id";
+};
 export const getRouteAdminAddNews = () => {
   return "news/add";
 };
@@ -52,6 +61,13 @@ export const getRouteAdminAdvertsDetails = (id: string) => {
   }
   return "adverts/:id";
 };
+export const getRouteAdminAdvertsEdit = (id: string) => {
+  if (id) {
+    return `adverts/edit/${id}`;
+  }
+  return "adverts/edit/:id";
+};
+
 export const getRouteAdminPhotoGallery = () => {
   return "photo_gallery";
 };

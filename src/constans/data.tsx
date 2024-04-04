@@ -28,6 +28,12 @@ export const LANGUAGES = [
     abbr: "uz",
   },
 ];
+export const TabsLanguage = [
+  "Русский",
+  "Каракалпаксикий",
+  "Английский",
+  "Узбекский",
+];
 
 export const ABOUT_INSTITUTE = [
   {
