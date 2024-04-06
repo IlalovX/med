@@ -3,8 +3,8 @@ export const getRouteAdmin = () => {
 };
 
 export const getRouteAdminEdit = () => {
-	return "edit";
-}
+  return "edit";
+};
 export const getRouteAdminUsers = () => {
   return "users";
 };
@@ -71,12 +71,43 @@ export const getRouteAdminAdvertsEdit = (id: string) => {
 export const getRouteAdminPhotoGallery = () => {
   return "photo_gallery";
 };
-export const getRouteAdminAboutInstitute = (type: string) => {
-  if (type) {
-    return `about_institute/${type}`;
-  }
-  return "about_institute/:type?";
+
+export const getRouteAdminAboutInstitute = () => {
+  return "about_institute";
 };
+
+export const getRouteAdminInfoInstitute = () => {
+  return "about_institute/information";
+};
+
+export const getRouteAdminStructureInstitute = () => {
+  return "about_institute/structure_university";
+};
+
+export const getRouteAdminStatuteInstitute = () => {
+  return "about_institute/institute_statute";
+};
+
+export const getRouteAdminCertificateInstitute = () => {
+  return "about_institute/institute_certificates";
+};
+
+export const getRouteAdminRegulationsInstitute = () => {
+  return "about_institute/internal_regulations";
+};
+
+export const getRouteAdminEducationalInstitute = () => {
+  return "about_institute/educational_buildings";
+};
+
+export const getRouteAdminLaboratoryInstitute = () => {
+  return "about_institute/laboratory_room";
+};
+
+export const getRouteAdminStudentsInstitute = () => {
+  return "about_institute/life_students";
+};
+
 export const getRouteAdminAdviceInstitute = (type: string) => {
   if (type) {
     return `advice_institute/${type}`;
@@ -99,13 +130,11 @@ export const getRouteAdminScientific = (type: string) => {
 export const getRouteFaculties = () => {
   return "faculties";
 };
-export const getRouteAdminFaculty = (id: string, type: string) => {
-  if (id && type) {
-    return `faculties/about_medical_faculty/${id}/${type}`;
-  } else if (id) {
+export const getRouteAdminFaculty = (id: string) => {
+  if (id) {
     return `faculties/about_medical_faculty/${id}`;
   }
-  return "faculties/about_medical_faculty/:id/:type?";
+  return "faculties/about_medical_faculty/:id";
 };
 export const getRouteAdminScientificFaculty = (id: string) => {
   if (id) {
@@ -113,6 +142,47 @@ export const getRouteAdminScientificFaculty = (id: string) => {
   }
   return "faculties/student_scientific_society_medical_faculty/:id";
 };
+export const getRouteAdminQualificationFaculty = (id: string) => {
+  if (id) {
+    return `faculties/qualification_medical_faculty/${id}`;
+  }
+  return "faculties/qualification_medical_faculty/:id";
+};
+export const getRouteAdminHistoryFaculty = (id: string) => {
+  if (id) {
+    return `faculties/history_medical_faculty/${id}`;
+  }
+  return "faculties/history_medical_faculty/:id";
+};
+
+export const getRouteAdminStructureFaculty = (id: string) => {
+  if (id) {
+    return `faculties/structure_medical_faculty/${id}`;
+  }
+  return "faculties/structure_medical_faculty/:id";
+};
+
+export const getRouteAdminCouncilFaculty = (id: string) => {
+  if (id) {
+    return `faculties/council_medical_faculty/${id}`;
+  }
+  return "faculties/council_medical_faculty/:id";
+};
+
+export const getRouteAdminMethodologicalFaculty = (id: string) => {
+  if (id) {
+    return `faculties/methodological_medical_faculty/${id}`;
+  }
+  return "faculties/methodological_medical_faculty/:id";
+};
+
+export const getRouteAdminResearchFaculty = (id: string) => {
+  if (id) {
+    return `faculties/research_work_medical_faculty/${id}`;
+  }
+  return "faculties/research_work_medical_faculty/:id";
+};
+
 export const getRouteAdminDepartments = () => {
   return "departments";
 };

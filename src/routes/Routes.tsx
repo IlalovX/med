@@ -5,369 +5,369 @@ import { PathNames } from "./consts/Consts";
 
 const MainLayout = lazy(() => import("../layouts/MainLayout"));
 
-const Home = lazy(() => import("../pages/home/Home"));
-const Auth = lazy(() => import("../pages/auth/Auth"));
-const Symbols = lazy(() => import("../pages/symbols/Symbols"));
-const Contacts = lazy(() => import("../pages/contacts/Contacts"));
-const Information = lazy(() => import("../pages/information/Information"));
-const Sitemap = lazy(() => import("../pages/sitemap/Sitemap"));
+const Home = lazy(() => import("../pages/users-pages/home/Home"));
+const Auth = lazy(() => import("../pages/users-pages/auth/Auth"));
+const Symbols = lazy(() => import("../pages/users-pages/symbols/Symbols"));
+const Contacts = lazy(() => import("../pages/users-pages/contacts/Contacts"));
+const Information = lazy(() => import("../pages/users-pages/information/Information"));
+const Sitemap = lazy(() => import("../pages/users-pages/sitemap/Sitemap"));
 const StructureUniversity = lazy(
-  () => import("../pages/structure-university/StructureUniversity")
+  () => import("../pages/users-pages/structure-university/StructureUniversity")
 );
 const InstituteStatute = lazy(
-  () => import("../pages/institute-statute/InstituteStatute")
+  () => import("../pages/users-pages/institute-statute/InstituteStatute")
 );
 const InstituteCertificates = lazy(
-  () => import("../pages/institute-certificates/InstituteCertificates")
+  () => import("../pages/users-pages/institute-certificates/InstituteCertificates")
 );
 const InternalRegulations = lazy(
-  () => import("../pages/internal-regulations/InternalRegulations")
+  () => import("../pages/users-pages/internal-regulations/InternalRegulations")
 );
 const EducationalBuildings = lazy(
-  () => import("../pages/educational-buildings/EducationalBuildings")
+  () => import("../pages/users-pages/educational-buildings/EducationalBuildings")
 );
 const LaboratoryRoom = lazy(
-  () => import("../pages/laboratory-room/LaboratoryRoom")
+  () => import("../pages/users-pages/laboratory-room/LaboratoryRoom")
 );
-const LifeStudents = lazy(() => import("../pages/life-students/LifeStudents"));
+const LifeStudents = lazy(() => import("../pages/users-pages/life-students/LifeStudents"));
 const AcademicCouncilStatue = lazy(
-  () => import("../pages/academic-council-statue/AcademicCouncilStatue")
+  () => import("../pages/users-pages/academic-council-statue/AcademicCouncilStatue")
 );
 const AcademicCouncilMembers = lazy(
-  () => import("../pages/academic-council-members/AcademicCouncilMembers")
+  () => import("../pages/users-pages/academic-council-members/AcademicCouncilMembers")
 );
 const AcademicCouncilAgenda = lazy(
-  () => import("../pages/academic-council-agenda/AcademicCouncilAgenda")
+  () => import("../pages/users-pages/academic-council-agenda/AcademicCouncilAgenda")
 );
 const AcademicCouncilHandouts = lazy(
-  () => import("../pages/academic-council-handouts/AcademicCouncilHandouts")
+  () => import("../pages/users-pages/academic-council-handouts/AcademicCouncilHandouts")
 );
 const AcademicCouncilResolutions = lazy(
   () =>
-    import("../pages/academic-council-resolutions/AcademicCouncilResolutions")
+    import("../pages/users-pages/academic-council-resolutions/AcademicCouncilResolutions")
 );
 
 const AboutDocuments = lazy(
-  () => import("../pages/about-documents/AboutDocuments")
+  () => import("../pages/users-pages/about-documents/AboutDocuments")
 );
 const MinistryOrder = lazy(
-  () => import("../pages/ministry-orders/MinistryOrder")
+  () => import("../pages/users-pages/ministry-orders/MinistryOrder")
 );
 const StatePrograms = lazy(
-  () => import("../pages/state-programs/StatePrograms")
+  () => import("../pages/users-pages/state-programs/StatePrograms")
 );
-const Management = lazy(() => import("../pages/management/Management"));
+const Management = lazy(() => import("../pages/users-pages/management/Management"));
 const ManagementDetail = lazy(
-  () => import("../pages/management-detail/ManagementDetail")
+  () => import("../pages/users-pages/management-detail/ManagementDetail")
 );
 const AboutMedicalFaculty = lazy(
-  () => import("../pages/about-medical-faculty/AboutMedicalFaculty")
+  () => import("../pages/users-pages/about-medical-faculty/AboutMedicalFaculty")
 );
 const QualificationMedicalFaculty = lazy(
   () =>
-    import("../pages/qualification-medical-faculty/QualificationMedicalFaculty")
+    import("../pages/users-pages/qualification-medical-faculty/QualificationMedicalFaculty")
 );
 const HistoryMedicalFaculty = lazy(
-  () => import("../pages/history-medical-faculty/HistoryMedicalFaculty")
+  () => import("../pages/users-pages/history-medical-faculty/HistoryMedicalFaculty")
 );
 const StructureMedicalFaculty = lazy(
-  () => import("../pages/structure-medical-faculty/StructureMedicalFaculty")
+  () => import("../pages/users-pages/structure-medical-faculty/StructureMedicalFaculty")
 );
 const CouncilMedicalFaculty = lazy(
-  () => import("../pages/council-medical-faculty/CouncilMedicalFaculty")
+  () => import("../pages/users-pages/council-medical-faculty/CouncilMedicalFaculty")
 );
 const DepartmentMedicalFaculty = lazy(
-  () => import("../pages/departments-medical-faculty/DepartmentsMedicalFaculty")
+  () => import("../pages/users-pages/departments-medical-faculty/DepartmentsMedicalFaculty")
 );
 const MethodologicalMedicalFaculty = lazy(
   () =>
     import(
-      "../pages/methodological-medical-faculty/MethodologicalMedicalFaculty"
+      "../pages/users-pages/methodological-medical-faculty/MethodologicalMedicalFaculty"
     )
 );
 const StudentScientificSocietyMedicalFaculty = lazy(
   () =>
     import(
-      "../pages/student-scientific-society-medical-faculty/StudentScientificSocietyMedicalFaculty"
+      "../pages/users-pages/student-scientific-society-medical-faculty/StudentScientificSocietyMedicalFaculty"
     )
 );
 const ResearchWorkMedicalFaculty = lazy(
   () =>
-    import("../pages/research-work-medical-faculty/ResearchWorkMedicalFaculty")
+    import("../pages/users-pages/research-work-medical-faculty/ResearchWorkMedicalFaculty")
 );
 const AboutDepartment = lazy(
-  () => import("../pages/about-department/AboutDepartment")
+  () => import("../pages/users-pages/about-department/AboutDepartment")
 );
 const HistoryDepartment = lazy(
-  () => import("../pages/history-department/HistoryDepartment")
+  () => import("../pages/users-pages/history-department/HistoryDepartment")
 );
 const StructureDepartment = lazy(
-  () => import("../pages/structure-department/StructureDepartment")
+  () => import("../pages/users-pages/structure-department/StructureDepartment")
 );
 const ScientificDepartment = lazy(
   () =>
-    import("../pages/scientific-circles-department/ScientificCirclesDepartment")
+    import("../pages/users-pages/scientific-circles-department/ScientificCirclesDepartment")
 );
 const ResearchDepartment = lazy(
-  () => import("../pages/research-work-department/ResearchWorkDeparment")
+  () => import("../pages/users-pages/research-work-department/ResearchWorkDeparment")
 );
 const SpiritualDepartment = lazy(
   () =>
     import(
-      "../pages/spiritual-and-enlightening-department/SpiritualAndEnlighteningDepartment"
+      "../pages/users-pages/spiritual-and-enlightening-department/SpiritualAndEnlighteningDepartment"
     )
 );
 const MethodologicalDepartment = lazy(
-  () => import("../pages/methodological-department/MethodologicalDepartment")
+  () => import("../pages/users-pages/methodological-department/MethodologicalDepartment")
 );
 const InternationalDepartment = lazy(
   () =>
     import(
-      "../pages/international-partnership-department/InternationalPartnershipDepartment"
+      "../pages/users-pages/international-partnership-department/InternationalPartnershipDepartment"
     )
 );
 const EducationQualityDepartment = lazy(
   () =>
-    import("../pages/education-quality-department/EducationQualityDepartment")
+    import("../pages/users-pages/education-quality-department/EducationQualityDepartment")
 );
 const EducationDepartment = lazy(
-  () => import("../pages/education-department/EducationDepartment")
+  () => import("../pages/users-pages/education-department/EducationDepartment")
 );
 const MasterDepartment = lazy(
-  () => import("../pages/master-department/MasterDepartment")
+  () => import("../pages/users-pages/master-department/MasterDepartment")
 );
 const ClinicalResidencyDepartment = lazy(
   () =>
     import(
-      "../pages/clinical-residency-department//ClinicalResidencyDepartment"
+      "../pages/users-pages/clinical-residency-department//ClinicalResidencyDepartment"
     )
 );
 const InternationalRelationsDepartment = lazy(
   () =>
     import(
-      "../pages/international-relations-department/InternationalRealtioonsDepartment"
+      "../pages/users-pages/international-relations-department/InternationalRealtioonsDepartment"
     )
 );
 const ScientificResearchDepartment = lazy(
   () =>
     import(
-      "../pages/scientific-research-department/ScientificResearchDepartment"
+      "../pages/users-pages/scientific-research-department/ScientificResearchDepartment"
     )
 );
 const GiftedStudents = lazy(
-  () => import("../pages/gifteds-students/GiftedsStudents")
+  () => import("../pages/users-pages/gifteds-students/GiftedsStudents")
 );
 const TalentedStudents = lazy(
-  () => import("../pages/talented-students/TalentedStudents")
+  () => import("../pages/users-pages/talented-students/TalentedStudents")
 );
-const Accounting = lazy(() => import("../pages/accounting/Accounting"));
-const Marketing = lazy(() => import("../pages/marketing/Marketing"));
+const Accounting = lazy(() => import("../pages/users-pages/accounting/Accounting"));
+const Marketing = lazy(() => import("../pages/users-pages/marketing/Marketing"));
 const PlanningFinance = lazy(
-  () => import("../pages/planning-finance-department/PlanningFinanceDepartment")
+  () => import("../pages/users-pages/planning-finance-department/PlanningFinanceDepartment")
 );
 const InfoResourceCenter = lazy(
-  () => import("../pages/information-resource-center/InfoResourceCenter")
+  () => import("../pages/users-pages/information-resource-center/InfoResourceCenter")
 );
 const InfoTechonologiesCenter = lazy(
   () =>
-    import("../pages/information-technologies-center/InfoTechnologiesCenter")
+    import("../pages/users-pages/information-technologies-center/InfoTechnologiesCenter")
 );
 const YouthUnionCenter = lazy(
-  () => import("../pages/youth-union-center/YouthUnionCenter")
+  () => import("../pages/users-pages/youth-union-center/YouthUnionCenter")
 );
 const WomenCommitteeCenter = lazy(
-  () => import("../pages/women-committee-department/WomenCommitteeDepartment")
+  () => import("../pages/users-pages/women-committee-department/WomenCommitteeDepartment")
 );
 const CommunicationDevelopmentCenter = lazy(
   () =>
     import(
-      "../pages/communication-development-center/CommunicationDevelopmentCenter"
+      "../pages/users-pages/communication-development-center/CommunicationDevelopmentCenter"
     )
 );
 const SpiritualityEnglightmentDepartments = lazy(
   () =>
     import(
-      "../pages/spirituality-enlightenment-department/SpiritualityEnglightmentDepartment"
+      "../pages/users-pages/spirituality-enlightenment-department/SpiritualityEnglightmentDepartment"
     )
 );
 const PressSecretary = lazy(
-  () => import("../pages/press-secretary/PressSecretary")
+  () => import("../pages/users-pages/press-secretary/PressSecretary")
 );
 const HumanResourcesDepartment = lazy(
-  () => import("../pages/human-resource-department/HumanResourceDepartment")
+  () => import("../pages/users-pages/human-resource-department/HumanResourceDepartment")
 );
 const ChancelleryDepartment = lazy(
-  () => import("../pages/chancellery-department/ChancelleryDepartment")
+  () => import("../pages/users-pages/chancellery-department/ChancelleryDepartment")
 );
 const ComplianceControl = lazy(
-  () => import("../pages/compliance-control/ComplianceControl")
+  () => import("../pages/users-pages/compliance-control/ComplianceControl")
 );
 const ArchiveDepartment = lazy(
-  () => import("../pages/archive-department/ArchiveDepartment")
+  () => import("../pages/users-pages/archive-department/ArchiveDepartment")
 );
 const LegalServicesDepartment = lazy(
-  () => import("../pages/legal-services-department/LegalServicesDepartment")
+  () => import("../pages/users-pages/legal-services-department/LegalServicesDepartment")
 );
-const Psychologist = lazy(() => import("../pages/psychologist/Psychologits"));
+const Psychologist = lazy(() => import("../pages/users-pages/psychologist/Psychologits"));
 const UnionCommittee = lazy(
-  () => import("../pages/union-committee/UnionCommittee")
+  () => import("../pages/users-pages/union-committee/UnionCommittee")
 );
 const SimulationCenter = lazy(
-  () => import("../pages/simulation-center/SimulationCenter")
+  () => import("../pages/users-pages/simulation-center/SimulationCenter")
 );
 const HistorySimulationCenter = lazy(
-  () => import("../pages/history-simulation-center/HistorySimulationCenter")
+  () => import("../pages/users-pages/history-simulation-center/HistorySimulationCenter")
 );
 const DirectorsSimulationCenter = lazy(
-  () => import("../pages/director-simulation-center/DirectorSimulationCenter")
+  () => import("../pages/users-pages/director-simulation-center/DirectorSimulationCenter")
 );
 
 const RegionalOffices = lazy(
-  () => import("../pages/regional-offices/RegionalOffices")
+  () => import("../pages/users-pages/regional-offices/RegionalOffices")
 );
 const ExampleContracts = lazy(
-  () => import("../pages/example-contracts/ExampleContracts")
+  () => import("../pages/users-pages/example-contracts/ExampleContracts")
 );
-const Graduates = lazy(() => import("../pages/graduates/Graduates"));
+const Graduates = lazy(() => import("../pages/users-pages/graduates/Graduates"));
 const CareerCenterFaq = lazy(
-  () => import("../pages/career-center-faq/CareerCenterFaq")
+  () => import("../pages/users-pages/career-center-faq/CareerCenterFaq")
 );
-const Treaty = lazy(() => import("../pages/treaty/Treaty"));
-const Joint = lazy(() => import("../pages/joint/Joint"));
+const Treaty = lazy(() => import("../pages/users-pages/treaty/Treaty"));
+const Joint = lazy(() => import("../pages/users-pages/joint/Joint"));
 const InternationalPartners = lazy(
-  () => import("../pages/international-partners/InternationalPartners")
+  () => import("../pages/users-pages/international-partners/InternationalPartners")
 );
 const RepublicanPartners = lazy(
-  () => import("../pages/republican-partners/RepublicanPartners")
+  () => import("../pages/users-pages/republican-partners/RepublicanPartners")
 );
-const PhotoGallery = lazy(() => import("../pages/photo-gallery/PhotoGallery"));
-const News = lazy(() => import("../pages/news/News"));
-const NewsDetail = lazy(() => import("../pages/news-detail/NewDetail"));
-const Adverts = lazy(() => import("../pages/adverts/Adverts"));
-const AdvertDetail = lazy(() => import("../pages/advert-detail/AdvertDetail"));
-const Instruction = lazy(() => import("../pages/instruction/Instruction"));
+const PhotoGallery = lazy(() => import("../pages/users-pages/photo-gallery/PhotoGallery"));
+const News = lazy(() => import("../pages/users-pages/news/News"));
+const NewsDetail = lazy(() => import("../pages/users-pages/news-detail/NewDetail"));
+const Adverts = lazy(() => import("../pages/users-pages/adverts/Adverts"));
+const AdvertDetail = lazy(() => import("../pages/users-pages/advert-detail/AdvertDetail"));
+const Instruction = lazy(() => import("../pages/users-pages/instruction/Instruction"));
 const ScheduleSesBachelor = lazy(
-  () => import("../pages/schedule-sec-bachelor/ScheduleSesBachelor")
+  () => import("../pages/users-pages/schedule-sec-bachelor/ScheduleSesBachelor")
 );
 const ClassSchedule = lazy(
-  () => import("../pages/class-schedule/ClassSchedule")
+  () => import("../pages/users-pages/class-schedule/ClassSchedule")
 );
 const ClassScheduleDetail = lazy(
-  () => import("../pages/class-schedule-detail/ClassScheduleDetail")
+  () => import("../pages/users-pages/class-schedule-detail/ClassScheduleDetail")
 );
 const MagClassSchedule = lazy(
-  () => import("../pages/mag-schedule/MagSchedule")
+  () => import("../pages/users-pages/mag-schedule/MagSchedule")
 );
 const MagClassScheduleDetail = lazy(
-  () => import("../pages/mag-schedule-detail/MagScheduleDetail")
+  () => import("../pages/users-pages/mag-schedule-detail/MagScheduleDetail")
 );
-const Learning = lazy(() => import("../pages/learning/Learning"));
-const LearningMag = lazy(() => import("../pages/learning-mag/LearningMag"));
-const Attendance = lazy(() => import("../pages/attendance/Attendance"));
+const Learning = lazy(() => import("../pages/users-pages/learning/Learning"));
+const LearningMag = lazy(() => import("../pages/users-pages/learning-mag/LearningMag"));
+const Attendance = lazy(() => import("../pages/users-pages/attendance/Attendance"));
 const CatalogSciences = lazy(
-  () => import("../pages/catalog-sciences/CatalogSciences")
+  () => import("../pages/users-pages/catalog-sciences/CatalogSciences")
 );
 const SameScholarships = lazy(
-  () => import("../pages/same-scholarships/SameScholarships")
+  () => import("../pages/users-pages/same-scholarships/SameScholarships")
 );
 const ProtectionMasterDesert = lazy(
-  () => import("../pages/protection-master-dessert/ProtectionMasterDesert")
+  () => import("../pages/users-pages/protection-master-dessert/ProtectionMasterDesert")
 );
 const MastersThesisTopics = lazy(
-  () => import("../pages/masters-thesis-topics/MastersThesisTopics")
+  () => import("../pages/users-pages/masters-thesis-topics/MastersThesisTopics")
 );
 const ScheduleSecMaster = lazy(
-  () => import("../pages/schedule-sec-masters/ScheduleSecMaster")
+  () => import("../pages/users-pages/schedule-sec-masters/ScheduleSecMaster")
 );
 const InstructionClinic = lazy(
-  () => import("../pages/instruction-clinic/InstructionClinic")
+  () => import("../pages/users-pages/instruction-clinic/InstructionClinic")
 );
 const AttendanceClinic = lazy(
-  () => import("../pages/attendance-clinic/AttendanceClinic")
+  () => import("../pages/users-pages/attendance-clinic/AttendanceClinic")
 );
-const StateExams = lazy(() => import("../pages/state-exams/StateExams"));
+const StateExams = lazy(() => import("../pages/users-pages/state-exams/StateExams"));
 const ClassScheduleInter = lazy(
-  () => import("../pages/class-schedule-inter/ClassScheduleInter")
+  () => import("../pages/users-pages/class-schedule-inter/ClassScheduleInter")
 );
 const ClassScheduleInterDetail = lazy(
-  () => import("../pages/class-schedule-inter-detail/ClassScheduleInterDetail")
+  () => import("../pages/users-pages/class-schedule-inter-detail/ClassScheduleInterDetail")
 );
 const ForeignStudentsStudying = lazy(
-  () => import("../pages/foreign-students-studying/ForeignStudentsStudying")
+  () => import("../pages/users-pages/foreign-students-studying/ForeignStudentsStudying")
 );
 const AmountPaymentInternationalStudent = lazy(
   () =>
     import(
-      "../pages/amount-payment-international-students/AmountPaymentInternationalStudents"
+      "../pages/users-pages/amount-payment-international-students/AmountPaymentInternationalStudents"
     )
 );
 const InfoResidenceForeignStudent = lazy(
   () =>
     import(
-      "../pages/information-residence-foreign-students/InformationResidenceForeignStudents"
+      "../pages/users-pages/information-residence-foreign-students/InformationResidenceForeignStudents"
     )
 );
 const AdmissionProcedure = lazy(
-  () => import("../pages/admission-procedure/AdmissionProcedure")
+  () => import("../pages/users-pages/admission-procedure/AdmissionProcedure")
 );
 
 const AdmissionProcudereInt = lazy(
-  () => import("../pages/admission-procedure-int/AdmissionProcedureInt")
+  () => import("../pages/users-pages/admission-procedure-int/AdmissionProcedureInt")
 );
 const AdmissionProcedureMag = lazy(
-  () => import("../pages/admission-procedure-mag/AdmissionProcedureMag")
+  () => import("../pages/users-pages/admission-procedure-mag/AdmissionProcedureMag")
 );
 const AdmissionCommitteeNews = lazy(
-  () => import("../pages/admissions-committee-news/AdmissionsCommitteeNews")
+  () => import("../pages/users-pages/admissions-committee-news/AdmissionsCommitteeNews")
 );
 const BachelorRequiredDocuments = lazy(
-  () => import("../pages/bachelor-required-documents/BachelorRequiredDocuments")
+  () => import("../pages/users-pages/bachelor-required-documents/BachelorRequiredDocuments")
 );
 const ChecklistList = lazy(
-  () => import("../pages/checklist-list/ChecklistList")
+  () => import("../pages/users-pages/checklist-list/ChecklistList")
 );
 const ClinicReceptionQuota = lazy(
-  () => import("../pages/clinic-reception-quota/ClinicReceptionQuota")
+  () => import("../pages/users-pages/clinic-reception-quota/ClinicReceptionQuota")
 );
 const ClinicRequiredDocuments = lazy(
-  () => import("../pages/clinic-required-documents/ClinicRequiredDocuments")
+  () => import("../pages/users-pages/clinic-required-documents/ClinicRequiredDocuments")
 );
 const JtrainingReceptionQuota = lazy(
-  () => import("../pages/jtraining-reception-quota/JtrainingReceptionQuota")
+  () => import("../pages/users-pages/jtraining-reception-quota/JtrainingReceptionQuota")
 );
 const MasterReceptionQuota = lazy(
-  () => import("../pages/master-reception-quota/MasterReceptionQuota")
+  () => import("../pages/users-pages/master-reception-quota/MasterReceptionQuota")
 );
-const Memo = lazy(() => import("../pages/memo/Memo"));
-const MemoClinic = lazy(() => import("../pages/memo-clinic/MemoClinic"));
+const Memo = lazy(() => import("../pages/users-pages/memo/Memo"));
+const MemoClinic = lazy(() => import("../pages/users-pages/memo-clinic/MemoClinic"));
 const MemoJtTraining = lazy(
-  () => import("../pages/memo-jt-training/MemoJtTraining")
+  () => import("../pages/users-pages/memo-jt-training/MemoJtTraining")
 );
-const MemoMag = lazy(() => import("../pages/memo-mag/MemoMag"));
+const MemoMag = lazy(() => import("../pages/users-pages/memo-mag/MemoMag"));
 const MonitoringReception = lazy(
-  () => import("../pages/monitoring-reception/MonitoringReception")
+  () => import("../pages/users-pages/monitoring-reception/MonitoringReception")
 );
 const PackageAcceptedDocuments = lazy(
-  () => import("../pages/package-accepted-documents/PackageAcceptedDocuments")
+  () => import("../pages/users-pages/package-accepted-documents/PackageAcceptedDocuments")
 );
 
 const PackageAcceptedDocumentsJt = lazy(
   () =>
-    import("../pages/package-accepted-documents-jt/PackageAcceptedDocumentsJt")
+    import("../pages/users-pages/package-accepted-documents-jt/PackageAcceptedDocumentsJt")
 );
 const PlaceAdmissionOffice = lazy(
-  () => import("../pages/place-admission-office/PlaceAdmissionOffice")
+  () => import("../pages/users-pages/place-admission-office/PlaceAdmissionOffice")
 );
 const RectorsAppeal = lazy(
-  () => import("../pages/rectors-appeal/RectorsAppeal")
+  () => import("../pages/users-pages/rectors-appeal/RectorsAppeal")
 );
 const TargetReception = lazy(
-  () => import("../pages/target-reception/TargetReception")
+  () => import("../pages/users-pages/target-reception/TargetReception")
 );
 const AdmissionsJtNews = lazy(
-  () => import("../pages/admissions-jt-news/AdmissionsJtNews")
+  () => import("../pages/users-pages/admissions-jt-news/AdmissionsJtNews")
 );
-const Faq = lazy(() => import("../pages/faq/Faq"));
+const Faq = lazy(() => import("../pages/users-pages/faq/Faq"));
 function PathRoutes() {
   return (
     <Routes>

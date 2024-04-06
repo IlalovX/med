@@ -11,11 +11,5 @@ export function useUploadImage() {
       });
       return res;
     },
-    onError: (error) => {
-      console.log(error);
-    },
-    onSuccess: (data) => {
-      console.log(data);
-    },
   });
 }

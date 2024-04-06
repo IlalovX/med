@@ -2,6 +2,7 @@ import SubmitButton from "../../components/submit-button/SubmitButton";
 import { Form, Input, Radio } from "antd";
 import { useUploadImage } from "../../services/mutations";
 import { useTranslation } from "react-i18next";
+import { useRef } from "react";
 
 export interface FieldType {
   header: string;
@@ -15,6 +16,7 @@ function NewForm({
   onChange,
   radioValue,
   setImageUrl,
+  fileInputRef,
 }: {
   form: any;
   text: string;
@@ -22,6 +24,7 @@ function NewForm({
   onChange: any;
   radioValue: number;
   setImageUrl: any;
+  fileInputRef: any;
 }) {
   const uploadImage = useUploadImage();
   const formData = new FormData();
@@ -81,7 +84,7 @@ function NewForm({
               },
             ]}
           >
-            <input type="file" onChange={onFileChange} />
+            <input type="file" onChange={onFileChange} ref={fileInputRef} />
           </Form.Item>
 
           <Form.Item>

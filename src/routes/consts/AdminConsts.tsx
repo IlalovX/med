@@ -33,6 +33,20 @@ import {
   getRouteAdminAdvertsEdit,
   getRouteAdminEditNew,
   getRouteAdminEdit,
+  getRouteAdminQualificationFaculty,
+  getRouteAdminHistoryFaculty,
+  getRouteAdminStructureFaculty,
+  getRouteAdminCouncilFaculty,
+  getRouteAdminMethodologicalFaculty,
+  getRouteAdminResearchFaculty,
+  getRouteAdminInfoInstitute,
+  getRouteAdminRegulationsInstitute,
+  getRouteAdminStructureInstitute,
+  getRouteAdminStatuteInstitute,
+  getRouteAdminCertificateInstitute,
+  getRouteAdminEducationalInstitute,
+  getRouteAdminLaboratoryInstitute,
+  getRouteAdminStudentsInstitute,
 } from "../getPaths/AdminGetPaths";
 
 export const AdminPathNames: Record<AdminPathEnums, string> = {
@@ -51,13 +65,37 @@ export const AdminPathNames: Record<AdminPathEnums, string> = {
   [AdminPathEnums.ADMIN_ADVERTS_DETAIL]: getRouteAdminAdvertsDetails(""),
   [AdminPathEnums.ADMIN_ADVERTS_EDIT]: getRouteAdminAdvertsEdit(""),
   [AdminPathEnums.ADMIN_PHOTO_GALLERY]: getRouteAdminPhotoGallery(),
-  [AdminPathEnums.ADMIN_ABOUT_INSTITUTE]: getRouteAdminAboutInstitute(""),
+  [AdminPathEnums.ADMIN_ABOUT_INSTITUTE]: getRouteAdminAboutInstitute(),
+  [AdminPathEnums.ADMIN_INFORMATION_INSTITUTE]: getRouteAdminInfoInstitute(),
+  [AdminPathEnums.ADMIN_STRUCTURE_INSTITUTE]: getRouteAdminStructureInstitute(),
+  [AdminPathEnums.ADMIN_STATUTE_INSTITUTE]: getRouteAdminStatuteInstitute(),
+  [AdminPathEnums.ADMIN_CERTIFICATES_INSTITUTE]:
+    getRouteAdminCertificateInstitute(),
+  [AdminPathEnums.ADMIN_REGULATIONS_INSTITUTE]:
+    getRouteAdminRegulationsInstitute(),
+  [AdminPathEnums.ADMIN_EDUCATIONAL_INSTITUTE]:
+    getRouteAdminEducationalInstitute(),
+  [AdminPathEnums.ADMIN_LABORATORY_INSTITUTE]:
+    getRouteAdminLaboratoryInstitute(),
+  [AdminPathEnums.ADMIN_STUDENTS_INSTITUTE]: getRouteAdminStudentsInstitute(),
   [AdminPathEnums.ADMIN_ADVICE_INSTITUTE]: getRouteAdminAdviceInstitute(""),
   [AdminPathEnums.ADMIN_DOCUMENTS]: getRouteAdminDocuments(""),
   [AdminPathEnums.ADMIN_SCIENTIFIC]: getRouteAdminScientific(""),
   [AdminPathEnums.ADMIN_FACULTIES]: getRouteFaculties(),
-  [AdminPathEnums.ADMIN_FACULTY]: getRouteAdminFaculty("", ""),
+  [AdminPathEnums.ADMIN_FACULTY]: getRouteAdminFaculty(""),
   [AdminPathEnums.ADMIN_SCIENTIFIC_FACULTY]: getRouteAdminScientificFaculty(""),
+  [AdminPathEnums.ADMIN_QUALIFICATION_MEDICAL_FACULTY]:
+    getRouteAdminQualificationFaculty(""),
+  [AdminPathEnums.ADMIN_HISTORY_MEDICAL_FACULTY]:
+    getRouteAdminHistoryFaculty(""),
+  [AdminPathEnums.ADMIN_STRUCTURE_MEDICAL_FACULTY]:
+    getRouteAdminStructureFaculty(""),
+  [AdminPathEnums.ADMIN_COUNCIL_MEDICAL_FACULTY]:
+    getRouteAdminCouncilFaculty(""),
+  [AdminPathEnums.ADMIN_METHODOLOGICAL_MEDICAL_FACULTY]:
+    getRouteAdminMethodologicalFaculty(""),
+  [AdminPathEnums.ADMIN_RESEARCH_WORK_MEDICAL_FACULTY]:
+    getRouteAdminResearchFaculty(""),
   [AdminPathEnums.ADMIN_DEPARTMENTS]: getRouteAdminDepartments(),
   [AdminPathEnums.ADMIN_DEPARTMENT_FACULTY]: getRouteAdminDepartmentFaculty(""),
   [AdminPathEnums.ADMIN_ABOUT_DEPARTMENT]: getRouteAdminAboutDepartment(""),
