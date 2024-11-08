@@ -1,14 +1,11 @@
-import AdminEditForm from "./components/AdminEditForm";
-import { getContacts } from "../../../services/queries";
+import AdminEditForm from './components/AdminEditForm'
 
 function AdminEdit() {
-  const { data } = getContacts();
-
-  return (
-    <>
-      <AdminEditForm />
-    </>
-  );
+	return (
+		<>
+			<AdminEditForm />
+		</>
+	)
 }
 
-export default AdminEdit;
+export default AdminEdit

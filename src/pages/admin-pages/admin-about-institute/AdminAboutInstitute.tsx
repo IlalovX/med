@@ -1,16 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { ABOUT_INSTITUTE } from "../../../constans/data";
 
-const routesArray = [
-  "information",
-  "structure_university",
-  "institute_statute",
-  "institute_certificates",
-  "internal_regulations",
-  "educational_buildings",
-  "laboratory_room",
-  "life_students",
-];
+
 
 function AdminAboutInstitute() {
   return (
