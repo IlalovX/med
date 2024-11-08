@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 import SubmitButton from '../../../components/submit-button/SubmitButton'
 import { LANGUAGES } from '../../../constans/data'
 import { useUploadImage } from '../../../services/mutations'
-import styles from '../admin-faculty/admin-faculty.module.scss'
 import { useHistory } from './services/mutations'
 
 function HistoryForm({ lngIndex, title }: { lngIndex: string; title: string }) {
@@ -144,7 +143,7 @@ function History() {
 	]
 
 	return (
-		<div className={styles.faculty}>
+		<div>
 			<Tabs onChange={onChange} type='card' items={items} />
 		</div>
 	)

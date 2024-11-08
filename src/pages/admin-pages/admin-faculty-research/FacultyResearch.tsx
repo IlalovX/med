@@ -3,7 +3,6 @@ import TextArea from 'antd/es/input/TextArea'
 import { useState } from 'react'
 import SubmitButton from '../../../components/submit-button/SubmitButton'
 import { useUploadImage } from '../../../services/mutations'
-import styles from '../admin-faculty/admin-faculty.module.scss'
 // import { useResearch } from './services/mutations'
 function ResearchForm({
 	lngIndex,
@@ -145,7 +144,7 @@ function Research() {
 		},
 	]
 	return (
-		<div className={styles.faculty}>
+		<div>
 			<Tabs onChange={onChange} type='card' items={items} />
 		</div>
 	)
